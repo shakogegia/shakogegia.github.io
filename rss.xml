@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shalva Gegia]]></title><description><![CDATA[Personal Blog]]></description><link>https://gegia.me/</link><generator>RSS for Node</generator><lastBuildDate>Tue, 29 Jan 2019 18:11:48 GMT</lastBuildDate><item><title><![CDATA[BookSwap - Convenient platform for swapping books]]></title><description><![CDATA[BookSwap is the convenient platform in Georgia for people, who wants to find, swap, sell or buy second-hand books. Swap/Sell second-hand…]]></description><link>https://gegia.me//bookswap/</link><guid isPermaLink="false">https://gegia.me//bookswap/</guid><pubDate>Mon, 26 Nov 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;BookSwap is the convenient platform in Georgia for people, who wants to find, swap, sell or buy second-hand books.&lt;/p&gt;
+&lt;p&gt;Swap/Sell second-hand books is quit actual in Tbilisi (Georgia).&lt;/p&gt;
+&lt;p&gt;Main idea, why I created BookSwap is that, the only way people could swap second-hand books in Tbilisi (Georgia) was though the Facebook Groups.&lt;/p&gt;
+&lt;p&gt;I personally tried this types of groups/forums and had a conclusion: even though Facebook group served us well long time and helped interested people connect each other, I had feeling that and I missed some functionality I wanted.&lt;/p&gt;
+&lt;p&gt;Facebook groups has its disadvantages, for example its impossible to make track of wanted book and get notified if someone sells or wants to swap it.&lt;/p&gt;
+&lt;p&gt;Its hard to find/search desireable book though the wall of hundreds of posts.&lt;/p&gt;
+&lt;p&gt;Thats why I created this side project called BookSwap.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/43e3c4d92b594372a34e43e13533c3fa/f4374/web.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 60.9744094488189%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACj0lEQVQoz5WSW08TURDH9/v4FXgzPpmoD8ZP4KMPJD6Y6AMhIVCClIKUg1ou5YAYE68xtbYkiraWWkipYEtvu3XZbXd7L73vtDueXQgoJkYnOzk7e2Z/5z9nhrOOj1ybf0hePJi1O+9PWqlteoY+dixQx8IiXV520iXmq6trdO3JOl1ZoZQ9dHFxiU5ap6iRb7XaqHXK5iRk/vnYmOU6l04lLfgX6/d1/FeLxWI2TpLkoZO4zRx+9Xa7DcViEVRVBUVRoFAoQKvVgvN5zDsGQBCEUU4UxWEj0HXd2NDPlPVPTwZNQwAwck6/Ge9GTq/XM1bjX0ylUhZOEDImsFCpwYdwTP+RVbBcKpmQbLGCntAe5ksVrB8dMUofE7k8uiJxrFZrDNQz4d1u1wQmk0kLl+Z5ExhN8XDx0oDu395BViJq3S6Gowc4NHIP42kBZVlCvafjp0gAbXQYRSmHhXwe6/U6app2BuRPgMnMIdwcHNQjsTjWqlVsNBq4d5BEx9wsiky1oVDr9XE3FMQ3jyawyBRWWV6tVvsdyC7SBMqFElD3Fz2eOcRqpYyddhuTkoJzbz+jmFPNa+iDht9FBV8Go5jNKSbsj5J5/hiYyEhwx+rQwwcprJQZsNnAzXAUL9yyYzwjYUFVsNnS8Nv+Jr5+dhsFUUYll8NGs2k0zAQmEgmzZHNsJCXfXv/oh7SUBTg+EXhJgZmnLlBLZdajLrDGQjSxD6/erUGxXAGmGphK6HQ6xsghn06PcrIsj58f0Fani/6vO5hV8/g/th2OTHMul+tyMBh0Bra27D6/n0R2d8nEjJ0MXLlBBu8OkUAgQNge2djYIG63m3i9XuL1vDdXI/b5fGQ7FLK7PN5l29z81Z/Yg0ZqF2LRnAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;bookswap.ge&quot;
+        title=&quot;&quot;
+        src=&quot;/static/43e3c4d92b594372a34e43e13533c3fa/fb8a0/web.png&quot;
+        srcset=&quot;/static/43e3c4d92b594372a34e43e13533c3fa/1a291/web.png 148w,
+/static/43e3c4d92b594372a34e43e13533c3fa/2bc4a/web.png 295w,
+/static/43e3c4d92b594372a34e43e13533c3fa/fb8a0/web.png 590w,
+/static/43e3c4d92b594372a34e43e13533c3fa/526de/web.png 885w,
+/static/43e3c4d92b594372a34e43e13533c3fa/fa2eb/web.png 1180w,
+/static/43e3c4d92b594372a34e43e13533c3fa/08f6a/web.png 1770w,
+/static/43e3c4d92b594372a34e43e13533c3fa/f4374/web.png 4064w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;View on  &lt;a href=&quot;https://itunes.apple.com/us/app/bookswap-georgia/id1440375612?ls=1&amp;#x26;mt=8&quot;&gt;App Store&lt;/a&gt;
+&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.bookswap.app&quot;&gt;Play Store&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[English to Georgian dictionary for Kindle devices]]></title><description><![CDATA[გადავწვყიტე გამეკეთებინა Open Source ინგლისურ-ქართული ლექსიკონი ქინდლის ყველა ვერსიითვის.
+ლექსიკონი დახვეწის პროცესშია თუმცა საკმაო…]]></description><link>https://gegia.me//english-to-georgian-dictionary/</link><guid isPermaLink="false">https://gegia.me//english-to-georgian-dictionary/</guid><pubDate>Tue, 30 Jan 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;გადავწვყიტე გამეკეთებინა Open Source ინგლისურ-ქართული ლექსიკონი ქინდლის ყველა ვერსიითვის.
+ლექსიკონი დახვეწის პროცესშია თუმცა საკმაო სიტყვების რაოდენობა უკვე დაგროვდა.
+ლექსიკონის გამოყენება მარტივია: ქინდლში კითხვის დროს მონიშნავთ სიტყვას და გამოვა ფანჯარა სადაც იქნება მნიშნვნელობა ქართულად (ისე როგორც სურათზეა მოცემული)&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d8159a41012d4a760b444e04cacda75a/7d7e9/kindle.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 135.25835866261397%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Kindle&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d8159a41012d4a760b444e04cacda75a/fb8a0/kindle.png&quot;
+        srcset=&quot;/static/d8159a41012d4a760b444e04cacda75a/1a291/kindle.png 148w,
+/static/d8159a41012d4a760b444e04cacda75a/2bc4a/kindle.png 295w,
+/static/d8159a41012d4a760b444e04cacda75a/fb8a0/kindle.png 590w,
+/static/d8159a41012d4a760b444e04cacda75a/7d7e9/kindle.png 658w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;ნათარგმნი სიტყვების რაოდენობა — 40533&lt;/p&gt;
+&lt;p&gt;პროექტის source code და ასევე უკვე დაგენერირებული ლექსიკონი დევს Gihub-ზე ( Release-ებში). ამ მეთოდით შეიძლება შეიქმნას ნებისმიერი ლექსიკონი ნებისმიერ ენებს შორის.&lt;/p&gt;
+&lt;p&gt;სიტყვების სათარგმნად გამოყენებულია Google Translate Api რადგან უფასოა, თუმცა შესაძლებელია თქვენთვის სასურველი ნებისმიერი api-ს გამოყენება.&lt;/p&gt;
+&lt;p&gt;პროექტის გითჰაბის მისამართი:
+English to Georgian Dictionary for Kindle e-Readers&lt;/p&gt;
+&lt;p&gt;ლექსიკონის მისამართი: Dictionary&lt;/p&gt;
+&lt;p&gt;ლექსიკონის ქინდლში ჩაწერა/დაყენების ინსტრუქცია წერია პროექტის README.md-ში&lt;/p&gt;
+&lt;p&gt;View post on Medium
+&lt;a href=&quot;https://medium.com/@shalva.gegia/%E1%83%94%E1%83%9C%E1%83%92%E1%83%9A%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A0-%E1%83%A5%E1%83%90%E1%83%A0%E1%83%97%E1%83%A3%E1%83%9A%E1%83%98-%E1%83%9A%E1%83%94%E1%83%A5%E1%83%A1%E1%83%98%E1%83%99%E1%83%9D%E1%83%9C%E1%83%9D-%E1%83%A5%E1%83%98%E1%83%9C%E1%83%93%E1%83%9A%E1%83%98%E1%83%A1%E1%83%97%E1%83%95%E1%83%98%E1%83%A1-ac7a57469219&quot;&gt;medium&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[About Me]]></title><description><![CDATA[Hello, I am web & mobile developer based in Tbilisi, Georgia. I love photography, music and films. Programing Skills: Back-end:  Nodejs…]]></description><link>https://gegia.me//about-me/</link><guid isPermaLink="false">https://gegia.me//about-me/</guid><pubDate>Mon, 01 Jan 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;Hello, I am web &amp;#x26; mobile developer based in Tbilisi, Georgia.&lt;br&gt;
+I love photography, music and films.&lt;/p&gt;
+&lt;h3&gt;Programing Skills:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Back-end: &lt;strong&gt;Nodejs&lt;/strong&gt;, PHP (Frameworks: Laravel)  &lt;/li&gt;
+&lt;li&gt;Front-end: &lt;strong&gt;React (Redux)&lt;/strong&gt;, VueJS  &lt;/li&gt;
+&lt;li&gt;Mobile: &lt;strong&gt;React Native (Expo.io)&lt;/strong&gt;  &lt;/li&gt;
+&lt;li&gt;Databases: &lt;strong&gt;MongoDB&lt;/strong&gt;, PostgresSQL, Oracle, MySQL  &lt;/li&gt;
+&lt;li&gt;Cross-platform: Github Electron, Nw.js  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Good knowledge of Nginx, Ubuntu servers&lt;/p&gt;
+&lt;p&gt;Also have experience with Socket.Io&lt;/p&gt;</content:encoded></item></channel></rss>
