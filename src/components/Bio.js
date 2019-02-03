@@ -31,7 +31,7 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in Tbilisi (Georgia) building useful things.
+              Powered by <strong>{author}</strong> who lives and works in Tbilisi (Georgia) building useful things.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 Twitter

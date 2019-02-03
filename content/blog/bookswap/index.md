@@ -3,6 +3,8 @@ title: BookSwap - Convenient platform for swapping books
 date: '2018-11-26T16:30:17.316Z'
 ---
 
+![bookswap.ge](./logo.png)
+
 BookSwap is the convenient platform in Georgia for people, who wants to find, swap, sell or buy second-hand books.
 
 Swap/Sell second-hand books is quit actual in Tbilisi (Georgia).
