@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shalva Gegia]]></title><description><![CDATA[Personal Blog]]></description><link>https://gegia.me/</link><generator>RSS for Node</generator><lastBuildDate>Mon, 14 Oct 2019 23:14:45 GMT</lastBuildDate><item><title><![CDATA[MERN monorepo boilerplate]]></title><description><![CDATA[Hello reader,
-I want to talk about monorepo, and also will share boilerplate for MERN (Mongo, Express.js, React, React-Native/Expo) stack…]]></description><link>https://gegia.me//mern-monorepo-boilerplate/</link><guid isPermaLink="false">https://gegia.me//mern-monorepo-boilerplate/</guid><pubDate>Mon, 14 Oct 2019 23:11:04 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/1a254be5f3d973502d4e53f37dd74d0ab1980ec4/68747470733a2f2f692e696d6775722e636f6d2f474666343164422e706e67&quot; alt=&quot;alt text&quot;&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shalva Gegia]]></title><description><![CDATA[Personal Blog]]></description><link>https://gegia.me</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 14 Oct 2019 23:27:04 GMT</lastBuildDate><item><title><![CDATA[MERN monorepo boilerplate]]></title><description><![CDATA[alt text Hello reader,
+I want to talk about monorepo, and also will share boilerplate for MERN (Mongo, Express.js, React, React-Native/Expo…]]></description><link>https://gegia.me/mern-monorepo-boilerplate/</link><guid isPermaLink="false">https://gegia.me/mern-monorepo-boilerplate/</guid><pubDate>Mon, 14 Oct 2019 23:11:04 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/1a254be5f3d973502d4e53f37dd74d0ab1980ec4/68747470733a2f2f692e696d6775722e636f6d2f474666343164422e706e67&quot; alt=&quot;alt text&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Hello reader,
 I want to talk about monorepo, and also will share boilerplate for MERN (Mongo, Express.js, React, React-Native/Expo) stack.&lt;/p&gt;
 &lt;p&gt;When it comes to a real-life project, it consists of multiple services fronted, backend/API and mobile. We can split them into separate repositories, but sharing code between repositories is difficult when using multiple repositories. This is the moment where monorepo shines.&lt;/p&gt;
@@ -67,7 +67,7 @@ It has its shortcomings but it’s worth using it. Big projects like Babel and J
 &lt;p&gt;Installs all of the package dependencies in all packages and links any cross-dependencies.&lt;/p&gt;
 &lt;p&gt;You can find more commands on Lerna.js’s documentation&lt;/p&gt;
 &lt;p&gt;Here is a boilerplate link:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/shakogegia/mern-monorepo-boilerplate&quot;&gt;Github Repository&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Mobile Development with React Native]]></title><description><![CDATA[React Native lets you build mobile apps using only JavaScript It uses the same design as React Build a real mobile app (not hybrid…]]></description><link>https://gegia.me//mobile-development-with-react-native/</link><guid isPermaLink="false">https://gegia.me//mobile-development-with-react-native/</guid><pubDate>Sun, 13 Jan 2019 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;React Native lets you build mobile apps using only JavaScript&lt;br&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/shakogegia/mern-monorepo-boilerplate&quot;&gt;Github Repository&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Mobile Development with React Native]]></title><description><![CDATA[React Native lets you build mobile apps using only JavaScript It uses the same design as React Build a real mobile app (not hybrid…]]></description><link>https://gegia.me/mobile-development-with-react-native/</link><guid isPermaLink="false">https://gegia.me/mobile-development-with-react-native/</guid><pubDate>Sun, 13 Jan 2019 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;React Native lets you build mobile apps using only JavaScript&lt;br&gt;
 It uses the same design as React&lt;br&gt;
 Build a real mobile app (not hybrid)&lt;br&gt;
 Supported platforms : iOS, Android, Apple TV, Desktop&lt;br&gt;
@@ -79,7 +79,7 @@ There are quite impressive list of companies using React native&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d99595c1c3985a54ceb898d220dd20c5/2e0e7/showcase.png&quot;
+    href=&quot;/static/d99595c1c3985a54ceb898d220dd20c5/7ac7b/showcase.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -98,13 +98,13 @@ There are quite impressive list of companies using React native&lt;/p&gt;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;showcase&quot;
         title=&quot;&quot;
-        src=&quot;/static/d99595c1c3985a54ceb898d220dd20c5/fb8a0/showcase.png&quot;
-        srcset=&quot;/static/d99595c1c3985a54ceb898d220dd20c5/1a291/showcase.png 148w,
-/static/d99595c1c3985a54ceb898d220dd20c5/2bc4a/showcase.png 295w,
-/static/d99595c1c3985a54ceb898d220dd20c5/fb8a0/showcase.png 590w,
-/static/d99595c1c3985a54ceb898d220dd20c5/526de/showcase.png 885w,
-/static/d99595c1c3985a54ceb898d220dd20c5/fa2eb/showcase.png 1180w,
-/static/d99595c1c3985a54ceb898d220dd20c5/2e0e7/showcase.png 1491w&quot;
+        src=&quot;/static/d99595c1c3985a54ceb898d220dd20c5/b9e4f/showcase.png&quot;
+        srcset=&quot;/static/d99595c1c3985a54ceb898d220dd20c5/cf440/showcase.png 148w,
+/static/d99595c1c3985a54ceb898d220dd20c5/d2d38/showcase.png 295w,
+/static/d99595c1c3985a54ceb898d220dd20c5/b9e4f/showcase.png 590w,
+/static/d99595c1c3985a54ceb898d220dd20c5/f9b6a/showcase.png 885w,
+/static/d99595c1c3985a54ceb898d220dd20c5/2d849/showcase.png 1180w,
+/static/d99595c1c3985a54ceb898d220dd20c5/7ac7b/showcase.png 1491w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -145,7 +145,7 @@ The native module needs to be written in Java and Swift/Objective C. Possibly, a
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/75b6d567b7c9ecb0b927afc3bfe3fe14/2763f/google_trends.png&quot;
+    href=&quot;/static/75b6d567b7c9ecb0b927afc3bfe3fe14/07529/google_trends.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -164,14 +164,13 @@ The native module needs to be written in Java and Swift/Objective C. Possibly, a
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;google_trends&quot;
         title=&quot;&quot;
-        src=&quot;/static/75b6d567b7c9ecb0b927afc3bfe3fe14/fb8a0/google_trends.png&quot;
-        srcset=&quot;/static/75b6d567b7c9ecb0b927afc3bfe3fe14/1a291/google_trends.png 148w,
-/static/75b6d567b7c9ecb0b927afc3bfe3fe14/2bc4a/google_trends.png 295w,
-/static/75b6d567b7c9ecb0b927afc3bfe3fe14/fb8a0/google_trends.png 590w,
-/static/75b6d567b7c9ecb0b927afc3bfe3fe14/526de/google_trends.png 885w,
-/static/75b6d567b7c9ecb0b927afc3bfe3fe14/fa2eb/google_trends.png 1180w,
-/static/75b6d567b7c9ecb0b927afc3bfe3fe14/08f6a/google_trends.png 1770w,
-/static/75b6d567b7c9ecb0b927afc3bfe3fe14/2763f/google_trends.png 1938w&quot;
+        src=&quot;/static/75b6d567b7c9ecb0b927afc3bfe3fe14/b9e4f/google_trends.png&quot;
+        srcset=&quot;/static/75b6d567b7c9ecb0b927afc3bfe3fe14/cf440/google_trends.png 148w,
+/static/75b6d567b7c9ecb0b927afc3bfe3fe14/d2d38/google_trends.png 295w,
+/static/75b6d567b7c9ecb0b927afc3bfe3fe14/b9e4f/google_trends.png 590w,
+/static/75b6d567b7c9ecb0b927afc3bfe3fe14/f9b6a/google_trends.png 885w,
+/static/75b6d567b7c9ecb0b927afc3bfe3fe14/2d849/google_trends.png 1180w,
+/static/75b6d567b7c9ecb0b927afc3bfe3fe14/07529/google_trends.png 1938w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -189,7 +188,7 @@ These two threads never communicate directly and never block each other.&lt;/p&g
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/f6998ede5f8468de5a7b5db2a197d988/4f5b3/layers.png&quot;
+    href=&quot;/static/f6998ede5f8468de5a7b5db2a197d988/7adc3/layers.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -208,9 +207,9 @@ These two threads never communicate directly and never block each other.&lt;/p&g
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;layers&quot;
         title=&quot;&quot;
-        src=&quot;/static/f6998ede5f8468de5a7b5db2a197d988/4f5b3/layers.png&quot;
-        srcset=&quot;/static/f6998ede5f8468de5a7b5db2a197d988/cde50/layers.png 148w,
-/static/f6998ede5f8468de5a7b5db2a197d988/4f5b3/layers.png 291w&quot;
+        src=&quot;/static/f6998ede5f8468de5a7b5db2a197d988/7adc3/layers.png&quot;
+        srcset=&quot;/static/f6998ede5f8468de5a7b5db2a197d988/cf440/layers.png 148w,
+/static/f6998ede5f8468de5a7b5db2a197d988/7adc3/layers.png 291w&quot;
         sizes=&quot;(max-width: 291px) 100vw, 291px&quot;
       /&gt;
     &lt;/span&gt;
@@ -258,11 +257,11 @@ Create React Native CLI (Merged with Expo CLI)&lt;/p&gt;
 &lt;p&gt;Getting started&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i -g react-native
 $ react-native init MyFirstProject
-$ &lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; MyFirstProject
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; MyFirstProject
 $ react-native run-ios&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i -g expo-cli
 $ expo init MyFirstProject
-$ &lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; MyFirstProject
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; MyFirstProject
 $ expo start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Expo over React Native CLI&lt;/h3&gt;
 &lt;p&gt;Expo is a set of tools, libraries and services which let you build native iOS and Android apps by writing JavaScript.
@@ -272,10 +271,10 @@ Expo SDK provides access to services:
 Expo can manage your Assets for you
 Push Notifications
 Build native binaries which are ready to deploy to the app store.
-OTA&lt;/p&gt;</content:encoded></item><item><title><![CDATA[BookSwap - Convenient platform for swapping books]]></title><description><![CDATA[BookSwap is the convenient platform in Georgia for people, who wants to find, swap, sell or buy second-hand books. Swap/Sell second-hand…]]></description><link>https://gegia.me//bookswap/</link><guid isPermaLink="false">https://gegia.me//bookswap/</guid><pubDate>Mon, 26 Nov 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;
+OTA&lt;/p&gt;</content:encoded></item><item><title><![CDATA[BookSwap - Convenient platform for swapping books]]></title><description><![CDATA[BookSwap is the convenient platform in Georgia for people, who wants to find, swap, sell or buy second-hand books. Swap/Sell second-hand…]]></description><link>https://gegia.me/bookswap/</link><guid isPermaLink="false">https://gegia.me/bookswap/</guid><pubDate>Mon, 26 Nov 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/dfffb590b352ba001a7435fffcec8c76/44154/logo.png&quot;
+    href=&quot;/static/dfffb590b352ba001a7435fffcec8c76/c6107/logo.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -294,9 +293,9 @@ OTA&lt;/p&gt;</content:encoded></item><item><title><![CDATA[BookSwap - Convenien
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;bookswap.ge&quot;
         title=&quot;&quot;
-        src=&quot;/static/dfffb590b352ba001a7435fffcec8c76/44154/logo.png&quot;
-        srcset=&quot;/static/dfffb590b352ba001a7435fffcec8c76/ff178/logo.png 148w,
-/static/dfffb590b352ba001a7435fffcec8c76/44154/logo.png 182w&quot;
+        src=&quot;/static/dfffb590b352ba001a7435fffcec8c76/c6107/logo.png&quot;
+        srcset=&quot;/static/dfffb590b352ba001a7435fffcec8c76/cf440/logo.png 148w,
+/static/dfffb590b352ba001a7435fffcec8c76/c6107/logo.png 182w&quot;
         sizes=&quot;(max-width: 182px) 100vw, 182px&quot;
       /&gt;
     &lt;/span&gt;
@@ -314,7 +313,7 @@ OTA&lt;/p&gt;</content:encoded></item><item><title><![CDATA[BookSwap - Convenien
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/43e3c4d92b594372a34e43e13533c3fa/f4374/web.png&quot;
+    href=&quot;/static/43e3c4d92b594372a34e43e13533c3fa/c31a0/web.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -333,14 +332,13 @@ OTA&lt;/p&gt;</content:encoded></item><item><title><![CDATA[BookSwap - Convenien
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;bookswap.ge&quot;
         title=&quot;&quot;
-        src=&quot;/static/43e3c4d92b594372a34e43e13533c3fa/fb8a0/web.png&quot;
-        srcset=&quot;/static/43e3c4d92b594372a34e43e13533c3fa/1a291/web.png 148w,
-/static/43e3c4d92b594372a34e43e13533c3fa/2bc4a/web.png 295w,
-/static/43e3c4d92b594372a34e43e13533c3fa/fb8a0/web.png 590w,
-/static/43e3c4d92b594372a34e43e13533c3fa/526de/web.png 885w,
-/static/43e3c4d92b594372a34e43e13533c3fa/fa2eb/web.png 1180w,
-/static/43e3c4d92b594372a34e43e13533c3fa/08f6a/web.png 1770w,
-/static/43e3c4d92b594372a34e43e13533c3fa/f4374/web.png 4064w&quot;
+        src=&quot;/static/43e3c4d92b594372a34e43e13533c3fa/b9e4f/web.png&quot;
+        srcset=&quot;/static/43e3c4d92b594372a34e43e13533c3fa/cf440/web.png 148w,
+/static/43e3c4d92b594372a34e43e13533c3fa/d2d38/web.png 295w,
+/static/43e3c4d92b594372a34e43e13533c3fa/b9e4f/web.png 590w,
+/static/43e3c4d92b594372a34e43e13533c3fa/f9b6a/web.png 885w,
+/static/43e3c4d92b594372a34e43e13533c3fa/2d849/web.png 1180w,
+/static/43e3c4d92b594372a34e43e13533c3fa/c31a0/web.png 4064w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -350,19 +348,19 @@ OTA&lt;/p&gt;</content:encoded></item><item><title><![CDATA[BookSwap - Convenien
     &lt;/p&gt;
 &lt;p&gt;View on  &lt;a href=&quot;https://itunes.apple.com/us/app/bookswap-georgia/id1440375612?ls=1&amp;#x26;mt=8&quot;&gt;App Store&lt;/a&gt;
 &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.bookswap.app&quot;&gt;Play Store&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React Native Animated Flatlist]]></title><description><![CDATA[React Native Animated Flatlist
-Animate new item add / item deletion For animation I used great animation package for React Native  View on…]]></description><link>https://gegia.me//react-native-animated-flatlist/</link><guid isPermaLink="false">https://gegia.me//react-native-animated-flatlist/</guid><pubDate>Thu, 18 Oct 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;React Native Animated Flatlist
+Animate new item add / item deletion For animation I used great animation package for React Native  Demo View…]]></description><link>https://gegia.me/react-native-animated-flatlist/</link><guid isPermaLink="false">https://gegia.me/react-native-animated-flatlist/</guid><pubDate>Thu, 18 Oct 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;React Native Animated Flatlist
 Animate new item add / item deletion&lt;/p&gt;
 &lt;p&gt;For animation I used great animation package for React Native &lt;code class=&quot;language-text&quot;&gt;react-native-animatable&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/demo-7131ab82446567be0daa1d156c49fe17.gif&quot; alt=&quot;Demo&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/7131ab82446567be0daa1d156c49fe17/demo.gif&quot; alt=&quot;Demo&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/shakogegia/react-native-animated-flatlist&quot;&gt;View on github&lt;/a&gt;
 &lt;a href=&quot;https://snack.expo.io/@shakogegia/react-native-animated-flatlist-demo&quot;&gt;View demo on Snack&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Feedbacks &amp;#x26; contributions are more than welcome&lt;/p&gt;</content:encoded></item><item><title><![CDATA[English to Georgian dictionary for Kindle devices]]></title><description><![CDATA[I want to share open source English to Georgian dictionary for Kindle devices generated by me. Dictionary is not yet fully completed, but…]]></description><link>https://gegia.me//english-to-georgian-dictionary/</link><guid isPermaLink="false">https://gegia.me//english-to-georgian-dictionary/</guid><pubDate>Tue, 30 Jan 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;I want to share open source English to Georgian dictionary for Kindle devices generated by me.&lt;/p&gt;
+&lt;p&gt;Feedbacks &amp;#x26; contributions are more than welcome&lt;/p&gt;</content:encoded></item><item><title><![CDATA[English to Georgian dictionary for Kindle devices]]></title><description><![CDATA[I want to share open source English to Georgian dictionary for Kindle devices generated by me. Dictionary is not yet fully completed, but…]]></description><link>https://gegia.me/english-to-georgian-dictionary/</link><guid isPermaLink="false">https://gegia.me/english-to-georgian-dictionary/</guid><pubDate>Tue, 30 Jan 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;I want to share open source English to Georgian dictionary for Kindle devices generated by me.&lt;/p&gt;
 &lt;p&gt;Dictionary is not yet fully completed, but there are solid number of translated words already&lt;/p&gt;
 &lt;p&gt;Its easy to use: you just select the word you want to translate on Kindle and you`ll get the little window of definition (as seen on screenshot below)&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d8159a41012d4a760b444e04cacda75a/7d7e9/kindle.png&quot;
+    href=&quot;/static/d8159a41012d4a760b444e04cacda75a/6164f/kindle.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -381,11 +379,11 @@ Animate new item add / item deletion&lt;/p&gt;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Kindle&quot;
         title=&quot;&quot;
-        src=&quot;/static/d8159a41012d4a760b444e04cacda75a/fb8a0/kindle.png&quot;
-        srcset=&quot;/static/d8159a41012d4a760b444e04cacda75a/1a291/kindle.png 148w,
-/static/d8159a41012d4a760b444e04cacda75a/2bc4a/kindle.png 295w,
-/static/d8159a41012d4a760b444e04cacda75a/fb8a0/kindle.png 590w,
-/static/d8159a41012d4a760b444e04cacda75a/7d7e9/kindle.png 658w&quot;
+        src=&quot;/static/d8159a41012d4a760b444e04cacda75a/b9e4f/kindle.png&quot;
+        srcset=&quot;/static/d8159a41012d4a760b444e04cacda75a/cf440/kindle.png 148w,
+/static/d8159a41012d4a760b444e04cacda75a/d2d38/kindle.png 295w,
+/static/d8159a41012d4a760b444e04cacda75a/b9e4f/kindle.png 590w,
+/static/d8159a41012d4a760b444e04cacda75a/6164f/kindle.png 658w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -402,7 +400,7 @@ Animate new item add / item deletion&lt;/p&gt;
 &lt;p&gt;Generated dictionary: &lt;a href=&quot;https://github.com/shakogegia/english_georgian_dictionary_kindle/releases/download/0.1/dict.mobi&quot;&gt;Dictionary&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Installation instruction into kindle devices is provided in Github`s README.md&lt;/p&gt;
 &lt;p&gt;View post on Medium
-&lt;a href=&quot;https://medium.com/@shalva.gegia/%E1%83%94%E1%83%9C%E1%83%92%E1%83%9A%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A0-%E1%83%A5%E1%83%90%E1%83%A0%E1%83%97%E1%83%A3%E1%83%9A%E1%83%98-%E1%83%9A%E1%83%94%E1%83%A5%E1%83%A1%E1%83%98%E1%83%99%E1%83%9D%E1%83%9C%E1%83%9D-%E1%83%A5%E1%83%98%E1%83%9C%E1%83%93%E1%83%9A%E1%83%98%E1%83%A1%E1%83%97%E1%83%95%E1%83%98%E1%83%A1-ac7a57469219&quot;&gt;medium&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[About Me]]></title><description><![CDATA[Hello, I am web & mobile developer based in Tbilisi, Georgia. I love photography, music and films. Programing Skills: Back-end:  Nodejs…]]></description><link>https://gegia.me//about-me/</link><guid isPermaLink="false">https://gegia.me//about-me/</guid><pubDate>Mon, 01 Jan 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;Hello, I am web &amp;#x26; mobile developer based in Tbilisi, Georgia.&lt;br&gt;
+&lt;a href=&quot;https://medium.com/@shalva.gegia/%E1%83%94%E1%83%9C%E1%83%92%E1%83%9A%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A0-%E1%83%A5%E1%83%90%E1%83%A0%E1%83%97%E1%83%A3%E1%83%9A%E1%83%98-%E1%83%9A%E1%83%94%E1%83%A5%E1%83%A1%E1%83%98%E1%83%99%E1%83%9D%E1%83%9C%E1%83%9D-%E1%83%A5%E1%83%98%E1%83%9C%E1%83%93%E1%83%9A%E1%83%98%E1%83%A1%E1%83%97%E1%83%95%E1%83%98%E1%83%A1-ac7a57469219&quot;&gt;medium&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[About Me]]></title><description><![CDATA[Hello, I am web & mobile developer based in Tbilisi, Georgia. I love photography, music and films. Programing Skills: Back-end: Nodejs, PHP…]]></description><link>https://gegia.me/about-me/</link><guid isPermaLink="false">https://gegia.me/about-me/</guid><pubDate>Mon, 01 Jan 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;Hello, I am web &amp;#x26; mobile developer based in Tbilisi, Georgia.&lt;br&gt;
 I love photography, music and films.&lt;/p&gt;
 &lt;h3&gt;Programing Skills:&lt;/h3&gt;
 &lt;ul&gt;
