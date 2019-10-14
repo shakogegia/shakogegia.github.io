@@ -1,4 +1,277 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shalva Gegia]]></title><description><![CDATA[Personal Blog]]></description><link>https://gegia.me/</link><generator>RSS for Node</generator><lastBuildDate>Sun, 03 Feb 2019 12:31:30 GMT</lastBuildDate><item><title><![CDATA[BookSwap - Convenient platform for swapping books]]></title><description><![CDATA[BookSwap is the convenient platform in Georgia for people, who wants to find, swap, sell or buy second-hand books. Swap/Sell second-hand…]]></description><link>https://gegia.me//bookswap/</link><guid isPermaLink="false">https://gegia.me//bookswap/</guid><pubDate>Mon, 26 Nov 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shalva Gegia]]></title><description><![CDATA[Personal Blog]]></description><link>https://gegia.me/</link><generator>RSS for Node</generator><lastBuildDate>Mon, 14 Oct 2019 23:12:11 GMT</lastBuildDate><item><title><![CDATA[MERN monorepo boilerplate]]></title><description><![CDATA[Hello reader,
+I want to talk about monorepo, and also will share boilerplate for MERN (Mongo, Express.js, React, React-Native/Expo) stack…]]></description><link>https://gegia.me//mern-monorepo-boilerplate/</link><guid isPermaLink="false">https://gegia.me//mern-monorepo-boilerplate/</guid><pubDate>Mon, 14 Oct 2019 23:11:04 GMT</pubDate><content:encoded>&lt;p&gt;Hello reader,
+I want to talk about monorepo, and also will share boilerplate for MERN (Mongo, Express.js, React, React-Native/Expo) stack.&lt;/p&gt;
+&lt;p&gt;When it comes to a real-life project, it consists of multiple services fronted, backend/API and mobile. We can split them into separate repositories, but sharing code between repositories is difficult when using multiple repositories. This is the moment where monorepo shines.&lt;/p&gt;
+&lt;p&gt;Let’s compare monorepo to mutli-repo style.&lt;/p&gt;
+&lt;h4&gt;Monorepo&lt;/h4&gt;
+&lt;p&gt;Monorepo is split into many single-repos. Each single-repo repository is read-only. You can change its code via pull-request to the monorepo.&lt;/p&gt;
+&lt;h4&gt;Multirepo&lt;/h4&gt;
+&lt;p&gt;The other approach is to manage multiple repositories. 1 package = 1 own repository. Each package has its own development, tagging, and even maintainers.&lt;/p&gt;
+&lt;h4&gt;Monolith&lt;/h4&gt;
+&lt;p&gt;Monolith IS NOT monorepo. Monolith is a huge amount of coupled code of one application that is hell to maintain.&lt;/p&gt;
+&lt;p&gt;This is what monorepo repository looks like&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*95IEDUCN3mfU9vpTWXChhQ@2x.png&quot; alt=&quot;alt text&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;Boilerplate&lt;/h2&gt;
+&lt;h5&gt;Lerna&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lerna is a tool that optimizes the workflow around managing multi-package repositories with git and npm.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Lerna tries to ease the management of npm links when dealing with multi-package projects hosted in a single repository. It analyzes the packages and automatically creates the required npm links between them. It also handles the execution of tasks across multiple packages and eases the pain of versioning and publishing.
+It has its shortcomings but it’s worth using it. Big projects like Babel and Jest use Lerna.&lt;/p&gt;
+&lt;h5&gt;Yarn workspaces&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Workspaces are a new way to setup your package architecture (..) It allows you to setup multiple packages in such a way that you only need to run yarn install once to install all of them in a single pass.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Your dependencies can be linked together, which means that your workspaces can depend on one another while always using the most up-to-date code available. This is also a better mechanism than yarn link since it only affects your workspace tree rather than your whole system.&lt;/p&gt;
+&lt;h5&gt;Eslint / Tslint / Stylelint / Prettier&lt;/h5&gt;
+&lt;p&gt;In this boilerplate eslint, tslint, stylelint and prettier are already isntalled, configured and ready to go!&lt;/p&gt;
+&lt;h5&gt;Husky / Lint-staged / Commit lint&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Husky - Git hooks made easy&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Husky is a tool which gives us the ability to catch GIT hooks like commit and/or push&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lint-staged - Run linters against staged git files and don’t let 💩 slip into your code base!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Lint-staged is a nice tool to run linters (for example: eslint) on staged files to prevent commit code which is note linter compatible&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Conventional (Semantic) Commit Messages - is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Conventional or Semantic commit messages is naming convension, that helps us to easily determine what commit contains and also it’s very helpful to avoid multiple fixes in a single commit.&lt;/p&gt;
+&lt;p&gt;If you are not familiar with conventional commits, here are some links with detailed info&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.conventionalcommits.org/en/v1.0.0-beta.4/&quot;&gt;Conventional Commits&lt;/a&gt;
+&lt;a href=&quot;https://seesparkbox.com/foundry/semantic_commit_messages&quot;&gt;Semantic Commits&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;How to start&lt;/h3&gt;
+&lt;p&gt;All you need is to clone &lt;a href=&quot;https://github.com/shakogegia/mern-monorepo-boilerplate&quot;&gt;repository&lt;/a&gt;, run &lt;code class=&quot;language-text&quot;&gt;yarn&lt;/code&gt; to install dependencies and you can start the project by running &lt;code class=&quot;language-text&quot;&gt;yarn dev&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://thepracticaldev.s3.amazonaws.com/i/7y04oyepefran5du6nv1.png&quot; alt=&quot;Alt Text&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Packages structure:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;client - React app created via&lt;code class=&quot;language-text&quot;&gt;create-react-app&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;api - Node.js / Express.js&lt;/li&gt;
+&lt;li&gt;socket - Socket.io server&lt;/li&gt;
+&lt;li&gt;mobile - React-native/Expo project&lt;/li&gt;
+&lt;li&gt;common - common utility functions shared accross all package&lt;/li&gt;
+&lt;li&gt;constants - just a container for constant variables also shared accross all package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By running &lt;code class=&quot;language-text&quot;&gt;yarn dev&lt;/code&gt; from the root folder, lerna.js will execute &lt;code class=&quot;language-text&quot;&gt;yarn dev&lt;/code&gt; in every and each package&lt;/p&gt;
+&lt;p&gt;Here are some of helpful lerna.js commands&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npx lerna add &amp;lt;package&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;this will add &lt;package&gt; as a dependency to all packages&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npx lerna add &amp;lt;package1&amp;gt; --scope=&amp;lt;package2&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;this will add &lt;package1&gt; as a dependency to only package2&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npx lerna publish&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;this will increase version of all packages and also will generate CHANGELOG.md files for all packages and also for a root repository, based on conventional commits. (see picture below)
+&lt;img src=&quot;https://thepracticaldev.s3.amazonaws.com/i/lwbsakys9rsbqbfp1mzq.png&quot; alt=&quot;Alt Text&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npx lerna bootstrap&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Installs all of the package dependencies in all packages and links any cross-dependencies.&lt;/p&gt;
+&lt;p&gt;You can find more commands on Lerna.js’s documentation&lt;/p&gt;
+&lt;p&gt;Here is a boilerplate link:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/shakogegia/mern-monorepo-boilerplate&quot;&gt;Github Repository&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Mobile Development with React Native]]></title><description><![CDATA[React Native lets you build mobile apps using only JavaScript It uses the same design as React Build a real mobile app (not hybrid…]]></description><link>https://gegia.me//mobile-development-with-react-native/</link><guid isPermaLink="false">https://gegia.me//mobile-development-with-react-native/</guid><pubDate>Sun, 13 Jan 2019 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;React Native lets you build mobile apps using only JavaScript&lt;br&gt;
+It uses the same design as React&lt;br&gt;
+Build a real mobile app (not hybrid)&lt;br&gt;
+Supported platforms : iOS, Android, Apple TV, Desktop&lt;br&gt;
+Philosophy: Learn once, write everywhere&lt;br&gt;
+Code sharing between platform 80%-95%&lt;/p&gt;
+&lt;h4&gt;Showcases&lt;/h4&gt;
+&lt;p&gt;React native has been a while, release in 2015 and gained popularity among developers.
+There are quite impressive list of companies using React native&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d99595c1c3985a54ceb898d220dd20c5/2e0e7/showcase.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 106.3044936284373%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;showcase&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d99595c1c3985a54ceb898d220dd20c5/fb8a0/showcase.png&quot;
+        srcset=&quot;/static/d99595c1c3985a54ceb898d220dd20c5/1a291/showcase.png 148w,
+/static/d99595c1c3985a54ceb898d220dd20c5/2bc4a/showcase.png 295w,
+/static/d99595c1c3985a54ceb898d220dd20c5/fb8a0/showcase.png 590w,
+/static/d99595c1c3985a54ceb898d220dd20c5/526de/showcase.png 885w,
+/static/d99595c1c3985a54ceb898d220dd20c5/fa2eb/showcase.png 1180w,
+/static/d99595c1c3985a54ceb898d220dd20c5/2e0e7/showcase.png 1491w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;Advantages of React Native&lt;/h3&gt;
+&lt;p&gt;Developing cross-platform apps has its advantages compare to Native development.
+Developers who are already experienced with Javascript will find React Native is a great choice.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Faster speed of development&lt;/strong&gt;&lt;br&gt;
+Same codebase across platforms (Especially if web app is already done.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lower cost&lt;/strong&gt;&lt;br&gt;
+No need of hiring separate teams for making app per platform&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OTA (bypass App Store / Play Store)&lt;/strong&gt;&lt;br&gt;
+Instant updates is thing that I would mention as benefit for cross-platform development.&lt;br&gt;
+Every update needs time to be deployed to the store (Apple takes minimum 2 days to publish new update)
+Using React Native you can bypass verification process from publisher and deliver update to end user instantly&lt;/p&gt;
+&lt;p&gt;Also there is also a very steady increase in the number of production and open source apps written using React Native. &lt;/p&gt;
+&lt;h3&gt;Advantages of Native Development&lt;/h3&gt;
+&lt;p&gt;We know that Javascript is fast, but Java, ObjC / Swift are faster especially for heavy calculations. It’s a known fact that JavaScript code is not as efficient for calculation-intensive tasks, and there is an overhead when JavaScript is controlling native elements.&lt;/p&gt;
+&lt;p&gt;JavaScript has a single dedicated device thread, while native code is free to use whatever threads it wants. In performance, React Native stays behind an optimized native application.&lt;/p&gt;
+&lt;p&gt;If your app is not doing any hugely heavy lifting (i.e. in terms of heavy memory or CPU usage) React Native seems like a really good choice. Having worked with both hybrid and native platforms before, if your app is doing a ton of heavy lifting, I would still recommend native development as a way to more closely manage things like CPU usage and memory footprint.&lt;/p&gt;
+&lt;h4&gt;Constant updates to the platform&lt;/h4&gt;
+&lt;p&gt;React Native is a relatively young and emerging platform. Whereas Native development is quite mature. iOS(ObjC) and Android(Java) have been on the go for close to 10 years and there some really great tools that have developed in that time. This is not really a disadvantage but rather another point that React Native has a lot of catching up to do. &lt;/p&gt;
+&lt;p&gt;Due to its relatively new entrance React Native is heavily in development, and a new version is released every month.
+Constant updates bring new ported native components, improved custom ones (like the Navigator), bug fixes and performance improvements. This is good in terms of activeness of the platform. But a bad choice if the app is to be maintained for a long-term as each build might require updating the platform which brings dependency checking for existing code base. &lt;/p&gt;
+&lt;p&gt;Incorporating these new releases requires vigilant updates to our own code if the logic of the prebuilt components changes. So developers will have to set aside some effort to incorporate these changes in order to keep up with the platform. Many people take up React Native fully understanding this situation. But if you are consulting for a client make sure that they understand this fact.&lt;/p&gt;
+&lt;h4&gt;Loosely-typed language&lt;/h4&gt;
+&lt;p&gt;React Native uses JavaScript code, CSS-like stylesheets and HTML-like tags for layout.
+The good side is that we get to use all the better aspects of JavaScript but of course, the bad side is that it brings some of the horrors of Javascript.
+Unlike Java and Swift, Javascript does not enforce a type of variables and parameters to functions. That is, any variable can be anything at any time. Developers need to follow the discipline and standards that they practice in their strongly-typed native programming language&lt;/p&gt;
+&lt;h4&gt;Native Language Dependency&lt;/h4&gt;
+&lt;p&gt;If a functionality that you require isn’t currently available in React Native, you will end up writing native modules.
+Native modules are a way of bridging native code and React Native code.
+The native module needs to be written in Java and Swift/Objective C. Possibly, at some point during your development you have to take help from a native developer or do it yourself in the native language.&lt;/p&gt;
+&lt;h3&gt;Google Trends&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/75b6d567b7c9ecb0b927afc3bfe3fe14/2763f/google_trends.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 27.141382868937047%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAwklEQVQY022QPU5DMRCE361zCQq6nISampoGhQZ6Xmwn4dn7O6xtghQRS59mdry7xS7ujv78iip69ldf/b3sDktfZu9vMCJY3eBphR+/4KcclEkJXxI8H6cO8qT/5zRnmLD0rW3/GMEKEQWJgTiUBUQ8ag6tpNiqDD96Gk8o+r43tPMFZo7l+VPxtHsAziuKAmlT5GqTNjUFJfyJph9Z8+HTr1+rgzQWfiTF4eUV4AoWiUPYDaYCE/6Xa2RuepP12/4Ap9KFhNwLmSoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;google_trends&quot;
+        title=&quot;&quot;
+        src=&quot;/static/75b6d567b7c9ecb0b927afc3bfe3fe14/fb8a0/google_trends.png&quot;
+        srcset=&quot;/static/75b6d567b7c9ecb0b927afc3bfe3fe14/1a291/google_trends.png 148w,
+/static/75b6d567b7c9ecb0b927afc3bfe3fe14/2bc4a/google_trends.png 295w,
+/static/75b6d567b7c9ecb0b927afc3bfe3fe14/fb8a0/google_trends.png 590w,
+/static/75b6d567b7c9ecb0b927afc3bfe3fe14/526de/google_trends.png 885w,
+/static/75b6d567b7c9ecb0b927afc3bfe3fe14/fa2eb/google_trends.png 1180w,
+/static/75b6d567b7c9ecb0b927afc3bfe3fe14/08f6a/google_trends.png 1770w,
+/static/75b6d567b7c9ecb0b927afc3bfe3fe14/2763f/google_trends.png 1938w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Red: Swift&lt;br&gt;
+Blue: React Native&lt;/p&gt;
+&lt;h2&gt;How React Native Works&lt;/h2&gt;
+&lt;p&gt;There are two important threads running in each React Native application.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Main thread&lt;/strong&gt; which also runs in each standard native app. It handles displaying the elements of the user interface and processes user gestures.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;JS Thread (React Native)&lt;/strong&gt; Executes the JavaScript code in a separate JavaScript engine. The JavaScript deals with the business logic of the application. It also defines the structure and the functionalities of the user interface.
+These two threads never communicate directly and never block each other.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f6998ede5f8468de5a7b5db2a197d988/4f5b3/layers.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 291px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 124.39862542955326%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAAAsSAAALEgHS3X78AAADj0lEQVQ4y52VfUsqURDG9/t/i6AoCAoiCMqi93xLy1JXTXd1dX2rFIygrObOb+osern3/nEXhnM8L888M8+c0VtZWZFsNivpdFpyuZwUCgUplUpyf38vd3d3Zre3t3J9fW17Nzc3ts8aVi6XbazVanJ5eSneyfGxNOoNiTodCYNQ6vW6/O83HA7FK6jnh4cH8wybcrkizWZTWq1WMrIPA0bWnLEXhqGNLy8vEkWReISaUWOx2+tJux3aoX4/lsFgaIfiXiyj0VjG47E8Pj6aPT09yfPzs43dbleq1arebYtH/m6KRQ21Jq2wrZ4bUlS2QUsZaApKdyVLxb+++XyeMPYymYw0Gg3J5/OWbF89kcfmT6iBjr5f/RHjWyQEQ4xKpWKCzGYzO8s9Y8iBbPpKvbSkqoeaQSDtoCVRN5K6Hozjvry/v8vHx4exYeQ3H44IG0Df978ZAljzK6p0pLQDCcJAOprL0WgoDxpKpx3Jx+enAXx9fSXGB2NyCTvyaIAsEj+LhGEhLyjsQnPhchFmiEToMKQKEoZcKKowxWLBGPYHA1U4VtVjY0GIvzObTqcGgANUTxhSNkm164Gelk6/39cwtCwm078qCyCsAIQhgCYKgDDkWcVxbNWO6l2tP2qwzQvSugxUJFKAcQ4Qp7QDDFTMhCGA3W5Pzk5PZGdnRzLZvGRzGUkdHsrp6alcXlzo77y8vr5aiXHZ5Q1A92q8q6urBJAFDlzncybAUF8HZfL29rYUrhOMSDBUXgIkDwDilVxeKBssk80lTDjj1OcOuWbOHgyZ29NzgIRBzpjThgqqOi8HRxktfvZpbxjsAYEdgKgMYEfzneSQfscC9eX7NRVnYL8RIFSWoXqfzV6sbHDkugysHaB1m0WGLgSKeaz5q+u8p4D9uCd+rS5fPzmEGalw55cYnp+fm0cA8fjdBG6t0Fl3r8QKX8Nnjuq0LIAREUBIWA5JPgzJDZT5XCNYtPn8+7Uw56N8CHcRcEllaxBKfzKZaFMYmfFWST4XKHjW+M0ZAByIU9kKG0DCRBwUPTo6klQqJfv7+3Ks/zekhHFvb8+M/bOzMxsRkz3qMGmwbOIJ746FG12rdwwH2jQY3TpvHiE+tbW5IvfInStOQnRAGKE5Y/9PqXDPDkFw6EGZ/BECIW1vb8v6+rpsbGzI1taW/cY2NzdlbW1NVldXbb67uyuH+s65R3qo44ODA/kFktMDTXWYNDYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;layers&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f6998ede5f8468de5a7b5db2a197d988/4f5b3/layers.png&quot;
+        srcset=&quot;/static/f6998ede5f8468de5a7b5db2a197d988/cde50/layers.png 148w,
+/static/f6998ede5f8468de5a7b5db2a197d988/4f5b3/layers.png 291w&quot;
+        sizes=&quot;(max-width: 291px) 100vw, 291px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h4&gt;Threads Interaction&lt;/h4&gt;
+&lt;p&gt;Between these two threads is the so-called bridge, which is the core of React Native. The bridge has three important characteristics.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Asynchronous&lt;/strong&gt; It enables asynchronous communication between the threads. This ensures that they never block each other.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Batched&lt;/strong&gt; It transfers messages from one thread to the other in an optimised way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Serializable&lt;/strong&gt; The two threads never share or operate with the same data. Instead, they exchange serialized messages.&lt;/p&gt;
+&lt;h2&gt;React Native for Web Developers&lt;/h2&gt;
+&lt;p&gt;React native is great for web developers, especially if you already are familiar with React.js&lt;/p&gt;
+&lt;p&gt;Web UI Primitives have their “equivalents” in React Native, for example:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;div /&amp;gt; === &amp;lt;View /&amp;gt;&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;&amp;lt;input /&amp;gt; === &amp;lt;TextInput&amp;gt;&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;&amp;lt;img /&amp;gt; === &amp;lt;Image /&amp;gt;&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;&amp;lt;button /&amp;gt; === &amp;lt;Button /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;But unlike Web, UI primitives not living in global scope, you must import them&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; 
+  View&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  Image&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  TextInput&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  Button&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react-native&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Differences between Web / React Native&lt;/h4&gt;
+&lt;p&gt;Primitives
+Styling (based on CSS / Flexbox)
+Navigation
+Unlike web, not every component has every interaction
+Touchable Components
+Button, TouchableOpacity, TouchableHighlight, TouchableWithoutFeedback
+PanResponder - reconciles several touches into a single gesture&lt;/p&gt;
+&lt;p&gt;we dont have window object, window push history API&lt;/p&gt;
+&lt;p&gt;No id, or class, title attributes
+ for example: &lt;div /&gt; can be clickable&lt;/p&gt;
+&lt;p&gt;Handful touchable components because of devices&lt;/p&gt;
+&lt;p&gt;Large selection of touchables&lt;/p&gt;
+&lt;p&gt;It makes single-touch gestures resilient to extra touches&lt;/p&gt;
+&lt;p&gt;Can be used to recognize simple multi-touch gestures&lt;/p&gt;
+&lt;h3&gt;Build your first React Native app&lt;/h3&gt;
+&lt;p&gt;React Native CLI
+Create React Native CLI (Merged with Expo CLI)&lt;/p&gt;
+&lt;p&gt;Getting started&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i -g react-native
+$ react-native init MyFirstProject
+$ &lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; MyFirstProject
+$ react-native run-ios&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i -g expo-cli
+$ expo init MyFirstProject
+$ &lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; MyFirstProject
+$ expo start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Expo over React Native CLI&lt;/h3&gt;
+&lt;p&gt;Expo is a set of tools, libraries and services which let you build native iOS and Android apps by writing JavaScript.
+The SDK is a native-and-JS library which provides access to the device’s system functionality (things like the camera, contacts, local storage, and other hardware).
+Expo also provides UI components. e.g. icons, blur views, and more.
+Expo SDK provides access to services:
+Expo can manage your Assets for you
+Push Notifications
+Build native binaries which are ready to deploy to the app store.
+OTA&lt;/p&gt;</content:encoded></item><item><title><![CDATA[BookSwap - Convenient platform for swapping books]]></title><description><![CDATA[BookSwap is the convenient platform in Georgia for people, who wants to find, swap, sell or buy second-hand books. Swap/Sell second-hand…]]></description><link>https://gegia.me//bookswap/</link><guid isPermaLink="false">https://gegia.me//bookswap/</guid><pubDate>Mon, 26 Nov 2018 16:30:17 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/static/dfffb590b352ba001a7435fffcec8c76/44154/logo.png&quot;
