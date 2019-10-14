@@ -3,6 +3,8 @@ title: MERN monorepo boilerplate
 date: '2019-10-14T23:11:04.831Z'
 ---
 
+![alt text](https://camo.githubusercontent.com/1a254be5f3d973502d4e53f37dd74d0ab1980ec4/68747470733a2f2f692e696d6775722e636f6d2f474666343164422e706e67)
+
 Hello reader,
 I want to talk about monorepo, and also will share boilerplate for MERN (Mongo, Express.js, React, React-Native/Expo) stack.
 
