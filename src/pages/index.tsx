@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Home: NextPage = () => {
   return (
     <Layout>
-      <article className="prose md:prose-lg lg:prose-xl prose-zinc font-sans font-light">
+      <article className="prose md:prose-lg lg:prose-xl prose-zinc font-sans font-light mt-8">
         <p>Hi I’m Shalva, a Georgian software engineer based in Amsterdam</p>
         <p>
           I'm starting this website to become my digital garden 🌱 where I'll
