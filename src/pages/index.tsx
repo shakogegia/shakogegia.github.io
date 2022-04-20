@@ -9,8 +9,9 @@ const Home: NextPage = () => {
       <article className="prose md:prose-lg lg:prose-xl prose-zinc font-sans font-light mt-8">
         <p>Hi I’m Shalva, a Georgian software engineer based in Amsterdam</p>
         <p>
-          I'm starting this website to become my digital garden 🌱 where I'll
-          share notes, articles & thoughts about things that interest me.
+          I'm starting this website to become my digital{' '}
+          <Link href="/garden">garden 🌱</Link> where I'll share notes, articles
+          & thoughts about things that interest me.
           <br />
           Still new to digital gardening, but I’m learning how to grow
         </p>
