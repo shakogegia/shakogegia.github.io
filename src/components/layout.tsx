@@ -3,6 +3,8 @@ import Header from '@/components/header'
 import Head from 'next/head'
 import { PropsWithChildren } from 'react'
 
+const me = 'Shalva Gegia'
+
 export default function Layout({
   children,
   title,
@@ -10,7 +12,7 @@ export default function Layout({
   return (
     <div>
       <Head>
-        <title>{title || 'Shalva Gegia'}</title>
+        <title>{title ? `${title} - ${me}` : me}</title>
 
         <meta charSet="UTF-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
