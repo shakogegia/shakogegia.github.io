@@ -10,6 +10,8 @@ Swap/Sell second-hand books is quit actual in Tbilisi (Georgia).
 
 Main idea, why I created BookSwap is that, the only way people could swap second-hand books in Tbilisi (Georgia) was though the Facebook Groups.
 
+<!-- read more -->
+
 I personally tried this types of groups/forums and had a conclusion: even though Facebook group served us well long time and helped interested people connect each other, I had feeling that and I missed some functionality I wanted.
 
 Facebook groups has its disadvantages, for example its impossible to make track of wanted book and get notified if someone sells or wants to swap it.

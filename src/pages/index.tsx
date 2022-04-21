@@ -76,7 +76,7 @@ function Article({ article }: { article: Article & { slug: string } }) {
         {article.title}
       </h2>
       <small className="text-gray-300">
-        {moment(article.date).format('MMMM YY')}
+        {moment(article.date).format('MMMM YYYY')}
       </small>
 
       <article

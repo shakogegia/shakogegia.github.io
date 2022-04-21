@@ -25,7 +25,7 @@ const ArticlePage: NextPage<{ article: Article }> = ({ article }) => {
           {article.title}
         </h2>
         <small className="text-gray-300">
-          {moment(article.date).format('MMMM YY')}
+          {moment(article.date).format('MMMM YYYY')}
         </small>
 
         <article
