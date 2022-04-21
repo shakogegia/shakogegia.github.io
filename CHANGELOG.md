@@ -1,5 +1,12 @@
 
 
+## [0.2.1](https://github.com/shakogegia/shakogegia.github.io/compare/0.2.0...0.2.1) (2022-04-21)
+
+
+### Bug Fixes
+
+* github pages basePath ([5037124](https://github.com/shakogegia/shakogegia.github.io/commit/5037124b03d5838806fe1b713c88705410bf1f59))
+
 # 0.2.0 (2022-04-21)
 
 
