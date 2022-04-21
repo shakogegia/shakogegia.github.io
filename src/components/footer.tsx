@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bottom-0 text-center w-full py-4 px-6">
+    <footer className="bottom-0 mt-10 text-center w-full py-4 px-6">
       <small className="text-gray-500">
         Copyright © Shalva Gegia 2022. Made by{' '}
         <Link href="/">

@@ -4,28 +4,18 @@ import { PropsWithChildren } from 'react'
 export default function Header() {
   return (
     <header className="w-full">
-      <nav className="flex items-center justify-center lg:justify-between flex-wrap p-6 container mx-auto md:max-w-4xl">
-        <div className="flex items-center">
-          <Link href="/">
-            <a className="text-indigo-500 font-bold text-lg">Shalva Gegia</a>
-          </Link>
-        </div>
+      <nav className="container mx-auto md:max-w-5xl flex items-center justify-between p-6">
+        <Link href="/">
+          <a className="text-indigo-500 font-bold text-lg">Shalva Gegia</a>
+        </Link>
 
-        <Nav />
+        <ul className="flex">
+          <NavLink href="/about">About</NavLink>
+          <NavLink href="/blog">Blog</NavLink>
+          <NavLink href="/garden">Garden 🌱</NavLink>
+        </ul>
       </nav>
     </header>
-  )
-}
-
-function Nav() {
-  return (
-    <div className="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center block shadow-3xl">
-      <ul className="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
-        <NavLink href="/about">About</NavLink>
-        <NavLink href="/blog">Blog</NavLink>
-        <NavLink href="/garden">Garden 🌱</NavLink>
-      </ul>
-    </div>
   )
 }
 
