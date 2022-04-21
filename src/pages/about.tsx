@@ -5,7 +5,7 @@ import Link from 'next/link'
 const About: NextPage = () => {
   return (
     <Layout>
-      <figure className="mt-4 mb-6">
+      <figure className="mt-8 mb-6">
         <img
           src="/selfie.png"
           alt="stackbrowser.com"
