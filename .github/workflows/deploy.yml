@@ -30,6 +30,7 @@ jobs:
       - name: Export
         run: |
           yarn export
+          yarn pages
 
       - name: Publish
         uses: JamesIves/github-pages-deploy-action@v4.3.0
