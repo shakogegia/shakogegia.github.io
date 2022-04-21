@@ -1,5 +1,12 @@
 
 
+## [0.2.2](https://github.com/shakogegia/shakogegia.github.io/compare/0.2.1...0.2.2) (2022-04-21)
+
+
+### Bug Fixes
+
+* github pages nojekyll ([6a8ff7a](https://github.com/shakogegia/shakogegia.github.io/commit/6a8ff7a26bc404c8a8d14dbbdb7ab22272ad64c2))
+
 ## [0.2.1](https://github.com/shakogegia/shakogegia.github.io/compare/0.2.0...0.2.1) (2022-04-21)
 
 
