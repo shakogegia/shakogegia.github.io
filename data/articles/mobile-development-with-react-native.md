@@ -125,7 +125,7 @@ PanResponder - reconciles several touches into a single gesture
 we dont have window object, window push history API
 
 No id, or class, title attributes
- for example: <div /> can be clickable
+for example: <div /> can be clickable
 
 Handful touchable components because of devices
 
@@ -160,7 +160,7 @@ $ expo start
 
 Expo is a set of tools, libraries and services which let you build native iOS and Android apps by writing JavaScript.
 The SDK is a native-and-JS library which provides access to the device's system functionality (things like the camera, contacts, local storage, and other hardware).
-Expo also provides UI components. e.g. icons, blur views, and more.
+Expo also provides UI components.e.g. icons, blur views, and more.
 Expo SDK provides access to services:
 Expo can manage your Assets for you
 Push Notifications
