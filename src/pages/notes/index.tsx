@@ -7,7 +7,7 @@ const Notes: NextPage<{ notes: Array<Article & { slug: string }> }> = ({
   notes,
 }) => {
   return (
-    <Layout>
+    <Layout title="Notes">
       <div className="max-w-3xl m-auto">
         <div className="flex flex-col align-center text-center">
           <span className="text-9xl">📜</span>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const About: NextPage = () => {
   return (
-    <Layout>
+    <Layout title="About">
       <figure className="mt-8 mb-6">
         <img
           src="/selfie.png"
@@ -20,9 +20,9 @@ const About: NextPage = () => {
         </p>
         <p>
           I'm starting this website to become my digital{' '}
-          <Link href="/garden">garden 🌱</Link> where I'll share notes,
-          articles & thoughts about things that interest me. Still new to
-          digital gardening, but I’m learning how to grow
+          <Link href="/garden">garden 🌱</Link> where I'll share notes, articles
+          & thoughts about things that interest me. Still new to digital
+          gardening, but I’m learning how to grow
         </p>
 
         <p>

@@ -12,7 +12,7 @@ export default function Header() {
         <ul className="flex">
           <NavLink href="/about">About</NavLink>
           <NavLink href="/notes">Notes</NavLink>
-          <NavLink href="/library">Library</NavLink>
+          {/* <NavLink href="/articles">Articles</NavLink> */}
           <NavLink href="/garden">Garden 🌱</NavLink>
         </ul>
       </nav>
@@ -24,7 +24,7 @@ function NavLink({ href, children }: PropsWithChildren<{ href: string }>) {
   return (
     <li className="mr-3">
       <Link href={href}>
-        <a className="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4">
+        <a className="text-ml inline-block transition-colors py-2 px-4 text-gray-500 no-underline hover:text-indigo-500 ">
           {children}
         </a>
       </Link>
