@@ -13,7 +13,7 @@ The impressions of the book followed me for a good long time. I was looking for 
 
 <p align="center">
   <img src="https://zolianipanda.files.wordpress.com/2019/05/cleanshot-2019-05-09-at-13.55.19402x.png?w=663&h=203&zoom=2" />
-  <em>Post on Reddit<em>
+  <em>Post on Reddit</em>
 </p>
 
 After reading the book, I read other ones by the author as well, and The Wayward Pines Trilogy also turned out to be catchy and interesting. A TV series of the same name is based on this story.
