@@ -97,7 +97,7 @@ function Article({ article }: { article: Article & { slug: string } }) {
 }
 
 export async function getStaticProps() {
-  const articles = await fetchArticles()
+  const articles = await fetchArticles({ type: 'article' })
   return {
     props: {
       articles,

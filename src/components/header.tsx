@@ -11,7 +11,8 @@ export default function Header() {
 
         <ul className="flex">
           <NavLink href="/about">About</NavLink>
-          {/* <NavLink href="/blog">Blog</NavLink> */}
+          <NavLink href="/notes">Notes</NavLink>
+          <NavLink href="/library">Library</NavLink>
           <NavLink href="/garden">Garden 🌱</NavLink>
         </ul>
       </nav>

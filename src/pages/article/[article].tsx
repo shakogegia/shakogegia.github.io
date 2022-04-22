@@ -42,7 +42,7 @@ export async function getStaticProps({
 }: {
   params: { article: string }
 }) {
-  const article = await fetchArticle(params.article)
+  const article = await fetchArticle(params.article, 'article')
 
   return {
     props: {
@@ -52,7 +52,7 @@ export async function getStaticProps({
 }
 
 export async function getStaticPaths() {
-  const articles = await fetchArticles()
+  const articles = await fetchArticles({ type: 'article' })
 
   const paths = articles.map((article) => ({
     params: { article: article.slug },
