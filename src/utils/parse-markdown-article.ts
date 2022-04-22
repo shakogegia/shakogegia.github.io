@@ -1,12 +1,5 @@
-import matter from 'gray-matter'
-import { remark } from 'remark'
-import html from 'remark-html'
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import rehypeRaw from 'rehype-raw'
-import rehypeStringify from 'rehype-stringify'
 import markdownToHtml from '@/utils/markdown-to-html'
+import matter from 'gray-matter'
 
 export default async function parseMarkdownArticle(
   markdown: string

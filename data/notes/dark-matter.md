@@ -24,7 +24,7 @@ Despite my admiration for this book on Reddit, readers' opinions on this book we
 On Reddit you can also check out the author's AMA (Ask Me Anything) Blake Crouch AMA where Blake himself answers readers' questions about his books.
 
 <p align="center">
-  <img src="https://pbs.twimg.com/media/FODxClmVcAYi5wi?format=jpg&name=small" />
+  <img class="rounded-md" src="https://pbs.twimg.com/media/FODxClmVcAYi5wi?format=jpg&name=small" />
   <em>illustration by <a href="https://twitter.com/blakecrouch1/status/1504477293002981381" target="_blank">Hilary Clarcq</a></em>
 </p>
 
