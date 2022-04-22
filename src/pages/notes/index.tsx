@@ -33,7 +33,7 @@ function Note({ note }: { note: Article & { slug: string } }) {
           {note.title}
         </h3>
         <article
-          className="prose max-w-none text-gray-500 group-hover:text-gray-700"
+          className="max-w-none text-gray-500 group-hover:text-gray-700"
           dangerouslySetInnerHTML={{
             __html: note.excerpt,
           }}
