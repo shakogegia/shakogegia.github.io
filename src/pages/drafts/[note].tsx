@@ -8,6 +8,7 @@ export async function getStaticProps({ params }: { params: { note: string } }) {
   return {
     props: {
       note,
+      draft: true,
     },
   }
 }

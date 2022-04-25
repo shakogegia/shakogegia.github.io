@@ -3,14 +3,28 @@ import moment from 'moment'
 import Layout from '@/components/layout'
 import fetchArticle from '@/utils/fetch-article'
 import fetchArticles from '@/utils/fetch-articles'
+import Script from 'next/script'
+import Head from 'next/head'
 
-const NotePage: NextPage<{ note: Article }> = ({ note }) => {
+const NotePage: NextPage<{ note: Article; draft?: boolean }> = ({
+  note,
+  draft,
+}) => {
   return (
     <Layout title={note.title}>
+      {draft && <Script src="https://unpkg.com/turndown/dist/turndown.js" />}
+
       <div className="max-w-3xl m-auto mt-8">
-        <h3 className="text-xl iAWriterDuospaceBold">{note.title}</h3>
+        {draft && <CopyActions />}
+
+        <h3 className="text-xl iAWriterDuospaceBold" contentEditable={draft}>
+          {note.title}
+        </h3>
+
         <article
           className="prose max-w-none mt-6 iAWriterDuospace text-gray-500"
+          id="content"
+          contentEditable={draft}
           dangerouslySetInnerHTML={{
             __html: note.content,
           }}
@@ -27,6 +41,35 @@ const NotePage: NextPage<{ note: Article }> = ({ note }) => {
         </div>
       </div>
     </Layout>
+  )
+}
+
+function CopyActions() {
+  return (
+    <div className="mb-4 space-x-4 flex justify-end">
+      <a
+        className="font-mono font-semibold hover:underline cursor-pointer text-indigo-500"
+        onClick={() => {
+          navigator.clipboard.writeText(
+            (window as any)
+              .TurndownService()
+              .turndown(document.getElementById('content'))
+          )
+        }}
+      >
+        Copy as Markdown
+      </a>
+      <a
+        className="font-mono font-semibold hover:underline cursor-pointer text-indigo-500"
+        onClick={() => {
+          navigator.clipboard.writeText(
+            document.getElementById('content')?.innerHTML || ''
+          )
+        }}
+      >
+        Copy as HTML
+      </a>
+    </div>
   )
 }
 
