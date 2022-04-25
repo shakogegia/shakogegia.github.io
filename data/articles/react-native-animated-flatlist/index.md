@@ -12,7 +12,7 @@ For animation I used great animation package for React Native `react-native-anim
 <!-- read more -->
 
 <p align="center">
-  <img src="/assets/react-native-animated-flatlist.gif" alt="React Native Animated Flatlist" style="height: 700px" />
+  <img src="{ react-native-animated-flatlist.gif }" alt="React Native Animated Flatlist" style="height: 700px" />
 </p>
 
 [View on github](https://github.com/shakogegia/react-native-animated-flatlist)

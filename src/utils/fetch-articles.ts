@@ -1,6 +1,6 @@
 import { DATA_DIR } from '@/utils/config'
 import fetchArticle from '@/utils/fetch-article'
-import fs from 'fs/promises'
+import fs from 'fs'
 import path from 'path'
 
 type Options = {
@@ -10,9 +10,11 @@ type Options = {
 export default async function fetchArticles(options: Options) {
   const dir = path.join(DATA_DIR, `${options.type}s`)
 
-  const files = (await fs.readdir(dir)).filter((file) => file.endsWith('.md'))
+  const files = fs
+    .readdirSync(dir, { withFileTypes: true })
+    .filter((file) => file.name.endsWith('.md') || file.isDirectory())
 
-  const slugs = files.map((file) => file.replace('.md', ''))
+  const slugs = files.map((file) => file.name.replace('.md', ''))
 
   const articles = await Promise.all(
     slugs.map(async (slug) => ({
