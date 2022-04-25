@@ -83,6 +83,29 @@
        url("/fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Bold.woff") format("woff");
 }
 
+/* BPG 2017 DejaVuSansMono */
+
+@font-face {
+  font-family: "DejaVuSansMono";
+  src: url("/fonts/DejaVuSansMono/DejaVuSansMono.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DejaVuSansMonoOblique";
+  src: url("/fonts/DejaVuSansMono/DejaVuSansMono-Oblique.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DejaVuSansMonoBoldOblique";
+  src: url("/fonts/DejaVuSansMono/DejaVuSansMono-BoldOblique.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DejaVuSansMonoBold";
+  font-weight: bold;
+  src: url("/fonts/DejaVuSansMono/DejaVuSansMono-Bold.ttf") format("truetype");
+}
+
 
 .plex-mono {
   font-family: 'IBM Plex Mono', monospace;
@@ -187,4 +210,24 @@
 
 .space-mono {
   font-family: 'Space Mono', monospace;
+}
+
+.DejaVuSansMono {
+  font-family: "DejaVuSansMono";
+}
+
+.DejaVuSansMonoOblique {
+  font-style: italic;
+  font-family: "DejaVuSansMonoOblique";
+}
+
+.DejaVuSansMonoBoldOblique {
+  font-style: italic;
+  font-weight: bold;
+  font-family: "DejaVuSansMonoBoldOblique";
+}
+
+.DejaVuSansMonoBold {
+  font-weight: bold;
+  font-family: "DejaVuSansMonoBold";
 }

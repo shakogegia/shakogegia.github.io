@@ -17,12 +17,15 @@ const NotePage: NextPage<{ note: Article; draft?: boolean }> = ({
       <div className="max-w-3xl m-auto mt-8">
         {draft && <CopyActions />}
 
-        <h3 className="text-xl iAWriterDuospaceBold" contentEditable={draft}>
+        <h3
+          className="text-xl iAWriterDuospaceBold DejaVuSansMonoBold"
+          contentEditable={draft}
+        >
           {note.title}
         </h3>
 
         <article
-          className="prose max-w-none mt-6 iAWriterDuospace text-gray-500"
+          className="prose max-w-none mt-6 iAWriterDuospace DejaVuSansMono text-gray-500"
           id="content"
           contentEditable={draft}
           dangerouslySetInnerHTML={{
