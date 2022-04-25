@@ -9,7 +9,7 @@ A question that has come to many of us and puzzled us. Are you happy with your l
 
 <!-- read more -->
 
-In this exciting book, Blake Crouch offers a multi-world where our lives are torn apart by the decisions we make. I discovered the book by accident and liked it very much. Recommend that you read Sci-fi lovers. I will be honest and tell you that this book and in general Blake's books reminded me of my all-time favorite science fiction writer, Philip Dick, and never read books more similar before in terms of style. I think Philip Dick fans will like it.
+In this exciting book, Blake Crouch offers a multi-world where our lives are torn apart by the decisions we make. I discovered the book by accident and liked it very much. Recommend that you read Sci-fi lovers. I will be honest and tell fyou that this book and in general Blake's books reminded me of my all-time favorite science fiction writer, Philip Dick, and never read books more similar before in terms of style. I think Philip Dick fans will like it.
 
 The impressions of the book followed me for a good long time. I was looking for books like this and I stumbled upon one of those book fans on Reddit whose story made me happy.
 
@@ -26,7 +26,7 @@ You can also check out the author's AMA (Ask Me Anything) Blake Crouch AMA On Re
 
 <p align="center">
   <img class="rounded-md" src="https://pbs.twimg.com/media/FODxClmVcAYi5wi?format=jpg&name=small" />
-  <em>illustration by <a href="https://twitter.com/blakecrouch1/status/1504477293002981381" target="_blank">Hilary Clarcq</a></em>
+  <em>Interior for Dark Matter - illustration by <a href="https://twitter.com/blakecrouch1/status/1504477293002981381" target="_blank">Hilary Clarcq</a></em>
 </p>
 
 In 2014, before dark matter saw the light of day, Sony Pictures acquired the rights to make the film, although the fate of the book's film adaptation is still unknown. There was also the idea to shoot a TV series instead of a movie. The series can be exciting when Jason moves to different worlds and visits alternate worlds.
