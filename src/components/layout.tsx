@@ -19,7 +19,7 @@ export default function Layout({
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        <link rel="shortcut icon" href="/hatching_chick.png" />
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
 
       <Script
