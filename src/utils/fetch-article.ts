@@ -22,7 +22,7 @@ export default async function fetchArticle(
 
     const files = await glob(path.join(dir, `${file}/*.{png,jpg,gif}`))
 
-    const destDir = path.join(PUBLIC_DIR, `contents/${file}/`)
+    const destDir = path.join(PUBLIC_DIR, `content/${file}/`)
 
     if (fs.existsSync(destDir)) {
       fs.rmdirSync(destDir, { recursive: true })
@@ -37,7 +37,7 @@ export default async function fetchArticle(
 
       markdown = markdown.replaceAll(
         `{ ${fileName} }`,
-        `/contents/${file}/${fileName}`
+        `/content/${file}/${fileName}`
       )
     })
   }
