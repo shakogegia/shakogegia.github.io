@@ -6,10 +6,12 @@ export default function Header() {
     <header className="w-full">
       <nav className="container mx-auto md:max-w-5xl flex items-center justify-between p-6">
         <Link href="/">
-          <a className="text-indigo-500 font-bold text-lg">Shalva Gegia</a>
+          <a className="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-indigo-600">
+            Shalva Gegia
+          </a>
         </Link>
 
-        <ul className="flex">
+        <ul className="flex iAWriterQuattro">
           <NavLink href="/about">About</NavLink>
           <NavLink href="/notes">Notes</NavLink>
           {/* <NavLink href="/articles">Articles</NavLink> */}
