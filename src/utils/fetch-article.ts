@@ -5,7 +5,7 @@ import parseMarkdownArticle from 'src/utils/parse-markdown-article'
 
 export default async function fetchArticle(
   file: string,
-  type: 'article' | 'note'
+  type: 'article' | 'note' | 'draft'
 ) {
   const dir = path.join(DATA_DIR, `${type}s`)
 

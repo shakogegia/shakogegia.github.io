@@ -4,7 +4,7 @@ import fs from 'fs/promises'
 import path from 'path'
 
 type Options = {
-  type: 'article' | 'note'
+  type: 'article' | 'note' | 'draft'
 }
 
 export default async function fetchArticles(options: Options) {

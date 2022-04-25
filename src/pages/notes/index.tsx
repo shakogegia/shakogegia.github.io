@@ -3,8 +3,11 @@ import fetchArticles from '@/utils/fetch-articles'
 import type { NextPage } from 'next'
 import Link from 'next/link'
 
-const Notes: NextPage<{ notes: Array<Article & { slug: string }> }> = ({
+type Note = Article & { slug: string }
+
+const Notes: NextPage<{ notes: Note[]; draft?: boolean }> = ({
   notes,
+  draft,
 }) => {
   return (
     <Layout title="Notes">
@@ -17,7 +20,7 @@ const Notes: NextPage<{ notes: Array<Article & { slug: string }> }> = ({
 
         <div className="mt-12 flex flex-col space-y-8">
           {notes.map((note) => (
-            <Note key={note.slug} note={note} />
+            <Note key={note.slug} note={note} draft={draft} />
           ))}
         </div>
       </div>
@@ -25,9 +28,10 @@ const Notes: NextPage<{ notes: Array<Article & { slug: string }> }> = ({
   )
 }
 
-function Note({ note }: { note: Article & { slug: string } }) {
+function Note({ note, draft }: { note: Note; draft?: boolean }) {
+  const url = draft ? '/drafts' : '/notes'
   return (
-    <Link href={`/notes/${note.slug}`}>
+    <Link href={`/${url}/${note.slug}`}>
       <a className="space-y-2 group iAWriterDuospace">
         <h3 className="text-lg font-semibold group-hover:underline">
           {note.title}
