@@ -6,7 +6,7 @@ import fetchArticles from '@/utils/fetch-articles'
 
 const ArticlePage: NextPage<{ article: Article }> = ({ article }) => {
   return (
-    <Layout title={article.title}>
+    <Layout title={article.title} cover={article.cover}>
       <article className="mt-8">
         {article.cover && (
           <figure className="mb-6">

@@ -3,17 +3,49 @@ import Header from '@/components/header'
 import Head from 'next/head'
 import Script from 'next/script'
 import { PropsWithChildren } from 'react'
+import { NextSeo } from 'next-seo'
 
 const me = 'Shalva Gegia'
+const description =
+  "I'm a software engineer based in Amsterdam, Netherlands. I'm passionate about building products that solve real-world problems."
 
 export default function Layout({
   children,
+  cover,
   title,
-}: PropsWithChildren<{ title?: string }>) {
+}: PropsWithChildren<{ title?: string; cover?: string }>) {
+  const pageTitle = title ? `${title} | ${me}` : me
+
+  const images = cover
+    ? [
+        {
+          url: cover.startsWith('http') ? cover : `https://gegia.me${cover}`,
+          alt: pageTitle,
+        },
+      ]
+    : []
+
   return (
     <div>
+      <NextSeo
+        title={pageTitle}
+        description={description}
+        openGraph={{
+          type: 'website',
+          locale: 'en_IE',
+          url: 'https://gegia.me/',
+          site_name: 'Shalva Gegia',
+          images,
+        }}
+        twitter={{
+          handle: '@ShalvaGegia',
+          site: '@ShalvaGegia',
+          cardType: 'summary_large_image',
+        }}
+      />
+
       <Head>
-        <title>{title ? `${title} - ${me}` : me}</title>
+        <title>{pageTitle}</title>
 
         <meta charSet="UTF-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />

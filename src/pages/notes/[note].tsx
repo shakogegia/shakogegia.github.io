@@ -11,7 +11,7 @@ const NotePage: NextPage<{ note: Article; draft?: boolean }> = ({
   draft,
 }) => {
   return (
-    <Layout title={note.title}>
+    <Layout title={note.title} cover={note.cover}>
       {draft && <Script src="https://unpkg.com/turndown/dist/turndown.js" />}
 
       <div className="max-w-3xl m-auto mt-8">

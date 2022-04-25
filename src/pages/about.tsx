@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const About: NextPage = () => {
   return (
-    <Layout title="About">
+    <Layout title="About me" cover="/assets/selfie.jpg">
       <figure className="mt-8 mb-6">
         <img
           src="/assets/selfie.jpg"
