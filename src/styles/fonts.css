@@ -1,0 +1,190 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+
+@font-face {
+  font-family: "iAWriterDuo";
+  src: url("/fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Regular.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iAWriterDuoItalic";
+  font-style: italic;
+  src: url("/fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Italic.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iAWriterDuoBold";
+  font-weight: bold;
+  src: url("/fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Bold.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iAWriterDuospace";
+  src: url("/fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Regular.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iAWriterDuospaceItalic";
+  font-style: italic;
+  src: url("/fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Italic.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iAWriterDuospaceBold";
+  font-weight: bold;
+  src: url("/fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Bold.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iAWriterMono";
+  src: url("/fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Regular.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iAWriterMonoItalic";
+  font-style: italic;
+  src: url("/fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Italic.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iAWriterMonoBold";
+  font-weight: bold;
+  src: url("/fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Bold.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iAWriterQuattro";
+  src: url("/fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Regular.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iAWriterQuattroItalic";
+  font-style: italic;
+  src: url("/fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Italic.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "iAWriterQuattroBold";
+  font-weight: bold;
+  src: url("/fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Bold.woff2") format("woff2"),
+       url("/fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Bold.woff") format("woff");
+}
+
+
+.plex-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.plex-mono-200 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 200;
+}
+
+.plex-mono-300 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+}
+
+.plex-mono-400 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+}
+
+.plex-mono-500 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+}
+
+.space-mono {
+  font-family: 'Space Mono', monospace;
+}
+
+
+.iAWriterDuo {
+  font-family: "iAWriterDuo";
+}
+
+.iAWriterDuoItalic {
+  font-family: "iAWriterDuoItalic";
+}
+
+.iAWriterDuoBold {
+  font-family: "iAWriterDuoBold";
+}
+
+.iAWriterDuospace {
+  font-family: "iAWriterDuospace";
+}
+
+.iAWriterDuospaceItalic {
+  font-family: "iAWriterDuospaceItalic";
+}
+
+.iAWriterDuospaceBold {
+  font-family: "iAWriterDuospaceBold";
+}
+
+.iAWriterMono {
+  font-family: "iAWriterMono";
+}
+
+.iAWriterMonoItalic {
+  font-family: "iAWriterMonoItalic";
+}
+
+.iAWriterMonoBold {
+  font-family: "iAWriterMonoBold";
+}
+
+.iAWriterQuattro {
+  font-family: "iAWriterQuattro";
+}
+
+.iAWriterQuattroItalic {
+  font-family: "iAWriterQuattroItalic";
+}
+
+.iAWriterQuattroBold {
+  font-family: "iAWriterQuattroBold";
+}
+
+.plex-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.plex-mono-200 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 200;
+}
+
+.plex-mono-300 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+}
+
+.plex-mono-400 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+}
+
+.plex-mono-500 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+}
+
+.space-mono {
+  font-family: 'Space Mono', monospace;
+}

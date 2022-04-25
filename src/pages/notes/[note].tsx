@@ -7,17 +7,17 @@ import fetchArticles from '@/utils/fetch-articles'
 const NotePage: NextPage<{ note: Article }> = ({ note }) => {
   return (
     <Layout title={note.title}>
-      <div className="max-w-3xl m-auto mt-8 font-mono">
-        <h3 className="text-lg font-semibold">{note.title}</h3>
+      <div className="max-w-3xl m-auto mt-8">
+        <h3 className="text-xl iAWriterDuospaceBold">{note.title}</h3>
         <article
-          className="prose max-w-none mt-6 text-gray-500"
+          className="prose max-w-none mt-6 iAWriterDuospace text-gray-500"
           dangerouslySetInnerHTML={{
             __html: note.content,
           }}
         />
 
         <div className="mt-14">
-          <em className="font-extralight space-mono text-gray-400">
+          <em className="font-extralight iAWriterDuospaceItalic text-gray-400">
             Published on {moment(note.date).format('MMMM YYYY')}
           </em>
         </div>

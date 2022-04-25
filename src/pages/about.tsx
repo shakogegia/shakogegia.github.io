@@ -7,13 +7,13 @@ const About: NextPage = () => {
     <Layout title="About">
       <figure className="mt-8 mb-6">
         <img
-          src="/selfie.png"
-          alt="stackbrowser.com"
+          src="/assets/selfie.jpg"
+          alt="Shalva Gegia"
           className="w-full rounded-md"
         />
       </figure>
 
-      <article className="prose md:prose-lg max-w-none font-sans font-light mt-8 text-gray-600">
+      <article className="prose md:prose-lg max-w-none iAWriterQuattro font-light mt-8 text-gray-600">
         <p>
           Hi I’m Shalva, a Georgian 🇬🇪 software engineer based in Amsterdam,
           Netherlands 🇳🇱

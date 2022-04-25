@@ -9,7 +9,7 @@ const Home: NextPage<{ articles: Array<Article & { slug: string }> }> = ({
 }) => {
   return (
     <Layout>
-      <article className="prose md:prose-lg lg:prose-xl max-w-none font-sans font-light mt-8 text-gray-600">
+      <article className="prose normalized-prose md:prose-lg lg:prose-xl max-w-none iAWriterQuattro font-light mt-8 text-gray-600">
         <p>Hi I’m Shalva, a Georgian software engineer based in Amsterdam</p>
         <p>
           I'm starting this website to become my digital{' '}

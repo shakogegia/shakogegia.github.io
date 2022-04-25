@@ -9,10 +9,10 @@ const Notes: NextPage<{ notes: Array<Article & { slug: string }> }> = ({
   return (
     <Layout title="Notes">
       <div className="max-w-3xl m-auto">
-        <div className="flex flex-col align-center text-center">
+        <div className="flex flex-col align-center text-center iAWriterDuospace">
           <span className="text-9xl">📜</span>
-          <h2 className=" mt-6 text-3xl font-mono">Digital Notes</h2>
-          <h6 className=" mt-6 text-md font-mono">notes on things</h6>
+          <h2 className=" mt-6 text-3xl">Digital Notes</h2>
+          <h6 className=" mt-6 text-md">notes on things</h6>
         </div>
 
         <div className="mt-12 flex flex-col space-y-8">
@@ -28,7 +28,7 @@ const Notes: NextPage<{ notes: Array<Article & { slug: string }> }> = ({
 function Note({ note }: { note: Article & { slug: string } }) {
   return (
     <Link href={`/notes/${note.slug}`}>
-      <a className="space-y-2 group font-mono">
+      <a className="space-y-2 group iAWriterDuospace">
         <h3 className="text-lg font-semibold group-hover:underline">
           {note.title}
         </h3>
