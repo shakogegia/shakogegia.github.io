@@ -11,7 +11,7 @@ export default function Header() {
           </a>
         </Link>
 
-        <ul className="flex iAWriterQuattro">
+        <ul className="flex iAWriterQuattro space-x-3">
           <NavLink href="/about">About</NavLink>
           <NavLink href="/notes">Notes</NavLink>
           {/* <NavLink href="/articles">Articles</NavLink> */}
@@ -24,7 +24,7 @@ export default function Header() {
 
 function NavLink({ href, children }: PropsWithChildren<{ href: string }>) {
   return (
-    <li className="mr-3">
+    <li>
       <Link href={href}>
         <a className="text-ml inline-block transition-colors py-2 px-4 text-gray-500 no-underline hover:text-indigo-500 ">
           {children}

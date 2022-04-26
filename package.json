@@ -12,7 +12,7 @@
     "start": "next start",
     "lint": "next lint",
     "release": "release-it",
-    "pages": "touch ./out/.nojekyll && echo 'gegia.me' > ./out/CNAME",
+    "pages": "touch ./out/.nojekyll && echo 'www.gegia.dev' > ./out/CNAME",
     "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
