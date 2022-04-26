@@ -67,7 +67,7 @@ function Article({ article }: { article: Article & { slug: string } }) {
             className="w-full rounded-md"
           />
           {/* <figcaption className="my-1 font-mono text-sm text-gray-300">
-            gegia.me
+            gegia.dev
           </figcaption> */}
         </figure>
       )}

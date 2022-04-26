@@ -19,7 +19,9 @@ export default function Layout({
   const images = cover
     ? [
         {
-          url: cover.startsWith('http') ? cover : `https://gegia.me${cover}`,
+          url: cover.startsWith('http')
+            ? cover
+            : `https://www.gegia.dev${cover}`,
           alt: pageTitle,
         },
       ]
@@ -33,7 +35,7 @@ export default function Layout({
         openGraph={{
           type: 'website',
           locale: 'en_IE',
-          url: 'https://gegia.me/',
+          url: 'https://www.gegia.dev/',
           site_name: 'Shalva Gegia',
           images,
         }}
