@@ -1,10 +1,9 @@
-import type { NextPage } from 'next'
-import moment from 'moment'
 import Layout from '@/components/layout'
 import fetchArticle from '@/utils/fetch-article'
 import fetchArticles from '@/utils/fetch-articles'
+import moment from 'moment'
+import type { NextPage } from 'next'
 import Script from 'next/script'
-import Head from 'next/head'
 
 const NotePage: NextPage<{ note: Article; draft?: boolean }> = ({
   note,
@@ -54,9 +53,7 @@ function CopyActions() {
         className="font-mono font-semibold hover:underline cursor-pointer text-indigo-500"
         onClick={() => {
           navigator.clipboard.writeText(
-            (window as any)
-              .TurndownService()
-              .turndown(document.getElementById('content'))
+            turndown(document.getElementById('content'))
           )
         }}
       >
@@ -74,6 +71,12 @@ function CopyActions() {
       </a>
     </div>
   )
+}
+
+function turndown(element: HTMLElement | null) {
+  return (window as any)
+    .TurndownService()
+    .turndown(document.getElementById('content'))
 }
 
 export async function getStaticProps({ params }: { params: { note: string } }) {

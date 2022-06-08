@@ -75,6 +75,15 @@ export default function Layout({
         }}
       />
 
+      <Script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      />
+      <Script
+        noModule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      />
+
       <Header />
 
       <main className="container mx-auto max-w-5xl px-6">{children}</main>
