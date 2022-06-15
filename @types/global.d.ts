@@ -4,14 +4,14 @@ declare global {
       'ion-icon': React.DetailedHTMLProps<HTMLElement>
     }
   }
-}
 
-interface Article {
-  title: string
-  date: string
-  cover?: string
-  excerpt: string
-  content: string
+  interface Article {
+    title: string
+    date: string
+    cover?: string
+    excerpt: string
+    content: string
+  }
 }
 
 export {}
