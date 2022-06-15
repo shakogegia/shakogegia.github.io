@@ -53,6 +53,8 @@ export default function Layout({
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+        <meta name="theme-color" content="#6366f1" />
+
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
 

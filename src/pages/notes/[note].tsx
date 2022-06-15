@@ -23,6 +23,16 @@ const NotePage: NextPage<{ note: Article; draft?: boolean }> = ({
           {note.title}
         </h3>
 
+        {note.cover && (
+          <figure className="my-6">
+            <img
+              src={note.cover}
+              alt={note.title}
+              className="w-full rounded-md"
+            />
+          </figure>
+        )}
+
         <article
           className="prose max-w-none mt-6 iAWriterDuospace DejaVuSansMono text-gray-500"
           id="content"
