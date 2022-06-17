@@ -43,7 +43,7 @@ const Home: NextPage<{ articles: Array<Article & { slug: string }> }> = ({
 
       <section>
         <h3 className="text-2xl font-semibold">Personal Favorites</h3>
-        <div className="flex flex-col space-y-2 mt-4">
+        <div className="flex flex-col space-y-4 mt-4">
           <Item href="/notes/starting-digital-garden">
             Starting digital garden
           </Item>
