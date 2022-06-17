@@ -14,10 +14,10 @@ export default function Header() {
         <ul className="flex iAWriterQuattro space-x-3">
           <NavLink href="/about">About</NavLink>
           <NavLink href="/notes">Notes</NavLink>
+          <NavLink href="/articles">Articles</NavLink>
           {process.env.NODE_ENV === 'development' && (
-            <NavLink href="/drafts">Drafts</NavLink>
+            <NavLink href="/drafts">[Drafts]</NavLink>
           )}
-          {/* <NavLink href="/articles">Articles</NavLink> */}
           <NavLink href="/garden">Garden 🌱</NavLink>
         </ul>
       </nav>

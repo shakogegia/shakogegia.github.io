@@ -17,7 +17,7 @@ const NotePage: NextPage<{ note: Article; draft?: boolean }> = ({
         {draft && <CopyActions />}
 
         <h3
-          className="text-xl iAWriterDuospaceBold DejaVuSansMonoBold"
+          className="text-2xl iAWriterDuospaceBold DejaVuSansMonoBold"
           contentEditable={draft}
         >
           {note.title}
@@ -34,7 +34,7 @@ const NotePage: NextPage<{ note: Article; draft?: boolean }> = ({
         )}
 
         <article
-          className="prose max-w-none mt-6 iAWriterDuospace DejaVuSansMono text-gray-500"
+          className="prose max-w-none mt-6 prose-lg iAWriterDuospace DejaVuSansMono text-gray-500"
           id="content"
           contentEditable={draft}
           dangerouslySetInnerHTML={{

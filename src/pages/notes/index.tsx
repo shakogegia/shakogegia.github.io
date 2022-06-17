@@ -33,7 +33,7 @@ function Note({ note, draft }: { note: Note; draft?: boolean }) {
   return (
     <Link href={`/${url}/${note.slug}`}>
       <a className="space-y-2 group iAWriterDuospace">
-        <h3 className="text-lg font-semibold group-hover:underline">
+        <h3 className="text-xl font-semibold group-hover:underline">
           {note.title}
         </h3>
         <article

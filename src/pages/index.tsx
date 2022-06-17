@@ -1,8 +1,9 @@
 import Layout from '@/components/layout'
 import fetchArticles from '@/utils/fetch-articles'
 import moment from 'moment'
-import type { NextPage } from 'next'
 import Link from 'next/link'
+import type { NextPage } from 'next'
+import { PropsWithChildren } from 'react'
 
 const Home: NextPage<{ articles: Array<Article & { slug: string }> }> = ({
   articles,
@@ -36,72 +37,49 @@ const Home: NextPage<{ articles: Array<Article & { slug: string }> }> = ({
         </p>
       </article>
 
-      <div className="py-16">
+      <div className="py-12">
         <div className="w-full border-t border-gray-100"></div>
       </div>
 
       <section>
-        {articles.map((article, i) => (
-          <div key={article.slug}>
-            <Article article={article} />
-            {i !== articles.length - 1 && (
-              <div className="py-20">
-                <div className="w-full border-t border-gray-100"></div>
-              </div>
-            )}
-          </div>
-        ))}
+        <h3 className="text-2xl font-semibold">Personal Favorites</h3>
+        <div className="flex flex-col space-y-2 mt-4">
+          <Item href="/notes/starting-digital-garden">
+            Starting digital garden
+          </Item>
+          <Item href="/notes/dark-matter">Multiverse – Dark Matter</Item>
+          <Item href="/articles/bookswap">
+            BookSwap - Convenient platform for swapping books
+          </Item>
+        </div>
       </section>
     </Layout>
   )
 }
 
-function Article({ article }: { article: Article & { slug: string } }) {
+function Item(props: PropsWithChildren<{ href: string }>) {
   return (
-    <article>
-      {article.cover && (
-        <figure className="mb-6">
-          <img
-            src={article.cover}
-            alt={article.title}
-            className="w-full rounded-md"
-          />
-          {/* <figcaption className="my-1 font-mono text-sm text-gray-300">
-            gegia.dev
-          </figcaption> */}
-        </figure>
-      )}
+    <Link href={props.href}>
+      <a className="inline-flex space-x-2 text-lg iAWriterDuospace hover:underline hover:text-indigo-500 transition-colors group">
+        <div className="inline-flex mt-1">
+          <span className="inline-flex group-hover:hidden">
+            <ion-icon name="unlink-outline"></ion-icon>
+          </span>
 
-      <h2 className="text-3xl font-normal leading-normal mt-0 mb-0 text-gray-800">
-        {article.title}
-      </h2>
-      <small className="text-gray-300">
-        {moment(article.date).format('MMMM YYYY')}
-      </small>
+          <span className="hidden group-hover:inline-flex">
+            <ion-icon name="link-outline"></ion-icon>
+          </span>
+        </div>
 
-      <article
-        className="prose max-w-none pt-6 text-gray-500"
-        dangerouslySetInnerHTML={{ __html: article.excerpt }}
-      />
-
-      <div className="mt-3">
-        <Link href={`/article/${article.slug}`}>
-          <a className="font-semibold text-lg group text-gray-600 hover:text-indigo-500 transition-colors">
-            read more
-            <span className="transition-all group-hover:ml-1"> →</span>
-          </a>
-        </Link>
-      </div>
-    </article>
+        <span>{props.children}</span>
+      </a>
+    </Link>
   )
 }
 
 export async function getStaticProps() {
-  const articles = await fetchArticles({ type: 'article' })
   return {
-    props: {
-      articles,
-    },
+    props: {},
   }
 }
 
