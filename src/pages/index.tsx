@@ -42,15 +42,23 @@ const Home: NextPage<{ articles: Array<Article & { slug: string }> }> = ({
       </div>
 
       <section>
-        <h3 className="text-2xl font-semibold">Personal Favorites</h3>
+        <h3 className="text-2xl font-semibold">Favorites Notes</h3>
         <div className="flex flex-col space-y-4 mt-4">
           <Item href="/notes/starting-digital-garden">
             Starting digital garden
           </Item>
-          <Item href="/notes/dark-matter">Multiverse – Dark Matter</Item>
+          <Item href="/notes/dark-matter">Multiverse - Dark Matter</Item>
           <Item href="/articles/bookswap">
             BookSwap - Convenient platform for swapping books
           </Item>
+        </div>
+      </section>
+
+      <section className="mt-8">
+        <h3 className="text-2xl font-semibold">Personal</h3>
+        <div className="flex flex-col space-y-4 mt-4">
+          <Item href="/library">Books I read</Item>
+          <Item href="/shows">Shows I watch</Item>
         </div>
       </section>
     </Layout>

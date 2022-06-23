@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Script from 'next/script'
 import { PropsWithChildren } from 'react'
 import { NextSeo } from 'next-seo'
+import classNames from '@/utils/classnames'
 
 const me = 'Shalva Gegia'
 const description =
@@ -13,7 +14,8 @@ export default function Layout({
   children,
   cover,
   title,
-}: PropsWithChildren<{ title?: string; cover?: string }>) {
+  className,
+}: PropsWithChildren<{ title?: string; cover?: string; className?: string }>) {
   const pageTitle = title ? `${title} | ${me}` : me
 
   const images = cover
@@ -88,7 +90,11 @@ export default function Layout({
 
       <Header />
 
-      <main className="container mx-auto max-w-5xl px-6">{children}</main>
+      <main
+        className={classNames('container mx-auto max-w-5xl px-6', className)}
+      >
+        {children}
+      </main>
 
       <Footer />
     </div>
