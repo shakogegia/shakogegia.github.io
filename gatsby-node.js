@@ -32,6 +32,16 @@ const createPosts = (createPage, createRedirect, edges) => {
       },
     })
     
+    // Legacy redirects
+    createPage({
+      path: `/notes/${pagePath}`,
+      component: path.resolve(`./src/templates/redirect.tsx`),
+      context: {
+        redirect: pagePath
+      },
+    })
+    
+    // Legacy redirects
     createRedirect({
       fromPath: `/notes/*`,
       toPath: `/*`,

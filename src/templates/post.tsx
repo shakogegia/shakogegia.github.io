@@ -1,6 +1,6 @@
-import * as React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import * as React from 'react'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 
@@ -10,7 +10,7 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev } 
       <SEO
         title={mdx.frontmatter.title}
         description={mdx.excerpt}
-        image={mdx.frontmatter.banner}
+        image={mdx.frontmatter.banner?.childImageSharp?.fluid.src}
         pathname={`/${mdx.frontmatter.slug}`}
         article
       />
