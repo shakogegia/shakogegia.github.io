@@ -1,29 +1,31 @@
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Shalva Gegia`,
-    description: "I'm a software engineer based in Amsterdam, Netherlands. I'm passionate about building products that solve real-world problems.",
+    description:
+      "I'm a software engineer based in Amsterdam, Netherlands. I'm passionate about building products that solve real-world problems.",
     siteUrl: `https://gegia.dev`,
-    titleTemplate: "%s · Shalva Gegia",
-    image: "./src/images/selfie.jpg", // Path to the image placed in the 'static' folder, in the project's root directory.
-    twitterUsername: "@ShalvaGegia",
+    titleTemplate: '%s · Shalva Gegia',
+    image: './src/images/selfie.jpg', // Path to the image placed in the 'static' folder, in the project's root directory.
+    twitterUsername: '@ShalvaGegia',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-image',
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/images/favicon.png",
+        icon: 'src/images/favicon.png',
       },
     },
-    "gatsby-remark-images",
+    'gatsby-remark-images',
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -37,23 +39,23 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'pages',
+        path: './src/pages/',
       },
-      __key: "pages",
+      __key: 'pages',
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -62,8 +64,15 @@ const config: GatsbyConfig = {
         name: 'blog',
       },
     },
-    'gatsby-plugin-postcss'
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-110098374-1',
+        head: false,
+        exclude: ['/preview/**'],
+      },
+    },
   ],
-};
+}
 
-export default config;
+export default config
