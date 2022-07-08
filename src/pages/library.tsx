@@ -113,7 +113,7 @@ export default function LibraryPage() {
         <span className="text-9xl text-indigo-500 flex justify-center">
           <IoLibraryOutline />
         </span>
-        <h2 className="mt-6 text-3xl font-mono">Digital Library</h2>
+        <h2 className="mt-6 text-3xl font-mono transition-colors dark:text-gray-200">Digital Library</h2>
         <h6 className="mt-6 text-md font-mono max-w-md mx-auto text-gray-500">
           Here are some of the books I love, admire and find myself frequently returning to them.
           <p>As you can see I'm huge fan of the Sci-Fi and thanks Philip K. Dick for that</p>
@@ -139,7 +139,7 @@ export default function LibraryPage() {
               </div>
             </div>
             <div>
-              <h3 className="iAWriterQuattro text-xl text-gray-900">{book.title}</h3>
+              <h3 className="iAWriterQuattro text-xl text-gray-900 transition-colors dark:text-gray-200">{book.title}</h3>
               <p className="iAWriterQuattro text-gray-500">{book.author}</p>
             </div>
           </article>

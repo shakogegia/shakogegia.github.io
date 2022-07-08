@@ -9,7 +9,7 @@ export default function IndexPage({ data: { site, allMdx } }: any) {
     <Layout>
       <SEO title="Home" />
       
-      <article className="prose normalized-prose md:prose-lg lg:prose-xl max-w-none iAWriterQuattro font-light mt-8 text-gray-600">
+      <article className="prose normalized-prose md:prose-lg lg:prose-xl max-w-none iAWriterQuattro font-light mt-8 text-gray-600 transition-colors dark:text-gray-400 dark:prose-a:text-gray-200">
         <p>Hi I’m Shalva, a Georgian software engineer based in Amsterdam</p>
         <p>
           I'm starting this website to become my digital <Link to="/garden">garden 🌱</Link> where I'll share notes,
@@ -32,11 +32,11 @@ export default function IndexPage({ data: { site, allMdx } }: any) {
       </article>
 
       <div className="py-12">
-        <div className="w-full border-t border-gray-100"></div>
+        <div className="w-full border-t border-gray-100 transition-colors dark:border-gray-600"></div>
       </div>
 
       <section>
-        <h3 className="text-2xl font-semibold">Personal</h3>
+        <Title>Personal</Title>
         <div className="flex flex-col space-y-4 mt-4">
           <Item href="/library">📚 Books I read</Item>
           <Item href="/shows">📽 Shows I watch</Item>
@@ -44,7 +44,7 @@ export default function IndexPage({ data: { site, allMdx } }: any) {
       </section>
 
       <section className="mt-8">
-        <h3 className="text-2xl font-semibold">Favorites</h3>
+        <Title>Favorites</Title>
         <div className="flex flex-col space-y-4 mt-4">
           {allMdx.edges.map(({ node }: any) => (
             <Item key={node.id} href={node.frontmatter.slug}>
@@ -57,11 +57,15 @@ export default function IndexPage({ data: { site, allMdx } }: any) {
   )
 }
 
+function Title({ children }: React.PropsWithChildren<{}>) {
+  return <h3 className="text-2xl font-semibold transition-colors dark:text-gray-200">{children}</h3>
+}
+
 function Item(props: React.PropsWithChildren<{ href: string }>) {
   return (
     <Link
       to={props.href}
-      className="inline-flex space-x-2 text-lg iAWriterDuospace hover:underline hover:text-indigo-500 transition-colors group"
+      className="inline-flex space-x-2 text-lg iAWriterDuospace hover:underline hover:text-indigo-500 transition-colors group dark:text-gray-400"
     >
       <div className="inline-flex mt-1">
         <span className="inline-flex group-hover:hidden">

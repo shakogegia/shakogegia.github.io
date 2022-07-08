@@ -12,7 +12,7 @@ export default function Layout({ children, className }: PropsWithChildren<{ clas
   }, [])
 
   return (
-    <div>
+    <div className='h-vh min-h-full transition-colors dark:bg-gray-900'>
       <Helmet>
         <meta charSet="UTF-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />

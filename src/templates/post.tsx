@@ -16,9 +16,9 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev } 
       />
 
       <div className="max-w-3xl m-auto mt-8">
-        <h3 className="text-2xl iAWriterDuospaceBold">{mdx.frontmatter.title}</h3>
+        <h3 className="text-2xl iAWriterDuospaceBold transition-colors dark:text-gray-200">{mdx.frontmatter.title}</h3>
 
-        <div className="prose max-w-none mt-6 prose-lg iAWriterDuospace text-gray-500">
+        <div className="prose max-w-none mt-6 prose-lg iAWriterDuospace text-gray-500 transition-colors dark:text-gray-300 dark:prose-a:text-gray-200 dark:prose-strong:text-gray-200 dark:prose-blockquote:text-gray-200">
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
 
@@ -27,7 +27,7 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev } 
         </div>
 
         <div className="py-20">
-          <div className="w-full border-t border-gray-100"></div>
+          <div className="w-full border-t border-gray-100 transition-colors dark:border-gray-600"></div>
         </div>
       </div>
     </Layout>

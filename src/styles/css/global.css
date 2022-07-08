@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 @import "./typography.css";
+
+html, body, #___gatsby, #gatsby-focus-wrapper {
+  height: 100%;
+}

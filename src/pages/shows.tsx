@@ -19,7 +19,7 @@ export default function ShowsPage() {
 
       <div className="flex flex-col align-center text-center mt-4">
         <span className="text-9xl p-1">📽</span>
-        <h2 className="mt-6 text-3xl font-mono">Shows I watch</h2>
+        <h2 className="mt-6 text-3xl font-mono transition-colors dark:text-gray-200">Shows I watch</h2>
         <h6 className="mt-6 text-md font-mono max-w-md mx-auto text-gray-500">
           Some of the memorable shows worth mentioning. "Friends" is on top of
           the list, I've been a fan of it for a long time and watched it over
