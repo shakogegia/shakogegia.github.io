@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
 import { PropsWithChildren } from 'react'
 import classNames from '../utils/classnames'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
-import { IoSunnyOutline, IoMoonSharp } from "react-icons/io5";
+import Lottie, { LottieRef, LottieRefCurrentProps } from 'lottie-react'
+import AnimationData from './animation.json'
 
 export default function Header() {
   return (
@@ -47,15 +48,38 @@ function NavLink({ to, children, className }: PropsWithChildren<{ to: string; cl
 }
 
 function ThemeToggle() {
+  const ref = React.useRef<LottieRefCurrentProps>(null)
+
+  useEffect(() => {
+    ref.current?.setSpeed(1.5)
+
+    if (document.body.classList.contains('dark')) {
+      ref.current?.goToAndStop(145, true)
+    }
+  }, [])
+
+  function animate(theme: string) {
+    if (theme === 'dark') {
+      ref.current?.playSegments([145, 220], true)
+    } else {
+      ref.current?.playSegments([0, 70], true)
+    }
+  }
+
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }: { theme: string | null; toggleTheme: (theme: string) => void }) => {
         if (theme == null) return null
         return (
-          <li className='flex justify-center items-center'>
-            <div className='inline-block cursor-pointer transition-colors dark:text-gray-200' onClick={() => toggleTheme(theme === 'dark' ? 'light': 'dark' )}>
-              {theme === 'dark' && <IoMoonSharp />}
-              {theme === 'light' && <IoSunnyOutline />}
+          <li className="flex justify-center items-center">
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                toggleTheme(theme === 'dark' ? 'light' : 'dark')
+                animate(theme)
+              }}
+            >
+              <Lottie lottieRef={ref} animationData={AnimationData} loop={false} autoplay={false} className="w-7 h-7" />
             </div>
           </li>
         )
