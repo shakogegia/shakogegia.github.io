@@ -5,12 +5,14 @@
 
 @font-face {
   font-family: "iAWriterDuo";
+  font-display: fallback;
   src: url("../fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Regular.woff2") format("woff2"),
        url("../fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "iAWriterDuoItalic";
+  font-display: fallback;
   font-style: italic;
   src: url("../fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Italic.woff2") format("woff2"),
        url("../fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Italic.woff") format("woff");
@@ -18,6 +20,7 @@
 
 @font-face {
   font-family: "iAWriterDuoBold";
+  font-display: fallback;
   font-weight: bold;
   src: url("../fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Bold.woff2") format("woff2"),
        url("../fonts/iA-Writer-Duo/Webfonts/iAWriterDuoS-Bold.woff") format("woff");
@@ -25,12 +28,14 @@
 
 @font-face {
   font-family: "iAWriterDuospace";
+  font-display: fallback;
   src: url("../fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Regular.woff2") format("woff2"),
        url("../fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "iAWriterDuospaceItalic";
+  font-display: fallback;
   font-style: italic;
   src: url("../fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Italic.woff2") format("woff2"),
        url("../fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Italic.woff") format("woff");
@@ -38,6 +43,7 @@
 
 @font-face {
   font-family: "iAWriterDuospaceBold";
+  font-display: fallback;
   font-weight: bold;
   src: url("../fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Bold.woff2") format("woff2"),
        url("../fonts/iA-Writer-Duospace/Webfonts/iAWriterDuospace-Bold.woff") format("woff");
@@ -45,12 +51,14 @@
 
 @font-face {
   font-family: "iAWriterMono";
+  font-display: fallback;
   src: url("../fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Regular.woff2") format("woff2"),
        url("../fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "iAWriterMonoItalic";
+  font-display: fallback;
   font-style: italic;
   src: url("../fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Italic.woff2") format("woff2"),
        url("../fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Italic.woff") format("woff");
@@ -58,6 +66,7 @@
 
 @font-face {
   font-family: "iAWriterMonoBold";
+  font-display: fallback;
   font-weight: bold;
   src: url("../fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Bold.woff2") format("woff2"),
        url("../fonts/iA-Writer-Mono/Webfonts/iAWriterMonoS-Bold.woff") format("woff");
@@ -65,12 +74,14 @@
 
 @font-face {
   font-family: "iAWriterQuattro";
+  font-display: fallback;
   src: url("../fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Regular.woff2") format("woff2"),
        url("../fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "iAWriterQuattroItalic";
+  font-display: fallback;
   font-style: italic;
   src: url("../fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Italic.woff2") format("woff2"),
        url("../fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Italic.woff") format("woff");
@@ -78,6 +89,7 @@
 
 @font-face {
   font-family: "iAWriterQuattroBold";
+  font-display: fallback;
   font-weight: bold;
   src: url("../fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Bold.woff2") format("woff2"),
        url("../fonts/iA-Writer-Quattro/Webfonts/iAWriterQuattroS-Bold.woff") format("woff");
@@ -87,21 +99,25 @@
 
 @font-face {
   font-family: "DejaVuSansMono";
+  font-display: fallback;
   src: url("../fonts/DejaVuSansMono/DejaVuSansMono.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "DejaVuSansMonoOblique";
+  font-display: fallback;
   src: url("../fonts/DejaVuSansMono/DejaVuSansMono-Oblique.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "DejaVuSansMonoBoldOblique";
+  font-display: fallback;
   src: url("../fonts/DejaVuSansMono/DejaVuSansMono-BoldOblique.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "DejaVuSansMonoBold";
+  font-display: fallback;
   font-weight: bold;
   src: url("../fonts/DejaVuSansMono/DejaVuSansMono-Bold.ttf") format("truetype");
 }
@@ -109,125 +125,153 @@
 
 .plex-mono {
   font-family: 'IBM Plex Mono', monospace;
+  font-display: fallback;
 }
 
 .plex-mono-200 {
   font-family: 'IBM Plex Mono', monospace;
+  font-display: fallback;
   font-weight: 200;
 }
 
 .plex-mono-300 {
   font-family: 'IBM Plex Mono', monospace;
+  font-display: fallback;
   font-weight: 300;
 }
 
 .plex-mono-400 {
   font-family: 'IBM Plex Mono', monospace;
+  font-display: fallback;
   font-weight: 400;
 }
 
 .plex-mono-500 {
   font-family: 'IBM Plex Mono', monospace;
+  font-display: fallback;
   font-weight: 500;
 }
 
 .space-mono {
   font-family: 'Space Mono', monospace;
+  font-display: fallback;
 }
 
 
 .iAWriterDuo {
   font-family: "iAWriterDuo";
+  font-display: fallback;
 }
 
 .iAWriterDuoItalic {
   font-family: "iAWriterDuoItalic";
+  font-display: fallback;
 }
 
 .iAWriterDuoBold {
   font-family: "iAWriterDuoBold";
+  font-display: fallback;
 }
 
 .iAWriterDuospace {
   font-family: "iAWriterDuospace";
+  font-display: fallback;
 }
 
 .iAWriterDuospaceItalic {
   font-family: "iAWriterDuospaceItalic";
+  font-display: fallback;
 }
 
 .iAWriterDuospaceBold {
   font-family: "iAWriterDuospaceBold";
+  font-display: fallback;
 }
 
 .iAWriterMono {
   font-family: "iAWriterMono";
+  font-display: fallback;
 }
 
 .iAWriterMonoItalic {
   font-family: "iAWriterMonoItalic";
+  font-display: fallback;
 }
 
 .iAWriterMonoBold {
   font-family: "iAWriterMonoBold";
+  font-display: fallback;
 }
 
 .iAWriterQuattro {
   font-family: "iAWriterQuattro";
+  font-display: fallback;
 }
 
 .iAWriterQuattroItalic {
   font-family: "iAWriterQuattroItalic";
+  font-display: fallback;
 }
 
 .iAWriterQuattroBold {
   font-family: "iAWriterQuattroBold";
+  font-display: fallback;
 }
 
 .plex-mono {
   font-family: 'IBM Plex Mono', monospace;
+  font-display: fallback;
 }
 
 .plex-mono-200 {
   font-family: 'IBM Plex Mono', monospace;
+  font-display: fallback;
   font-weight: 200;
 }
 
 .plex-mono-300 {
   font-family: 'IBM Plex Mono', monospace;
+  font-display: fallback;
   font-weight: 300;
 }
 
 .plex-mono-400 {
   font-family: 'IBM Plex Mono', monospace;
+  font-display: fallback;
   font-weight: 400;
 }
 
 .plex-mono-500 {
   font-family: 'IBM Plex Mono', monospace;
+  font-display: fallback;
   font-weight: 500;
 }
 
 .space-mono {
   font-family: 'Space Mono', monospace;
+  font-display: fallback;
 }
 
 .DejaVuSansMono {
   font-family: "DejaVuSansMono";
+  font-display: fallback;
 }
 
 .DejaVuSansMonoOblique {
   font-style: italic;
   font-family: "DejaVuSansMonoOblique";
+  font-display: fallback;
 }
 
 .DejaVuSansMonoBoldOblique {
   font-style: italic;
   font-weight: bold;
   font-family: "DejaVuSansMonoBoldOblique";
+  font-display: fallback;
 }
 
 .DejaVuSansMonoBold {
   font-weight: bold;
   font-family: "DejaVuSansMonoBold";
+  font-display: fallback;
 }

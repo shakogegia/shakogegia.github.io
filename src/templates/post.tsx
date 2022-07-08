@@ -16,9 +16,9 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev } 
       />
 
       <div className="max-w-3xl m-auto mt-8">
-        <h3 className="text-2xl iAWriterDuospaceBold DejaVuSansMonoBold">{mdx.frontmatter.title}</h3>
+        <h3 className="text-2xl iAWriterDuospaceBold">{mdx.frontmatter.title}</h3>
 
-        <div className="prose max-w-none mt-6 prose-lg iAWriterDuospace DejaVuSansMono text-gray-500">
+        <div className="prose max-w-none mt-6 prose-lg iAWriterDuospace text-gray-500">
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
 

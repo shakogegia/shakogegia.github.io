@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { PropsWithChildren } from 'react'
+import classNames from '../utils/classnames'
 
 export default function Header() {
   return (
@@ -11,7 +12,7 @@ export default function Header() {
         </Link>
 
         <ul className="flex iAWriterQuattro space-x-3">
-          <NavLink to="/about">About</NavLink>
+          <NavLink className='hidden sm:block' to="/about">About</NavLink>
           <NavLink to="/notes">Notes</NavLink>
           <NavLink to="/garden">Garden 🌱</NavLink>
         </ul>
@@ -20,10 +21,10 @@ export default function Header() {
   )
 }
 
-function NavLink({ to, children }: PropsWithChildren<{ to: string }>) {
+function NavLink({ to, children, className }: PropsWithChildren<{ to: string, className?: string }>) {
   return (
     <li>
-      <Link to={to} className="text-ml inline-block transition-colors py-2 px-4 text-gray-500 no-underline hover:text-indigo-500 ">
+      <Link to={to} className={classNames("text-ml inline-block transition-colors py-2 px-4 text-gray-500 no-underline hover:text-indigo-500 ", className)}>
         {children}
       </Link>
     </li>

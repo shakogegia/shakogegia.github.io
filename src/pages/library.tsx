@@ -120,9 +120,10 @@ export default function LibraryPage() {
         </h6>
       </div>
 
-      <div className="grid lg:grid-cols-4 sm:grid-cols-3 gap-8 mt-10">
+
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 justify-items-center gap-8 mt-10">
         {books.map((book) => (
-          <article key={book.title}>
+          <article key={book.title} className="flex flex-col max-w-[230px]">
             <div className="relative">
               <img src={book.cover} alt={book.title} className="mb-2 rounded-md w-[230px] h-[342px] object-cover" />
               <div className="absolute inset-0 bg-white bg-opacity-60 transition-all opacity-0 hover:opacity-100 flex justify-center items-center">
@@ -137,8 +138,10 @@ export default function LibraryPage() {
                 </Link>
               </div>
             </div>
-            <h3 className="iAWriterQuattro text-xl text-gray-900">{book.title}</h3>
-            <p className="iAWriterQuattro text-gray-500">{book.author}</p>
+            <div>
+              <h3 className="iAWriterQuattro text-xl text-gray-900">{book.title}</h3>
+              <p className="iAWriterQuattro text-gray-500">{book.author}</p>
+            </div>
           </article>
         ))}
       </div>

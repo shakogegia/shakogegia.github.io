@@ -1,10 +1,16 @@
-import React, { PropsWithChildren } from 'react'
+import React, { PropsWithChildren, useEffect } from 'react'
 import classNames from '../../utils/classnames'
 import Footer from '../footer'
 import Header from '../header'
 import { Helmet } from "react-helmet"
+import Lightense from 'lightense-images'
 
 export default function Layout({ children, className }: PropsWithChildren<{ className?: string }>) {
+
+  useEffect(() => {
+    Lightense('img');
+  }, [])
+
   return (
     <div>
       <Helmet>

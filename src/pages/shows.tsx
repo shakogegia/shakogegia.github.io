@@ -27,7 +27,7 @@ export default function ShowsPage() {
         </h6>
       </div>
 
-      <section className="grid grid-cols-3 gap-8 mt-10">
+      <section className="grid mx-auto lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-center gap-8 mt-10">
         <Item
           title="Friends"
           cover={Friends}
@@ -67,7 +67,7 @@ export default function ShowsPage() {
 
 function Item(props: { title: string; cover: string }) {
   return (
-    <article>
+    <article className='flex justify-center'>
       <img
         src={props.cover}
         alt={props.title}
