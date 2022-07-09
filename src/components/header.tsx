@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { PropsWithChildren } from 'react'
 import classNames from '../utils/classnames'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
-import Lottie, { LottieRef, LottieRefCurrentProps } from 'lottie-react'
+import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import AnimationData from './animation.json'
 
 export default function Header() {
@@ -48,21 +48,21 @@ function NavLink({ to, children, className }: PropsWithChildren<{ to: string; cl
 }
 
 function ThemeToggle() {
-  const ref = React.useRef<LottieRefCurrentProps>(null)
+  const lottieRef = React.useRef<LottieRefCurrentProps>(null)
 
   useEffect(() => {
-    ref.current?.setSpeed(1.5)
+    lottieRef.current?.setSpeed(1.5)
 
     if (document.body.classList.contains('dark')) {
-      ref.current?.goToAndStop(145, true)
+      lottieRef.current?.goToAndStop(145, true)
     }
   }, [])
 
   function animate(theme: string) {
     if (theme === 'dark') {
-      ref.current?.playSegments([145, 220], true)
+      lottieRef.current?.playSegments([145, 220], true)
     } else {
-      ref.current?.playSegments([0, 70], true)
+      lottieRef.current?.playSegments([0, 70], true)
     }
   }
 
@@ -79,7 +79,7 @@ function ThemeToggle() {
                 animate(theme)
               }}
             >
-              <Lottie lottieRef={ref} animationData={AnimationData} loop={false} autoplay={false} className="w-7 h-7" />
+              <Lottie lottieRef={lottieRef} animationData={AnimationData} loop={false} autoplay={false} className="w-7 h-7" />
             </div>
           </li>
         )
