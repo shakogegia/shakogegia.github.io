@@ -17,7 +17,7 @@ export default function Header() {
           Shalva Gegia
         </Link>
 
-        <ul className="flex iAWriterQuattro space-x-3">
+        <ul className="flex iAWriterQuattro md:space-x-3">
           <NavLink className="hidden sm:block" to="/about">
             About
           </NavLink>
@@ -36,7 +36,7 @@ function NavLink({ to, children, className }: PropsWithChildren<{ to: string; cl
       <Link
         to={to}
         className={classNames(
-          'text-ml inline-block transition-colors py-2 px-4 text-gray-500 no-underline hover:text-indigo-500 ',
+          'text-ml inline-block transition-colors py-2 px-2 sm:px-4 text-gray-500 no-underline hover:text-indigo-500 ',
           'transition-colors dark:text-gray-300',
           className,
         )}
