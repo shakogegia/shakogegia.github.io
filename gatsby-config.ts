@@ -19,6 +19,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-root-import',
     'gatsby-plugin-dark-mode',
     {
       resolve: 'gatsby-plugin-manifest',
