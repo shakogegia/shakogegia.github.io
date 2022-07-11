@@ -5,6 +5,9 @@ import classNames from '../utils/classnames'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import AnimationData from './animation.json'
+import { ImCommand } from 'react-icons/im'
+import { IoSearchOutline } from 'react-icons/io5'
+import { useThemeContext } from './theme-context'
 
 export default function Header() {
   return (
@@ -23,6 +26,12 @@ export default function Header() {
           </NavLink>
           <NavLink to="/notes">Notes</NavLink>
           <NavLink to="/garden">Garden 🌱</NavLink>
+          <NavButton className='hidden sm:mr-4 sm:block' onClick={() => trigger('?')}>
+            <IoSearchOutline className="text-xl color" />
+          </NavButton>
+          <NavButton className='hidden sm:mr-4 sm:block' onClick={() => trigger('k', true)}>
+            <ImCommand className="text-xl color" />
+          </NavButton>
           <ThemeToggle />
         </ul>
       </nav>
@@ -47,7 +56,19 @@ function NavLink({ to, children, className }: PropsWithChildren<{ to: string; cl
   )
 }
 
+function NavButton(props: PropsWithChildren<{ className?: string; onClick: () => void }>) {
+  return (
+    <button
+      className={classNames('outline-none text-xl transition-colors text-gray-500 dark:text-gray-300', props.className)}
+      onClick={props.onClick}
+    >
+      {props.children}
+    </button>
+  )
+}
+
 function ThemeToggle() {
+  const {  theme, toggleTheme } = useThemeContext()
   const lottieRef = React.useRef<LottieRefCurrentProps>(null)
 
   useEffect(() => {
@@ -67,23 +88,26 @@ function ThemeToggle() {
   }
 
   return (
-    <ThemeToggler>
-      {({ theme, toggleTheme }: { theme: string | null; toggleTheme: (theme: string) => void }) => {
-        if (theme == null) return null
-        return (
-          <li className="flex justify-center items-center">
-            <div
-              className="cursor-pointer"
-              onClick={() => {
-                toggleTheme(theme === 'dark' ? 'light' : 'dark')
-                animate(theme)
-              }}
-            >
-              <Lottie lottieRef={lottieRef} animationData={AnimationData} loop={false} autoplay={false} className="w-7 h-7" />
-            </div>
-          </li>
-        )
-      }}
-    </ThemeToggler>
+    <li className="flex justify-center items-center">
+      <div
+        className="cursor-pointer"
+        onClick={() => {
+          toggleTheme(theme === 'dark' ? 'light' : 'dark')
+          animate(theme)
+        }}
+      >
+        <Lottie
+          lottieRef={lottieRef}
+          animationData={AnimationData}
+          loop={false}
+          autoplay={false}
+          className="w-7 h-7"
+        />
+      </div>
+    </li>
   )
+}
+
+function trigger(key: string, metaKey = true) {
+  window.dispatchEvent(new KeyboardEvent('keydown', { key, metaKey }))
 }

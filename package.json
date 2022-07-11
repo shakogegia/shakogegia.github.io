@@ -32,6 +32,7 @@
     "gatsby-remark-images": "^6.18.0",
     "gatsby-source-filesystem": "^4.18.0",
     "gatsby-transformer-sharp": "^4.18.0",
+    "kbar": "^0.1.0-beta.36",
     "lightense-images": "^1.0.17",
     "lodash": "^4.17.21",
     "lottie-react": "^2.3.1",

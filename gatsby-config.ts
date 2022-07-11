@@ -9,6 +9,8 @@ const config: GatsbyConfig = {
     titleTemplate: '%s · Shalva Gegia',
     image: './src/images/selfie.jpg', // Path to the image placed in the 'static' folder, in the project's root directory.
     twitterUsername: '@ShalvaGegia',
+    githubUsername: 'shakogegia',
+    email: 'shalva.gegia@gmail.com',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
