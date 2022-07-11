@@ -17,7 +17,7 @@ export default function About() {
       <article className="prose md:prose-lg max-w-none iAWriterQuattro font-light mt-8 text-gray-600 transition-colors dark:text-gray-300 dark:prose-a:text-gray-200">
         <p>Hi I’m Shalva, a Georgian 🇬🇪 software engineer based in Amsterdam, Netherlands 🇳🇱</p>
         <p>
-          I'm <GifTip url="http://localhost:8000/static/selfie-5688555715ccd648e9ab6d060d1276d7.jpg">starting</GifTip> this website to become my digital <Link to="/garden">garden 🌱</Link> where I'll
+          I'm starting this website to become my digital <Link to="/garden">garden 🌱</Link> where I'll
           share notes, articles & thoughts about things that interest me. Still new to digital gardening, but I’m
           learning how to grow
         </p>
@@ -39,17 +39,5 @@ export default function About() {
         </p>
       </article>
     </Layout>
-  )
-}
-
-function Item(props: PropsWithChildren<{}>) {
-  return (
-    <span className="relative">
-      <span className="underline underline-offset-1 cursor-help">{props.children}</span>
-      <img
-        src="http://localhost:8000/static/selfie-5688555715ccd648e9ab6d060d1276d7.jpg"
-        className="absolute top max-w-xs"
-      />
-    </span>
   )
 }
