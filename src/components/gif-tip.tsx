@@ -24,7 +24,7 @@ export default function GifTip(props: PropsWithChildren<{ url: string }>) {
     <span
       className={classNames(
         "relative inline-block cursor-none font-bold",
-        "after:content-[' '] after:-z-[1] after:h-0.5 after:w-full after:absolute after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-pink-400 after:to-indigo-600",
+        "after:content-[' '] after:h-0.5 after:w-full after:absolute after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-pink-400 after:to-indigo-600",
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
