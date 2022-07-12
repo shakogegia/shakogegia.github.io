@@ -90,15 +90,6 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createRedirect, createPage } = actions
 
   createPosts(createPage, createRedirect, edges)
-
-  // createPage({
-  //   path: '/articles',
-  //   component: path.resolve(`src/templates/blog.js`),
-  //   context: {
-  //     articles: edges.map(value => value.node.id),
-  //     categories: [],
-  //   },
-  // })
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
