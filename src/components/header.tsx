@@ -93,7 +93,7 @@ function ThemeToggle() {
         className="cursor-pointer"
         onClick={() => {
           toggleTheme(theme === 'dark' ? 'light' : 'dark')
-          animate(theme)
+          theme && animate(theme)
         }}
       >
         <Lottie
