@@ -9,6 +9,12 @@ featured: true
 published: true
 banner: "./images/scan_3.jpeg"
 ---
+import scan_1 from "./images/scan_1.jpeg"
+import scan_2 from "./images/scan_2.jpeg"
+import scan_3 from "./images/scan_3.jpeg"
+import scan_4 from "./images/scan_4.jpeg"
+
+import Gallery from "src/components/gallery"
 
 In this day and age, if you are a film shooter, you know that digitalizing film is inevitable. Sure, it's great fun to have a darkroom and play with silver gelatin prints for both color and B&W, but let's face it, we all have Instagram and want to share our work with the rest of the world. If you are lucky enough to have the film scanned at your local lab, great, but prices are [going higher and higher](https://silvergrainclassics.com/en/2021/10/film-prices-analysed/), so to get those images on your device, you need some setup to scan them.
 
@@ -35,12 +41,12 @@ So these are the final lens mount system:
 - M42 to M42 focusing helicoid adapter
 - M42 to Sony E mount adapter
 
-<p class="flex flex-wrap justify-center">
+<div class="flex flex-wrap justify-center">
   <img src="https://res.craft.do/user/full/c1f660f3-6119-a09b-30f1-aebf482da31b/doc/2F264CB5-8622-4E22-97A1-2DAB1ED64B38/E97EA553-6561-4516-AF95-7CA043074197_2/dxP6kLHWNXzDYghfy0j75yh7Q8odq7IRl3jqtgEvJDIz/373972_01_1000x1000.jpeg" width="180" alt="Lens El-Nikkor f2.8" />
   <img src="https://res.craft.do/user/full/c1f660f3-6119-a09b-30f1-aebf482da31b/doc/2F264CB5-8622-4E22-97A1-2DAB1ED64B38/B2ADC36E-770D-42A2-B837-A780EA8F0B49_2/iTokux5ZDNhHeO1mht89RzQlOtlI3HVkhvkNVyaaRPkz/m39m42.jpeg" width="180" alt="M39 to M42 Adapter" /> 
   <img src="https://res.craft.do/user/full/c1f660f3-6119-a09b-30f1-aebf482da31b/doc/2F264CB5-8622-4E22-97A1-2DAB1ED64B38/44FDC1D6-8D81-4431-9D41-19A138F58647_2/x9zBk0O1SYiJ5LCzVAQNba6AK5d4YxvXrUUvpz1Zjqgz/M42-M42-MCR-01_1400x.jpeg" width="180" alt="M42 to M42 focusing helicoid adapter" />
   <img src="https://res.craft.do/user/full/c1f660f3-6119-a09b-30f1-aebf482da31b/doc/2F264CB5-8622-4E22-97A1-2DAB1ED64B38/0F1E5C89-81DE-49B6-A5A4-7BD15378E8D7_2/yphvqiNCkhhnv6Zb9ToWXrqsPPFBq1j1hBDpcgPHx4Ez/m42nex.jpeg" width="180" alt="M42 to Sony E mount adapter" />
-</p>
+</div>
 
 #### Stand
 
@@ -81,10 +87,4 @@ Here is a picture of my setup; it looks sturdy, feels sturdy, and works great.
 
 Can this be improved? This is a good one, but I can take it further. I already have some ideas to take this scanning setup to the next level using Arduino: to roll the film and automatically take pictures. Also, maybe using an enlarger head as a better-diffused light source in the future, but this scanning setup seems quite enough for me to test the camera scanning experience.
 
-![IMG_4969.jpeg](./images/scan_1.jpeg)
-
-![IMG_4971.jpeg](./images/scan_2.jpeg)
-
-![IMG_4973.jpeg](./images/scan_3.jpeg)
-
-![IMG_4970.jpeg](./images/scan_4.jpeg)
+<Gallery images={[scan_1, scan_2, scan_3, scan_4]} />

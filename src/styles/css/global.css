@@ -11,3 +11,7 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
 [fill="rgb(0,0,0)"] {
   fill: transparent;
 }
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
