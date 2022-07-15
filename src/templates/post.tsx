@@ -17,9 +17,9 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev } 
       />
 
       <div className="max-w-3xl m-auto mt-8">
-        <h3 className="text-2xl iAWriterDuospaceBold transition-colors dark:text-gray-200">{mdx.frontmatter.title}</h3>
+        <h3 className="text-3xl max-w-lg mx-auto text-center iAWriterDuospaceBold transition-colors dark:text-gray-200">{mdx.frontmatter.title}</h3>
 
-        <div className="prose max-w-none mt-6 prose-lg iAWriterDuospace break-words  text-gray-500 transition-colors dark:text-gray-300 dark:prose-a:text-gray-200 dark:prose-strong:text-gray-200 dark:prose-blockquote:text-gray-200">
+        <div className="prose max-w-none mt-16 prose-lg iAWriterDuospace break-words  text-gray-500 transition-colors dark:text-gray-300 dark:prose-a:text-gray-200 dark:prose-strong:text-gray-200 dark:prose-blockquote:text-gray-200">
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
 
