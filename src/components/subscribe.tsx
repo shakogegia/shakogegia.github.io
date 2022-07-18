@@ -3,19 +3,19 @@ import { IoMailUnreadOutline } from 'react-icons/io5'
 
 export default function Subscribe() {
   const [completed, setCompleted] = React.useState(false)
+  const [loading, setLoading] = React.useState(false)
 
   async function onSubmit(event: React.FormEvent) {
     event.preventDefault()
+    setLoading(true)
     const data = new FormData(event.target as HTMLFormElement)
 
     try {
-      await fetch('/api/form-submit-url', {
-        method: 'POST',
-        body: data,
-      })
+      await fetch(`${process.env.EMAIL_SUBSCRIBE_URL}?address=${data.get('email')}&list=newsletter@gegia.dev`)
     } catch (error) {
       console.log(error)
     } finally {
+      setLoading(false)
       setCompleted(true)
     }
   }
@@ -47,7 +47,7 @@ export default function Subscribe() {
           <Input type="text" name="name" placeholder="John doe" label="Name" required />
           <Input type="email" name="email" placeholder="john@doe.com" label="Email" required />
           <div>
-            <button className="py-4 px-8 rounded font-mono text-white bg-indigo-500">Subscribe</button>
+            <button disabled={loading} className="py-4 px-8 rounded font-mono text-white bg-indigo-500">Subscribe</button>
           </div>
         </form>
       </div>
