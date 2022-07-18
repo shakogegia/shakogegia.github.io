@@ -11,7 +11,7 @@ export default function Subscribe() {
     const data = new FormData(event.target as HTMLFormElement)
 
     try {
-      await fetch(`${process.env.EMAIL_SUBSCRIBE_URL}?address=${data.get('email')}&list=newsletter@gegia.dev`)
+      await fetch(`https://generic-server.vercel.app/email/subscribe?address=${data.get('email')}&list=newsletter@gegia.dev`)
     } catch (error) {
       console.log(error)
     } finally {
@@ -32,14 +32,14 @@ export default function Subscribe() {
     <div className="flex flex-col mx-auto">
       <div className="flex">
         <div className="mr-0 sm:mr-20">
-          <p className="text-3xl font-bold">Let's chat about coding, business, learning, and teaching.</p>
+          <p className="text-3xl font-bold dark:text-gray-200">Let's chat about coding, business, learning, and teaching.</p>
           <p className="mt-4 text-lg text-gray-500">
             I send articles and thoughts occasionally and love to have conversations with folks. Lots of people like
             them, and I'd love to learn what you think as well. You can always unsubscribe.
           </p>
         </div>
         <div className="p-8">
-          <IoMailUnreadOutline className="text-7xl text-gray-500" />
+          <IoMailUnreadOutline className="text-7xl text-gray-500 dark:text-gray-300" />
         </div>
       </div>
       <div className="mt-10">
@@ -63,10 +63,10 @@ function Input(props: InputProps) {
   return (
     <div className="flex flex-1 flex-col">
       <div className="flex justify-between mb-2">
-        <label className="font-mono">{props.label}</label>
+        <label className="font-mono dark:text-gray-500">{props.label}</label>
         {/* <label className='font-mono text-sm text-red-500'>Required</label> */}
       </div>
-      <input className="border rounded p-4 font-mono" {...props} />
+      <input className="border rounded p-4 font-mono dark:text-gray-100 dark:border-gray-500 dark:bg-gray-600 dark:ring-gray-500" {...props} />
     </div>
   )
 }
