@@ -1,33 +1,15 @@
-import React, { PropsWithChildren, useRef } from 'react'
-import {
-  KBarProvider,
-  KBarPortal,
-  KBarPositioner,
-  KBarAnimator,
-  KBarSearch,
-  KBarResults,
-  useMatches,
-  NO_GROUP,
-  Action,
-} from 'kbar'
-import classNames from 'src/utils/classnames'
-import { navigate, graphql, useStaticQuery } from 'gatsby'
-import { useMemo } from 'react'
-import {
-  IoHomeOutline as IoHome,
-  IoSearchOutline as IoSearch,
-  IoLogoTwitter as IoTwitter,
-  IoLogoGithub as IoGithub,
-  IoMailOutline as IoMail,
-  IoLibraryOutline as IoLibrary,
-  IoFilmOutline as IoFilm,
-  IoDocumentTextOutline as IoDocument,
-  IoColorPaletteOutline as IoColor,
-  IoInformationCircleOutline as IoInformation,
-  IoLeafOutline as IoLeaf,
-  IoChevronForwardOutline,
-} from 'react-icons/io5'
+import { graphql, navigate, useStaticQuery } from 'gatsby'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import {
+  Action, KBarAnimator, KBarPortal,
+  KBarPositioner, KBarProvider, KBarResults, KBarSearch, useMatches
+} from 'kbar'
+import React, { PropsWithChildren, useMemo } from 'react'
+import {
+  IoChevronForwardOutline, IoColorPaletteOutline as IoColor, IoDocumentTextOutline as IoDocument, IoFilmOutline as IoFilm, IoHomeOutline as IoHome, IoInformationCircleOutline as IoInformation,
+  IoLeafOutline as IoLeaf, IoLibraryOutline as IoLibrary, IoLogoGithub as IoGithub, IoLogoTwitter as IoTwitter, IoMailOutline as IoMail, IoSearchOutline as IoSearch
+} from 'react-icons/io5'
+import classNames from 'src/utils/classnames'
 import { ThemeProvider, useThemeContext } from './theme-context'
 
 function CommandPallette(props: PropsWithChildren<{}>) {
