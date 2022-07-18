@@ -1,9 +1,9 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import { IoLibraryOutline, IoShareOutline } from 'react-icons/io5'
 import Layout from '../components/layout/main'
-import Ubik from '../images/ubik.jpg'
-import { IoShareOutline, IoLibraryOutline } from 'react-icons/io5'
 import SEO from '../components/seo'
+import Ubik from '../images/ubik.jpg'
 
 const books = [
   {
@@ -125,7 +125,7 @@ export default function LibraryPage() {
         {books.map((book) => (
           <article key={book.title} className="flex flex-col max-w-[230px]">
             <div className="relative">
-              <img src={book.cover} alt={book.title} className="mb-2 rounded-md w-[230px] h-[342px] object-cover" />
+              <img src={book.cover} alt={book.title} className="mb-2 rounded-md w-[230px] h-[342px] object-cover" loading='lazy' />
               <div className="absolute inset-0 bg-white bg-opacity-60 transition-all opacity-0 hover:opacity-100 flex justify-center items-center">
                 <Link
                   to={book.href}

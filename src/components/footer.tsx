@@ -9,6 +9,10 @@ export default function Footer() {
           Shalva Gegia
         </a>
         {' • '}
+        <a href="/rss.xml" target="_blank" className="underline" rel="noopener">
+          RSS
+        </a>
+        {' • '}
         <a href="https://twitter.com/@ShalvaGegia" target="_blank" className="underline" rel="noopener">
           Twitter
         </a>
