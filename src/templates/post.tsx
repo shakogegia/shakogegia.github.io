@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import * as React from 'react'
+import Subscribe from 'src/components/subscribe'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 
@@ -28,6 +29,10 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev } 
 
         <div className="py-20">
           <div className="w-full border-t border-gray-100 transition-colors dark:border-gray-600"></div>
+        </div>
+
+        <div className="mb-20">
+          <Subscribe />
         </div>
       </div>
     </Layout>
