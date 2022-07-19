@@ -1,1 +1,0 @@
-{"version":3,"file":"component---src-pages-garden-tsx-07137d5c0c14220bbcb6.js","mappings":"gLAEe,SAASA,IACtB,OAAOC,EAAAA,cAAAA,MAAAA,KAAAA","sources":["webpack://my-gatsby-site/./src/pages/garden.tsx"],"sourcesContent":["import * as React from 'react'\n\nexport default function GardenPage() {\n  return <div>garden</div>\n}\n"],"names":["GardenPage","React"],"sourceRoot":""}
