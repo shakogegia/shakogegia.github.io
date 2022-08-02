@@ -100,8 +100,8 @@ const config: GatsbyConfig = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + "/" + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + "/" + edge.node.fields.slug,
+                  url: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
                 })
               })
             },
@@ -125,8 +125,8 @@ const config: GatsbyConfig = {
               }
             `,
             output: '/rss.xml',
-            title: "Shalva Gegia",
-            copyright: "Shalva Gegia",
+            title: 'Shalva Gegia',
+            copyright: 'Shalva Gegia',
             language: 'en',
           },
         ],
