@@ -3,7 +3,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import * as React from 'react'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
-import { Disqus } from 'gatsby-plugin-disqus';
 import Share from 'src/components/share'
 
 export default function Post({ data: { site, mdx }, pageContext: { next, prev } }: any) {
