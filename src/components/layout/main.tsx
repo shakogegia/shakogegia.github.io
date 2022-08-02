@@ -7,7 +7,7 @@ import Lightense from 'lightense-images'
 
 export default function Layout({ children, className }: PropsWithChildren<{ className?: string }>) {
   useEffect(() => {
-    Lightense('img', { keyboard: true })
+    Lightense('img:not(.no-lightense)', { keyboard: true })
   }, [])
 
   return (
