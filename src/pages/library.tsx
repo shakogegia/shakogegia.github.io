@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { IoLibraryOutline, IoShareOutline } from 'react-icons/io5'
+import Cover from 'src/components/cover'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 import Ubik from '../images/ubik.jpg'
@@ -120,28 +121,28 @@ export default function LibraryPage() {
         </h6>
       </div>
 
-
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 justify-items-center gap-8 mt-10">
         {books.map((book) => (
           <article key={book.title} className="flex flex-col max-w-[230px]">
-            <div className="relative">
-              <img src={book.cover} alt={book.title} className="mb-2 rounded-md w-[230px] h-[342px] object-cover" loading='lazy' />
-              <div className="absolute inset-0 bg-white bg-opacity-60 transition-all opacity-0 hover:opacity-100 flex justify-center items-center">
-                <Link
-                  to={book.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-white rounded px-4 py-2 flex items-center space-x-2 text-center"
-                >
-                  <span className="font-mono text-sm">View on Goodreads</span>
-                  <IoShareOutline />
-                </Link>
-              </div>
-            </div>
-            <div>
-              <h3 className="iAWriterQuattro text-xl text-gray-900 transition-colors dark:text-gray-200">{book.title}</h3>
-              <p className="iAWriterQuattro text-gray-500">{book.author}</p>
-            </div>
+            <Link
+              to={book.href}
+              target="_blank"
+              rel="noreferrer"
+              className="relative bg-white rounded px-4 py-2 flex items-center space-x-2 text-center group"
+            >
+              <Cover src={book.cover} size={'small'} className="relative">
+                <div className='absolute inset-0 bg-white flex flex-col justify-center items-center opacity-0 transition-opacity group-hover:opacity-100 bg-opacity-95 p-5'>
+                  <h3 className="iAWriterQuattro text-lg text-gray-900 transition-colors dark:text-gray-200">
+                    {book.title}
+                  </h3>
+                  <p className="iAWriterQuattro text-gray-500">{book.author}</p>
+                  <div className='flex mt-10'>
+                    <span className="font-mono text-sm">Goodreads</span>
+                    <IoShareOutline />
+                  </div>
+                </div>
+              </Cover>
+            </Link>
           </article>
         ))}
       </div>
