@@ -3,6 +3,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import * as React from 'react'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
+import { Disqus } from 'gatsby-plugin-disqus';
+import Share from 'src/components/share'
 
 export default function Post({ data: { site, mdx }, pageContext: { next, prev } }: any) {
   return (
@@ -28,6 +30,10 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev } 
 
         <div className="py-20">
           <div className="w-full border-t border-gray-100 transition-colors dark:border-gray-600"></div>
+        </div>
+
+        <div className='py-20'>
+          <Share text={mdx.frontmatter.title} url={`/${mdx.frontmatter.slug}`} />
         </div>
       </div>
     </Layout>
