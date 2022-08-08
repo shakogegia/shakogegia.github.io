@@ -280,7 +280,7 @@ export default function LibraryPage() {
 
       <div className="prose prose-lg max-w-none my-5 iAWriterDuospace text-gray-600 dark:text-gray-400">
         <p>
-          It all started with Canon AE-1 Program. It was the first camera I brought a year ago. I wanted to start with
+          It all started with Canon AE-1 Program. It was the very first camera I brought a year ago. I wanted to start with
           film, and the AE-1 Program was one of the most hyped one then. Then I discovered I needed a camera with
           shutter priority mode and brought Canon A-1, which, IMHO, is the superior version of the AE-1 Program. Then I
           came across an almost mint beloved Minolta X-700 and couldn't resist. Still one of my favorite. I haven't
