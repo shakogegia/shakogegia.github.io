@@ -39,8 +39,8 @@ export default function GardenPage(props: any) {
             if (activeTopic && !categories.includes(activeTopic)) return null
             return (
               <div className='mb-6 break-inside-avoid' key={fields.id}>
-                <Link to={`/${fields.slug}`}>
-                  <h3 className="text-lg font-mono transition-colors dark:text-gray-200">{fields.title}</h3>
+                <Link className='group' to={`/${fields.slug}`}>
+                  <h3 className="text-lg font-mono group-hover:underline transition-colors dark:text-gray-200">{fields.title}</h3>
                   <div className="text-sm text-gray-400 flex items-center">
                     <IoReaderOutline className='mr-1' />
                     <span>
