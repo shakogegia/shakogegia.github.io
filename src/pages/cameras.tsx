@@ -290,7 +290,7 @@ export default function LibraryPage() {
         <p>
           Those are great cameras, but what is everyone talking about, Nikon? I want one, need that. And here comes the
           Nikon F3 and FA. Now I have it all... But there is an auction going on right now of FM2n in mint+++++
-          condition, almost new; what is u gonna do? Get it quickly while it's hot. What about FE2? Need that...
+          condition, almost new; what u gonna do? Get it quickly while it's hot. What about FE2? Need that...
         </p>
 
         <p>and the list never ends...</p>
