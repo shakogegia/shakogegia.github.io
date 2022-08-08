@@ -18,7 +18,7 @@ const sizes = {
 export default function Cover({ src, className, size = "medium", children }: PropsWithChildren<Props>) {
   return (
     <div className={classNames(sizes[size], className)}>
-      <div className='rounded overflow-hidden cover-wrapper'>
+      <div className='rounded overflow-hidden cover-wrapper relative'>
         <span className={classNames('relative block',
         "after:content-[' '] after:absolute after:inset-0 after:rounded after:pointer-events-none",
         'cover-after h-full'
