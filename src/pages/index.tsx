@@ -40,6 +40,7 @@ export default function IndexPage({ data: { site, allMdx } }: any) {
         <div className="flex flex-col space-y-4 mt-4">
           <Item href="/library">📚 Books I read</Item>
           <Item href="/shows">📽 Shows I watch</Item>
+          <Item href="/cameras">📸 Cameras I own</Item>
         </div>
       </section>
 

@@ -1,117 +1,168 @@
 import React from 'react'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
+import GifTip from 'src/components/gif-tip'
 
 const cameras = [
   {
     name: 'Minolta',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Minolta_Logo.svg/1200px-Minolta_Logo.svg.png',
     cameras: [
       {
         name: 'XG-M',
-        type: 'slr',
+        type: 'SLR',
         color: 'silver',
       },
       {
         name: 'X-300',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'X-700',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
-        name: 'X-700',
-        type: 'slr',
+        name: 'MAXXUM 5000',
+        type: 'SLR',
+        color: 'black',
+      },
+      {
+        name: 'MAXXUM 7000',
+        type: 'SLR',
+        color: 'black',
+      },
+      {
+        name: 'Dynax 7000i',
+        type: 'SLR',
+        color: 'black',
+      },
+      {
+        name: 'Dynax 404si',
+        type: 'SLR',
+        color: 'silver',
+      },
+      {
+        name: 'Hi-matic 7s II',
+        type: 'Rangefinder',
+        color: 'black',
+      },
+      {
+        name: 'Hi-matic G',
+        type: 'Rangefinder',
         color: 'black',
       },
     ],
   },
   {
     name: 'Canon',
-    logo: 'https://global.canon/en/corporate/logo/img/logo_1935.png',
     cameras: [
       {
         name: 'FTb',
-        type: 'slr',
+        type: 'SLR',
         color: 'silver',
       },
       {
         name: 'AE-1 Program',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'A-1',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
-        name: 'EOS 650',
-        type: 'slr',
+        name: 'AF35M',
+        type: 'Point & Shoot',
+        color: 'black',
+      },
+      {
+        name: 'AF35M II',
+        type: 'Point & Shoot',
         color: 'black',
       },
     ],
   },
   {
     name: 'Yashica',
-    logo: '',
     cameras: [
       {
         name: 'FX-3',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
+      },
+      {
+        name: 'Electro 35 GSN ',
+        type: 'Rangefinder',
+        color: 'silver',
       },
     ],
   },
   {
     name: 'Mamya',
-    logo: '',
     cameras: [
       {
-        name: 'FX-3',
-        type: 'slr',
+        name: 'ZE',
+        type: 'SLR',
         color: 'black',
       },
     ],
   },
   {
     name: 'Fujifilm',
-    logo: '',
     cameras: [
       {
-        name: 'FX-3',
-        type: 'slr',
+        name: 'DL 200',
+        type: 'Point & Shoot',
         color: 'black',
       },
     ],
   },
   {
     name: 'Agfa',
-    logo: '',
     cameras: [
       {
         name: 'Optima 335',
-        type: 'slr',
+        type: 'Rangefinder',
         color: 'black',
       },
       {
-        name: 'Optima 500',
-        type: 'slr',
+        name: 'Optima 535',
+        type: 'Rangefinder',
         color: 'black',
       },
       {
         name: 'Optima 1035',
-        type: 'slr',
+        type: 'Rangefinder',
+        color: 'black',
+      },
+      {
+        name: 'Optima Flash sensor',
+        type: 'Rangefinder',
         color: 'black',
       },
     ],
   },
   {
+    name: 'Zeiss Ikon',
+    cameras: [
+      {
+        name: 'Ikonta (521/16)',
+        type: 'Rangefinder',
+        film: '120, 6x6',
+        color: 'silver',
+      },
+      {
+        name: 'Signal Nettar 518/2',
+        type: 'Rangefinder',
+        film: '120, 6x9',
+        color: 'silver',
+      },
+    ],
+  },
+  {
     name: 'Rollei',
-    logo: '',
     cameras: [
       {
         name: 'LED',
@@ -127,162 +178,142 @@ const cameras = [
   },
   {
     name: 'Nikon',
-    logo: 'https://flyclipart.com/thumbs/nikon-logo-transparent-svg-vector-freebie-supply-nikon-logo-1116495.png',
     cameras: [
       {
         name: 'FG',
-        type: 'slr',
+        type: 'SLR',
         color: 'silver',
       },
       {
         name: 'EM',
-        type: 'slr',
-        color: 'black',
-      },
-      {
-        name: 'EM',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'FM',
-        type: 'slr',
+        type: 'SLR',
         color: 'silver',
       },
       {
         name: 'FM',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'FM2n',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'FE',
-        type: 'slr',
+        type: 'SLR',
         color: 'silver',
       },
       {
         name: 'FE',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'FE2',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'FA',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'F3',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'F4',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
-        name: 'F801s',
-        type: 'slr',
+        name: 'F401',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'F501',
-        type: 'slr',
+        type: 'SLR',
+        color: 'black',
+      },
+      {
+        name: 'F601',
+        type: 'SLR',
+        color: 'black',
+      },
+      {
+        name: 'F801s',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'F65',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'F75',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
       {
         name: 'F80',
-        type: 'slr',
+        type: 'SLR',
         color: 'black',
       },
     ],
   },
 ]
+
 export default function LibraryPage() {
   return (
     <Layout>
       <SEO title="Cameras" />
 
-      <div className='prose prose-lg my-5 iAWriterDuospace text-gray-600'>
-        I love cameras, especially old ones. Saving them, caring them, and collecting them.
+      <div className="prose prose-lg max-w-none my-5 iAWriterDuospace text-gray-600 dark:text-gray-400">
+        <p>
+          It all started with Canon AE-1 Program. It was the first camera I brought a year ago. Wanted to get started
+          with a film and it was one of the most hyped ones at that time. Then I discovered I needed a camera with
+          shutter priority mode and brought Canon A-1, which IMHO, is the superior version of the AE-1 Program. Then I
+          came across an almost mint beloved Minolta X-700 and couldn't resist. Still one of my favorite. I haven't
+          heard of Minolta back then, but now it's one of the tops (by quantity) cameras I own.
+        </p>
+
+        <p>
+          Those are great cameras, but what about Nikon's everyone is talking about? I want one, need that. And here
+          comes the Nikon F3 and FA. Now I have it all... But there is an auction going on right now of FM2n in
+          mint+++++ condition, almost new, what u gonna do? Get it quickly while it's hot. what about FE2? Need that...
+        </p>
+
+        <p>and the list never ends...</p>
       </div>
 
-      <p className='mb-10 iAWriterDuospaceItalic text-gray-300'>Hera are list of cameras I own:</p>
+      <p className="mb-10 iAWriterDuospaceItalic text-gray-400">Hera are list of cameras I own:</p>
 
       <div className="columns-1 sm:columns-2 md:columns-3">
         {cameras.map((manufacturer) => (
-          <div className='mb-10 break-inside-avoid'>
-            
-            <h2 className='lead text-2xl mb-2 iAWriterDuospaceBold'>
-              {manufacturer.name}
-              {/* <img src={manufacturer.logo} className="h-20"/> */}
-            </h2>
+          <div className="mb-10 break-inside-avoid">
+            <h2 className="lead text-2xl mb-2 iAWriterDuospaceBold dark:text-gray-200">{manufacturer.name}</h2>
 
             <ul>
               {manufacturer.cameras.map((camera, j) => (
-                <li className='text-gray-500 iAWriterDuospace' key={camera.name}>
-                  <span>{manufacturer.name} {camera.name},</span>
-                  {' '}
-                  <span className=''>{camera.type},</span>
-                  {' '}
-                  <span className='capitalize'>{camera.color}</span>
+                <li className="text-gray-500 iAWriterDuospace py-0.5" key={camera.name}>
+                  <span>{camera.name}</span>
+                  {', '}
+                  <span className="">{camera.type},</span> <span className="capitalize">{camera.color}</span>
                 </li>
               ))}
             </ul>
           </div>
         ))}
-      </div>
-    </Layout>
-  )
-}
-
-function LibraryPage2() {
-  return (
-    <Layout>
-      <SEO title="Cameras" />
-
-      <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-        <table className="min-w-full divide-y divide-gray-300">
-          <thead className="bg-gray-50">
-            <tr>
-              <th className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Brand</th>
-              <th className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Name</th>
-              <th className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Type</th>
-              <th className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Color</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200 bg-white">
-            {cameras.map(({ brand, cameras }, i) =>
-              cameras.map((camera, j) => (
-                <tr key={camera.name}>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{brand}</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{camera.name}</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{camera.type}</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{camera.color}</td>
-                </tr>
-              )),
-            )}
-          </tbody>
-        </table>
       </div>
     </Layout>
   )

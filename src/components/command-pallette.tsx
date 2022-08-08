@@ -1,13 +1,30 @@
 import { graphql, navigate, useStaticQuery } from 'gatsby'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import {
-  Action, KBarAnimator, KBarPortal,
-  KBarPositioner, KBarProvider, KBarResults, KBarSearch, useMatches
+  Action,
+  KBarAnimator,
+  KBarPortal,
+  KBarPositioner,
+  KBarProvider,
+  KBarResults,
+  KBarSearch,
+  useMatches,
 } from 'kbar'
 import React, { PropsWithChildren, useMemo } from 'react'
 import {
-  IoChevronForwardOutline, IoColorPaletteOutline as IoColor, IoDocumentTextOutline as IoDocument, IoFilmOutline as IoFilm, IoHomeOutline as IoHome, IoInformationCircleOutline as IoInformation,
-  IoLeafOutline as IoLeaf, IoLibraryOutline as IoLibrary, IoLogoGithub as IoGithub, IoLogoTwitter as IoTwitter, IoMailOutline as IoMail, IoSearchOutline as IoSearch
+  IoChevronForwardOutline,
+  IoColorPaletteOutline as IoColor,
+  IoDocumentTextOutline as IoDocument,
+  IoFilmOutline as IoFilm,
+  IoHomeOutline as IoHome,
+  IoInformationCircleOutline as IoInformation,
+  IoLeafOutline as IoLeaf,
+  IoLibraryOutline as IoLibrary,
+  IoCameraOutline as IoCamera,
+  IoLogoGithub as IoGithub,
+  IoLogoTwitter as IoTwitter,
+  IoMailOutline as IoMail,
+  IoSearchOutline as IoSearch,
 } from 'react-icons/io5'
 import classNames from 'src/utils/classnames'
 import { ThemeProvider, useThemeContext } from './theme-context'
@@ -272,10 +289,19 @@ const PAGES = [
   {
     id: 'library',
     name: 'Library',
-    shortcut: ['h', 'l'],
+    shortcut: ['g', 'l'],
     keywords: 'books library',
     icon: <IoLibrary />,
     url: '/library',
+    section: 'Navigation',
+  },
+  {
+    id: 'cameras',
+    name: 'Cameras',
+    shortcut: ['g', 'cam'],
+    keywords: 'camera',
+    icon: <IoCamera />,
+    url: '/cameras',
     section: 'Navigation',
   },
   {
