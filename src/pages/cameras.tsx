@@ -280,17 +280,17 @@ export default function LibraryPage() {
 
       <div className="prose prose-lg max-w-none my-5 iAWriterDuospace text-gray-600 dark:text-gray-400">
         <p>
-          It all started with Canon AE-1 Program. It was the first camera I brought a year ago. Wanted to get started
-          with a film and it was one of the most hyped ones at that time. Then I discovered I needed a camera with
-          shutter priority mode and brought Canon A-1, which IMHO, is the superior version of the AE-1 Program. Then I
+          It all started with Canon AE-1 Program. It was the first camera I brought a year ago. I wanted to start with
+          film, and the AE-1 Program was one of the most hyped one then. Then I discovered I needed a camera with
+          shutter priority mode and brought Canon A-1, which, IMHO, is the superior version of the AE-1 Program. Then I
           came across an almost mint beloved Minolta X-700 and couldn't resist. Still one of my favorite. I haven't
           heard of Minolta back then, but now it's one of the tops (by quantity) cameras I own.
         </p>
 
         <p>
-          Those are great cameras, but what about Nikon's everyone is talking about? I want one, need that. And here
-          comes the Nikon F3 and FA. Now I have it all... But there is an auction going on right now of FM2n in
-          mint+++++ condition, almost new, what u gonna do? Get it quickly while it's hot. what about FE2? Need that...
+          Those are great cameras, but what is everyone talking about, Nikon? I want one, need that. And here comes the
+          Nikon F3 and FA. Now I have it all... But there is an auction going on right now of FM2n in mint+++++
+          condition, almost new; what is u gonna do? Get it quickly while it's hot. What about FE2? Need that...
         </p>
 
         <p>and the list never ends...</p>
