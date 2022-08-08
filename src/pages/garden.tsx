@@ -4,11 +4,12 @@ import * as React from 'react'
 import classNames from 'src/utils/classnames'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
+import { IoReaderOutline } from 'react-icons/io5'
 
 export default function GardenPage(props: any) {
-  const [activeCategory, setActiveCategory] = React.useState<string | null>(null)
+  const [activeTopic, setActiveTopic] = React.useState<string | null>(null)
 
-  const categories = React.useMemo<string[]>(() => {
+  const topics = React.useMemo<string[]>(() => {
     const array = props.data.allMdx.edges.map(({ node }: any) => node.frontmatter?.categories)
     return [...new Set(array.flat())].sort() as string[]
   }, [])
@@ -26,23 +27,26 @@ export default function GardenPage(props: any) {
       </div>
 
       <div className="my-10">
-        <Topics categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+        <Topics topics={topics} activeTopic={activeTopic} setActiveTopic={setActiveTopic} />
       </div>
 
       <div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="columns-1 sm:columns-2 md:columns-3">
           {props.data.allMdx.edges.map(({ node }: any) => {
             const { frontmatter, fields } = node
             if (!frontmatter || !fields) return null
             const { categories = [] } = frontmatter
-            if (activeCategory && !categories.includes(activeCategory)) return null
+            if (activeTopic && !categories.includes(activeTopic)) return null
             return (
-              <div key={fields.id}>
+              <div className='mb-6 break-inside-avoid' key={fields.id}>
                 <Link to={`/${fields.slug}`}>
                   <h3 className="text-lg font-mono transition-colors dark:text-gray-200">{fields.title}</h3>
-                  <span className="text-sm text-gray-400">
-                    Note {' • '} {moment(fields.date).fromNow()}
-                  </span>
+                  <div className="text-sm text-gray-400 flex items-center">
+                    <IoReaderOutline className='mr-1' />
+                    <span>
+                      Note {' • '} {moment(fields.date).fromNow()}
+                    </span>
+                  </div>
                 </Link>
               </div>
             )
@@ -54,13 +58,13 @@ export default function GardenPage(props: any) {
 }
 
 function Topics({
-  categories,
-  activeCategory,
-  setActiveCategory,
+  topics,
+  activeTopic,
+  setActiveTopic,
 }: {
-  categories: string[]
-  activeCategory: string | null
-  setActiveCategory: (category: string | null) => void
+  topics: string[]
+  activeTopic: string | null
+  setActiveTopic: (category: string | null) => void
 }) {
   return (
     <div className="flex justify-center space-x-2 sm:space-x-4 mx-auto">
@@ -71,24 +75,25 @@ function Topics({
             'iAWriterQuattro text-gray-400',
             "after:content-[' '] after:h-[70%] after:w-0.5 after:absolute after:top-[15%] after:-right-3 after:bg-gray-300",
           )}
+          onClick={() => setActiveTopic(null)}
         >
           Topics
         </div>
       </div>
       <div className="flex flex-wrap justify-start mx-auto">
-        {categories.map((category) => (
+        {topics.map((topic) => (
           <span
-            key={category}
+            key={topic}
             className={classNames(
               'relative cursor-pointer capitalize mr-6 mb-2',
               'after:opacity-0 transition-opacity after:h-0.5 after:w-full after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-pink-400 after:to-indigo-600',
               'hover:after:opacity-100',
               'iAWriterQuattro text-gray-500',
-              category === activeCategory && 'after:opacity-100',
+              topic === activeTopic && 'after:opacity-100',
             )}
-            onClick={() => setActiveCategory(activeCategory !== category ? category : null)}
+            onClick={() => setActiveTopic(activeTopic !== topic ? topic : null)}
           >
-            {category}
+            {topic}
           </span>
         ))}
       </div>
