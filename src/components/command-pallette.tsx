@@ -155,7 +155,7 @@ function RenderResults() {
           <div
             className={classNames(
               'flex justify-between',
-              'px-4 py-4 iAWriterQuattro dark:text-gray-300',
+              'px-4 py-4 iAWriterDuospace dark:text-gray-300',
               active ? 'bg-gray-50 dark:bg-gray-700 dark:text-gray-200' : 'bg-transparent',
             )}
           >

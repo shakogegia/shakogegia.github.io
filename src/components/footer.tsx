@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className="bottom-0 mt-10 text-center w-full py-4 px-6 iAWriterQuattro">
+    <footer className="bottom-0 mt-10 text-center w-full py-4 px-6 iAWriterDuospace">
       <small className="text-gray-500">
         Copyright © Shalva Gegia 2022. Made by{' '}
         <a href="/" className="underline">

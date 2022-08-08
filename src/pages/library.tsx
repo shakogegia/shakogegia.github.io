@@ -154,10 +154,10 @@ export default function LibraryPage() {
                 >
                   <Cover src={book.cover} size={'small'} className="relative">
                     <div className="absolute inset-0 bg-white flex flex-col justify-center items-center opacity-0 transition-opacity group-hover:opacity-100 bg-opacity-95 p-5 dark:bg-gray-800 dark:bg-opacity-80">
-                      <h3 className="iAWriterQuattro text-lg text-gray-900 transition-colors dark:text-gray-200">
+                      <h3 className="iAWriterDuospace text-lg text-gray-900 transition-colors dark:text-gray-200">
                         {book.title}
                       </h3>
-                      <p className="iAWriterQuattro text-gray-500 dark:text-gray-300">{book.author}</p>
+                      <p className="iAWriterDuospace text-gray-500 dark:text-gray-300">{book.author}</p>
                       <div className="flex mt-10  dark:text-gray-400">
                         <span className="font-mono text-sm">Goodreads</span>
                         <IoShareOutline />
