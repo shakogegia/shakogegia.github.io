@@ -49,6 +49,14 @@ const createPosts = (createPage, createRedirect, edges) => {
       },
     })
     
+    createPage({
+      path: `/articles/${pagePath}`,
+      component: path.resolve(`./src/templates/redirect.tsx`),
+      context: {
+        redirect: pagePath
+      },
+    })
+    
     // Legacy redirects
     createRedirect({
       fromPath: `/notes/*`,
@@ -56,6 +64,10 @@ const createPosts = (createPage, createRedirect, edges) => {
     });
     createRedirect({
       fromPath: `/article/*`,
+      toPath: `/*`,
+    });
+    createRedirect({
+      fromPath: `/articles/*`,
       toPath: `/*`,
     });
 
