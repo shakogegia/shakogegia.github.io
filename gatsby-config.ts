@@ -7,7 +7,7 @@ const config: GatsbyConfig = {
       "I'm a software engineer based in Amsterdam, Netherlands. I'm passionate about building products that solve real-world problems.",
     siteUrl: `https://gegia.dev`,
     titleTemplate: '%s · Shalva Gegia',
-    image: './src/images/selfie.jpg', // Path to the image placed in the 'static' folder, in the project's root directory.
+    image: '/images/meta.png',
     twitterUsername: '@ShalvaGegia',
     githubUsername: 'shakogegia',
     email: 'shalva.gegia@gmail.com',
