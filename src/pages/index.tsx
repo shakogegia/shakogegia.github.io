@@ -41,6 +41,7 @@ export default function IndexPage({ data: { site, allMdx } }: any) {
           <Item href="/library">📚 Books I read</Item>
           <Item href="/shows">📽 Shows I watch</Item>
           <Item href="/cameras">📸 Cameras I own</Item>
+          <Item href="/sketches">🎨 Sketches I paint</Item>
         </div>
       </section>
 

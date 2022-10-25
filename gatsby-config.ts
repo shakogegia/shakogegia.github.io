@@ -50,14 +50,6 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: './src/images/',
-      },
-      __key: 'images',
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'pages',
         path: './src/pages/',
       },
@@ -68,6 +60,13 @@ const config: GatsbyConfig = {
       options: {
         path: `${__dirname}/content/blog`,
         name: 'blog',
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `./src/images/sketches/`,
+        name: "sketches",
       },
     },
     {

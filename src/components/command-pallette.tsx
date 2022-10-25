@@ -25,6 +25,7 @@ import {
   IoLogoTwitter as IoTwitter,
   IoMailOutline as IoMail,
   IoSearchOutline as IoSearch,
+  IoColorPaletteOutline,
 } from 'react-icons/io5'
 import classNames from 'src/utils/classnames'
 import { ThemeProvider, useThemeContext } from './theme-context'
@@ -302,6 +303,14 @@ const PAGES = [
     keywords: 'camera',
     icon: <IoCamera />,
     url: '/cameras',
+    section: 'Navigation',
+  },
+  {
+    id: 'sketches',
+    name: 'Sketches',
+    keywords: 'sketches art painting drawing',
+    icon: <IoColorPaletteOutline />,
+    url: '/sketches',
     section: 'Navigation',
   },
   {
