@@ -39,7 +39,7 @@ export default function SketchesPage({ data }: any) {
       <p className="mb-10 iAWriterDuospaceItalic text-gray-400">Hera are list of cameras I own:</p>
 
       <div className="">
-        <Gallery className='object-contain' images={data.allFile.edges.map((edge: any) => edge.node.childImageSharp.fluid.src)} />
+        <Gallery className='object-cover' images={data.allFile.edges.map((edge: any) => edge.node.childImageSharp.fluid.src)} />
       </div>
     </Layout>
   )

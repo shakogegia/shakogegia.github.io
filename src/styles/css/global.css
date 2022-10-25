@@ -33,3 +33,7 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
     rgba(244, 244, 244, 0) 6.96%
   );
 }
+
+.lightense-wrap img {
+  object-fit: contain;
+}
