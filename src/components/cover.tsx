@@ -1,4 +1,3 @@
-import { title } from 'process'
 import React, { PropsWithChildren } from 'react'
 import classNames from 'src/utils/classnames'
 
@@ -15,7 +14,7 @@ const sizes = {
   large: 'w-[325px] h-[500px]',
 }
 
-export default function Cover({ src, className, size = "medium", children }: PropsWithChildren<Props>) {
+export default function Cover({ src, className, title, size = "medium", children }: PropsWithChildren<Props>) {
   return (
     <div className={classNames(sizes[size], className)}>
       <div className='rounded overflow-hidden cover-wrapper relative'>

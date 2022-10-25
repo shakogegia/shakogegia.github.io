@@ -129,7 +129,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
     const slug =
       parent.sourceInstanceName === 'legacy'
-        ? `blog/${node.frontmatter.date.split('T')[0].replace(/-/g, '/')}/${titleSlugged}`
+        ? `blog/${node.frontmatter.date?.split('T')[0].replace(/-/g, '/')}/${titleSlugged}`
         : node.frontmatter.slug || titleSlugged
 
     createNodeField({
@@ -178,7 +178,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       name: 'date',
       node,
-      value: node.frontmatter.date ? node.frontmatter.date.split(' ')[0] : '',
+      value: node.frontmatter.date && node.frontmatter.date.split ? node.frontmatter.date.split(' ')[0] : '',
     })
 
     createNodeField({
