@@ -1,11 +1,10 @@
 import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import * as React from 'react'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 import Share from 'src/components/share'
 
-export default function Post({ data: { site, mdx }, pageContext: { next, prev } }: any) {
+export default function Post({ data: { site, mdx }, pageContext: { next, prev }, children }: any) {
   return (
     <Layout>
       <SEO
@@ -20,7 +19,7 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev } 
         <h3 className="text-center text-3xl iAWriterDuospaceBold transition-colors dark:text-gray-200">{mdx.frontmatter.title}</h3>
 
         <div className="prose max-w-none mt-10 prose-lg iAWriterDuospace text-gray-500 transition-colors dark:text-gray-300 dark:prose-a:text-gray-200 dark:prose-strong:text-gray-200 dark:prose-blockquote:text-gray-200 dark:prose-headings:text-gray-200">
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          {children}
         </div>
 
         <div className="mt-14">
@@ -48,10 +47,6 @@ export const pageQuery = graphql`
     }
     mdx(fields: { id: { eq: $id } }) {
       excerpt(pruneLength: 240)
-      fields {
-        github
-      }
-      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

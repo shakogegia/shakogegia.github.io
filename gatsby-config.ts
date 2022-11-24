@@ -97,8 +97,8 @@ const config: GatsbyConfig = {
             serialize: ({ query: { site, allMdx } }: any) => {
               return allMdx.edges.map((edge: any) => {
                 return Object.assign({}, edge.node.frontmatter, {
+                  title: edge.node.fields.title,
                   description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
                 })
@@ -107,15 +107,26 @@ const config: GatsbyConfig = {
             query: `
               {
                 allMdx(
-                  filter: { frontmatter: { published: { ne: false } } }
-                  sort: { order: DESC, fields: [frontmatter___date] }
+                  filter: {frontmatter: {published: {ne: false}}}
+                  sort: {frontmatter: {date: DESC}}
                 ) {
                   edges {
                     node {
-                      excerpt
-                      fields { slug }
+                      id
+                      parent {
+                        ... on File {
+                          name
+                          sourceInstanceName
+                        }
+                      }
+                      excerpt(pruneLength: 250)
                       frontmatter {
                         title
+                        date
+                      }
+                      fields {
+                        title
+                        slug
                         date
                       }
                     }
@@ -123,7 +134,53 @@ const config: GatsbyConfig = {
                 }
               }
             `,
-            output: '/rss.xml',
+            output: '/feed.xml',
+            title: 'Shalva Gegia',
+            copyright: 'Shalva Gegia',
+            language: 'en',
+          },
+          {
+            serialize: ({ query: { site, allMdx } }: any) => {
+              return allMdx.edges.map((edge: any) => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  title: edge.node.fields.title,
+                  description: edge.node.excerpt,
+                  url: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
+                })
+              })
+            },
+            query: `
+              {
+                allMdx(
+                  filter: {frontmatter: {published: {ne: false}, categories: {in: "film"}}}
+                  sort: {frontmatter: {date: DESC}}
+                ) {
+                  edges {
+                    node {
+                      id
+                      parent {
+                        ... on File {
+                          name
+                          sourceInstanceName
+                        }
+                      }
+                      excerpt(pruneLength: 250)
+                      frontmatter {
+                        title
+                        date
+                      }
+                      fields {
+                        title
+                        slug
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/film.xml',
             title: 'Shalva Gegia',
             copyright: 'Shalva Gegia',
             language: 'en',

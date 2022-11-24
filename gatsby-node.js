@@ -22,16 +22,18 @@ const createPosts = (createPage, createRedirect, edges) => {
       })
     }
 
+    const postTemplate = path.resolve(`./src/templates/post.tsx`)
+    
     createPage({
       path: pagePath,
-      component: path.resolve(`./src/templates/post.tsx`),
+      component: `${postTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         id: node.id,
         prev,
         next,
       },
     })
-    
+
     // Legacy redirects
     createPage({
       path: `/notes/${pagePath}`,
@@ -40,7 +42,7 @@ const createPosts = (createPage, createRedirect, edges) => {
         redirect: pagePath
       },
     })
-    
+
     createPage({
       path: `/article/${pagePath}`,
       component: path.resolve(`./src/templates/redirect.tsx`),
@@ -48,7 +50,7 @@ const createPosts = (createPage, createRedirect, edges) => {
         redirect: pagePath
       },
     })
-    
+
     createPage({
       path: `/articles/${pagePath}`,
       component: path.resolve(`./src/templates/redirect.tsx`),
@@ -56,7 +58,7 @@ const createPosts = (createPage, createRedirect, edges) => {
         redirect: pagePath
       },
     })
-    
+
     // Legacy redirects
     createRedirect({
       fromPath: `/notes/*`,
@@ -78,8 +80,8 @@ exports.createPages = async ({ actions, graphql }) => {
   const { data, errors } = await graphql(`
     query {
       allMdx(
-        filter: { frontmatter: { published: { ne: false } } }
-        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: {frontmatter: {published: {ne: false}}}
+        sort: {frontmatter: {date: DESC}}
       ) {
         edges {
           node {
@@ -95,6 +97,9 @@ exports.createPages = async ({ actions, graphql }) => {
               title
               slug
               date
+            }
+            internal {
+              contentFilePath
             }
           }
         }

@@ -48,7 +48,7 @@ export default function SketchesPage({ data }: any) {
 export const pageQuery = graphql`
   query {
     allFile(
-      sort: {order: ASC, fields: name},
+      sort: {name: ASC},
       filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, sourceInstanceName: { eq: "sketches" } }
     ) {
       edges {

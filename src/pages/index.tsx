@@ -93,7 +93,7 @@ export const pageQuery = graphql`
     }
     allMdx(
       filter: { frontmatter: { published: { ne: false }, featured: { eq: true } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {
