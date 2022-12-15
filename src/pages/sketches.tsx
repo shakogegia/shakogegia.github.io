@@ -1,9 +1,8 @@
+import { graphql } from 'gatsby'
 import React from 'react'
+import Gallery from 'src/components/gallery'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
-import GifTip from 'src/components/gif-tip'
-import Gallery from 'src/components/gallery'
-import { graphql } from 'gatsby'
 
 export default function SketchesPage({ data }: any) {
   return (
@@ -12,34 +11,37 @@ export default function SketchesPage({ data }: any) {
 
       <div className="prose prose-lg max-w-none my-5 iAWriterDuospace text-gray-600 dark:text-gray-400">
         <p>
-          I love painting. I love it since I remember myself. Even my very first memories are about
-          painting. It may sound unbelievable, but I remember myself as a kid in the kindergarten, painting with
-          my friends; This memory is so vivid that I can still feel the smell of the paint and the taste of the paper.
-          It was an easy task, we just had to paint 3 circles: one small, one medium and large one. We used brushes and
-          watercolors, even remember the color I chose - blue. 
+          My love for painting has been a constant in my life, a passion that has stayed with me through the years. Even
+          as a child, I remember the thrill of picking up a brush and watching the colors dance across the page, the
+          smell of the paint filling my senses. It was as if I had discovered a part of myself that I never knew
+          existed, a sense of freedom and joy that I had never before experienced.
         </p>
-
         <p>
-          Time has passed since, but I never stopped loving painting. From time to time I've found myself craving for painting.
-          In 2020, when covid ruled the world and everyone was forced to stay at home, I found myself painting more than ever.
-          I've brought brushes, pencils, pens, fountain pens, sketchbooks, watercolors, acrylics, gouache, pastels,
-          and everything I could find at my local art store in Utrecht. But this is not all, I've also bought a
-          art books and now I have a quite a few of them;
+          As I grew older, my love for painting only deepened. I continued to explore different mediums and styles,
+          finding solace and creativity in each brushstroke. In 2020, when the world was consumed by the Covid-19
+          pandemic and we were all forced to stay at home, I found myself drawn to painting more than ever. I stocked up
+          on supplies, filling my shelves with pencils, pens, and paints of every color. I even discovered a new love in
+          urban sketching, the art of capturing the world around me in quick, vibrant strokes.
         </p>
-
         <p>
-          Finally, I ended up with <a href="https://urbansketchers.org/" target="_blank">Urban Sketching</a>, found it as my most
-          favorite art style. I love the idea of sketching the world around me, capturing the moment, the place, the
-          people, the atmosphere. Besides, Netherland is a perfect place for urban sketching.
+          The Netherlands, with its stunning cities and landscapes, is the perfect place for urban sketching. I find
+          myself constantly inspired by the people, places, and atmosphere of this country, and I pour that inspiration
+          into my art. Each sketch is a moment in time, a memory frozen on paper for all eternity.
         </p>
-
-        <p>Here are some of my recent sketches...</p>
+        <p>
+          Through painting, I have found a sense of purpose and fulfillment. It is a passion that will always be with
+          me, a constant source of joy and creativity. And I will continue to paint, to capture the beauty of the world
+          around me and share it with others.
+        </p>
       </div>
 
-      <p className="mb-10 iAWriterDuospaceItalic text-gray-400">Hera are list of cameras I own:</p>
+      <p className="mb-10 iAWriterDuospaceItalic text-gray-400">Here are some of my recent sketches...</p>
 
       <div className="">
-        <Gallery className='object-cover' images={data.allFile.edges.map((edge: any) => edge.node.childImageSharp.fluid.src)} />
+        <Gallery
+          className="object-cover"
+          images={data.allFile.edges.map((edge: any) => edge.node.childImageSharp.fluid.src)}
+        />
       </div>
     </Layout>
   )
@@ -48,7 +50,7 @@ export default function SketchesPage({ data }: any) {
 export const pageQuery = graphql`
   query {
     allFile(
-      sort: {name: ASC},
+      sort: { name: ASC }
       filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, sourceInstanceName: { eq: "sketches" } }
     ) {
       edges {
