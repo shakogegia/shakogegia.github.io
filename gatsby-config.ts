@@ -180,7 +180,7 @@ const config: GatsbyConfig = {
                 }
               }
             `,
-            output: '/analog.xml',
+            output: '/film.xml',
             title: 'Shalva Gegia',
             copyright: 'Shalva Gegia',
             language: 'en',
