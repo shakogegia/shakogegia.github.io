@@ -105,7 +105,7 @@ function CommandPallette(props: PropsWithChildren<{}>) {
         items.push({
           id: node.id,
           name: node.frontmatter.title,
-          keywords: `${node.frontmatter.title}`,
+          keywords: `${node.frontmatter.title} ${(node.frontmatter.keywords || []).join(' ')} ${(node.frontmatter.categories || []).join(' ')}`,
           perform: () => navigate(`/${node.fields.slug}`),
           parent: 'search',
         })
@@ -221,6 +221,8 @@ const query = graphql`
             title
             slug
             date
+            keywords
+            categories
           }
           parent {
             ... on File {
