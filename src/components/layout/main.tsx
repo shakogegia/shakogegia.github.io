@@ -24,7 +24,7 @@ export default function Layout({ children, className }: PropsWithChildren<{ clas
       </Helmet>
 
       <Header />
-      <main className={classNames('container mx-auto max-w-5xl px-6', className)}>{children}</main>
+      <main className={classNames('container mx-auto px-6', className)}>{children}</main>
       <Footer />
     </div>
   )

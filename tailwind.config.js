@@ -8,7 +8,10 @@ module.exports = {
     "./content/**/*.{md,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+      },
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 }

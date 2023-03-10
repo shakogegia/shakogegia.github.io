@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 
 export default function IndexPage({ data: { site, allMdx } }: any) {
   return (
-    <Layout>
+    <Layout className='max-w-5xl'>
       <SEO title="Home" />
       
       <article className="prose normalized-prose md:prose-lg lg:prose-xl max-w-none iAWriterDuospace font-light mt-8 text-gray-600 transition-colors dark:text-gray-400 dark:prose-a:text-gray-200">
