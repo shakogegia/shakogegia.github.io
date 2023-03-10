@@ -10,6 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        'duospace': ['"iAWriterDuospace"'],
+        'duospace-bold': ['"iAWriterDuospaceBold"'],
       },
     },
   },

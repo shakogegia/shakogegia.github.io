@@ -13,7 +13,7 @@ export default function Share(props: { url: string, text: string }) {
           <IoWater className='text-3xl text-gray-600 hidden group-hover:block' />
         </div>
         <a
-          className='text-xl text-gray-600 iAWriterDuospace'
+          className='text-xl text-gray-600 font-duospace'
           href={`https://twitter.com/intent/tweet?url=${site?.siteMetadata?.siteUrl}${encodeURIComponent(props.url)}&text=${encodeURIComponent(
             props.text,
           )}&via=${site?.siteMetadata?.twitterUsername.replace('@', '')}`}

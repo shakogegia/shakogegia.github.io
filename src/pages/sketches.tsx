@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion'
 import { graphql } from 'gatsby'
 import React from 'react'
-import Gallery from 'src/components/gallery'
+import { IoColorPaletteOutline } from 'react-icons/io5'
+import Hero from 'src/components/layout/hero'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 
@@ -9,7 +11,11 @@ export default function SketchesPage({ data }: any) {
     <Layout>
       <SEO title="Sketches" />
 
-      <div className="prose prose-lg max-w-none my-5 iAWriterDuospace text-gray-600 dark:text-gray-400">
+      <Hero title="Sketches" color="text-indigo-500" icon={<span>🎨</span>}>
+        A collection of my sketches, drawings and paintings, mostly urban sketching.
+      </Hero>
+
+      <div className="mt-8 prose prose-lg max-w-none font-duospace text-gray-600 dark:text-gray-400">
         <p>
           My love for painting has been a constant in my life, a passion that has stayed with me through the years. Even
           as a child, I remember the thrill of picking up a brush and watching the colors dance across the page, the
@@ -35,14 +41,32 @@ export default function SketchesPage({ data }: any) {
         </p>
       </div>
 
-      <p className="mb-10 iAWriterDuospaceItalic text-gray-400">Here are some of my recent sketches...</p>
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10"
+        initial="hidden"
+        animate="show"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+      >
+        {data.allFile.edges.map((edge: any) => (
+          <motion.div
+            key={edge.node.childImageSharp.fluid.src}
+            className="flex flex-col gap-8 rounded-md p-4 transition-colors group bg-neutral-50 hover:bg-neutral-100 dark:bg-gray-800 hover:dark:bg-gray-700"
+            variants={{ hidden: { opacity: 0, y: -10 }, show: { opacity: 1, y: 0, transition: { type: 'spring' } } }}
+          >
+            <img src={edge.node.childImageSharp.fluid.src} className="object-contain max-h-60" />
+          </motion.div>
+        ))}
+      </motion.div>
 
-      <div className="">
-        <Gallery
-          className="object-cover"
-          images={data.allFile.edges.map((edge: any) => edge.node.childImageSharp.fluid.src)}
-        />
-      </div>
     </Layout>
   )
 }

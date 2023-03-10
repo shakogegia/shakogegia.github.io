@@ -5,6 +5,7 @@ import classNames from 'src/utils/classnames'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 import { IoReaderOutline } from 'react-icons/io5'
+import Hero from 'src/components/layout/hero'
 
 export default function GardenPage(props: any) {
   const [activeTopic, setActiveTopic] = React.useState<string | null>(null)
@@ -18,13 +19,9 @@ export default function GardenPage(props: any) {
     <Layout>
       <SEO title="Garden" />
 
-      <div className="flex flex-col max-w-md mx-auto align-center text-center">
-        <span className="text-9xl">🌱</span>
-        <h2 className=" mt-6 text-3xl font-mono transition-colors dark:text-gray-200">Digital Garden</h2>
-        <h6 className=" mt-6 text-sm font-mono transition-colors text-gray-400 dark:text-gray-400">
+      <Hero title="Digital Garden" color="text-indigo-500" icon={<span>🌱</span>}>
           A collection of notes, articles and ideas I'm interested into.
-        </h6>
-      </div>
+      </Hero>
 
       <div className="my-10">
         <Topics topics={topics} activeTopic={activeTopic} setActiveTopic={setActiveTopic} />
@@ -44,7 +41,7 @@ export default function GardenPage(props: any) {
                   <div className="text-sm text-gray-400 flex items-center">
                     <IoReaderOutline className='mr-1' />
                     <span>
-                      Note {' • '} {moment(fields.date).fromNow()}
+                      Note {' • '} {moment(frontmatter.date).fromNow()}
                     </span>
                   </div>
                 </Link>
@@ -72,7 +69,7 @@ function Topics({
         <div
           className={classNames(
             'relative mr-6',
-            'iAWriterQuattro text-gray-400',
+            'font-duospace-bold text-gray-400',
             "after:content-[' '] after:h-[70%] after:w-0.5 after:absolute after:top-[15%] after:-right-3 after:bg-gray-300",
           )}
           onClick={() => setActiveTopic(null)}
@@ -88,7 +85,7 @@ function Topics({
               'relative cursor-pointer capitalize mr-6 mb-2',
               'after:opacity-0 transition-opacity after:h-0.5 after:w-full after:absolute after:-bottom-1 after:left-0 after:bg-gradient-to-r after:from-pink-400 after:to-indigo-600',
               'hover:after:opacity-100',
-              'iAWriterQuattro text-gray-500',
+              'font-duospace text-gray-500',
               topic === activeTopic && 'after:opacity-100',
             )}
             onClick={() => setActiveTopic(activeTopic !== topic ? topic : null)}

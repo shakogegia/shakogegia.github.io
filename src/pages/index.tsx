@@ -9,7 +9,7 @@ export default function IndexPage({ data: { site, allMdx } }: any) {
     <Layout className='max-w-5xl'>
       <SEO title="Home" />
       
-      <article className="prose normalized-prose md:prose-lg lg:prose-xl max-w-none iAWriterDuospace font-light mt-8 text-gray-600 transition-colors dark:text-gray-400 dark:prose-a:text-gray-200">
+      <article className="prose normalized-prose md:prose-lg lg:prose-xl max-w-none font-mono font-light mt-8 text-gray-600 transition-colors dark:text-gray-400 dark:prose-a:text-gray-200">
         <p>Hi I’m Shalva, a Georgian software engineer based in Amsterdam</p>
         <p>
           I'm starting this website to become my digital <Link to="/garden">garden 🌱</Link> where I'll share notes,
@@ -24,7 +24,7 @@ export default function IndexPage({ data: { site, allMdx } }: any) {
           if you want to say hi. While I'm not super active on social media, I do check in every now and then.
         </p>
         <p>
-          <Link to="/about" className="group hover:text-indigo-500 transition-colors">
+          <Link to="/about" className="group underline-offset-2 hover:text-indigo-500 transition-colors">
             <span>more about me</span>
             <span className="group-hover:ml-1 transition-all"> →</span>
           </Link>
@@ -37,7 +37,7 @@ export default function IndexPage({ data: { site, allMdx } }: any) {
 
       <section>
         <Title>Personal</Title>
-        <div className="flex flex-col space-y-4 mt-4">
+        <div className="flex flex-col space-y-4 mt-4 font-duospace">
           <Item href="/library">📚 Books I read</Item>
           <Item href="/shows">📽 Shows I watch</Item>
           <Item href="/cameras">📸 Cameras I own</Item>
@@ -47,7 +47,7 @@ export default function IndexPage({ data: { site, allMdx } }: any) {
 
       <section className="mt-8">
         <Title>Favorites</Title>
-        <div className="flex flex-col space-y-4 mt-4">
+        <div className="flex flex-col space-y-4 mt-4 font-duospace">
           {allMdx.edges.map(({ node }: any) => (
             <Item key={node.id} href={node.frontmatter.slug}>
               {node.frontmatter.title}
@@ -67,7 +67,7 @@ function Item(props: React.PropsWithChildren<{ href: string }>) {
   return (
     <Link
       to={props.href}
-      className="inline-flex space-x-2 text-lg iAWriterDuospace hover:underline hover:text-indigo-500 transition-colors group dark:text-gray-400"
+      className="inline-flex space-x-2 text-lg hover:underline hover:text-indigo-500 transition-colors group dark:text-gray-400"
     >
       <div className="inline-flex mt-1">
         <span className="inline-flex group-hover:hidden">

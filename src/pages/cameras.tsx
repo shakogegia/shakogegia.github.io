@@ -275,10 +275,10 @@ const cameras = [
 
 export default function LibraryPage() {
   return (
-    <Layout>
+    <Layout className='max-w-5xl'>
       <SEO title="Cameras" />
 
-      <div className="prose prose-lg max-w-none my-5 iAWriterDuospace text-gray-600 dark:text-gray-400">
+      <div className="prose prose-lg max-w-none my-5 font-duospace text-gray-600 dark:text-gray-400">
         <p>
           It all started with Canon AE-1 Program. It was the very first camera I brought a year ago. I wanted to start with
           film, and the AE-1 Program was one of the most hyped one then. Then I discovered I needed a camera with
@@ -296,16 +296,16 @@ export default function LibraryPage() {
         <p>and the list never ends...</p>
       </div>
 
-      <p className="mb-10 iAWriterDuospaceItalic text-gray-400">Hera are list of cameras I own:</p>
+      <p className="mb-10 font-mono italic text-gray-400">Hera are list of cameras I own:</p>
 
       <div className="columns-1 sm:columns-2 md:columns-3">
         {cameras.map((manufacturer) => (
           <div className="mb-10 break-inside-avoid">
-            <h2 className="lead text-2xl mb-2 iAWriterDuospaceBold dark:text-gray-200">{manufacturer.name}</h2>
+            <h2 className="lead text-2xl mb-2 font-duospace-bold dark:text-gray-200">{manufacturer.name}</h2>
 
             <ul>
               {manufacturer.cameras.map((camera, j) => (
-                <li className="text-gray-500 iAWriterDuospace py-0.5" key={camera.name}>
+                <li className="text-gray-500 font-duospace py-0.5" key={camera.name}>
                   <span>{camera.name}</span>
                   {', '}
                   <span className="">{camera.type},</span> <span className="capitalize">{camera.color}</span>

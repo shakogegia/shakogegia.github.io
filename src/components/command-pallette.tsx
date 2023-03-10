@@ -143,7 +143,7 @@ function RenderResults() {
           return (
             <div
               className={classNames(
-                'px-4 py-2 text-xs DejaVuSansMono text-gray-300 dark:text-gray-500',
+                'font-duospace px-4 py-2 text-xs text-gray-300 dark:text-gray-500',
                 'bg-transparent',
               )}
             >
@@ -156,7 +156,7 @@ function RenderResults() {
           <div
             className={classNames(
               'flex justify-between',
-              'px-4 py-4 iAWriterDuospace dark:text-gray-300',
+              'font-duospace px-4 py-4 dark:text-gray-300',
               active ? 'bg-gray-50 dark:bg-gray-700 dark:text-gray-200' : 'bg-transparent',
             )}
           >

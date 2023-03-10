@@ -20,7 +20,7 @@ export default function Header() {
           Shalva Gegia
         </Link>
 
-        <ul className="flex iAWriterDuospace md:space-x-3">
+        <ul className="flex font-duospace md:space-x-3">
           <NavLink className="hidden sm:block" to="/about">
             About
           </NavLink>
