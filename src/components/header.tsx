@@ -12,20 +12,19 @@ import { useThemeContext } from './theme-context'
 export default function Header() {
   return (
     <header className="w-full">
-      <nav className="container mx-auto md:max-w-5xl flex items-center justify-between p-6">
+      <nav className="container mx-auto flex items-center justify-between p-6">
         <Link
           to="/"
-          className="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-indigo-600"
+          className="flex items-center gap-1 font-bold text-lg group text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-indigo-600"
         >
-          Shalva Gegia
+          <span className='group-hover:text-gray-50'>🌱</span>
+          <span>Shalva Gegia</span>
         </Link>
 
         <ul className="flex font-duospace md:space-x-3">
           <NavLink className="hidden sm:block" to="/about">
             About
           </NavLink>
-          <NavLink to="/notes">Notes</NavLink>
-          <NavLink to="/garden">Garden 🌱</NavLink>
           <NavButton className='hidden sm:mr-4 sm:block' onClick={() => trigger('?')}>
             <IoSearchOutline className="text-xl color" />
           </NavButton>
