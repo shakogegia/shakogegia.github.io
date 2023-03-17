@@ -6,9 +6,8 @@ import classNames from 'src/utils/classnames'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 
-import Rome from '../../static/film/rome-porta400-1.jpg'
-import Rome2 from '../../static/film/rome-porta400-2.png'
-import Flowers from '../../static/film/flowers.jpg'
+import Rome from '../../static/film/Rome_Porta_400.jpg'
+import Flowers from '../../static/film/Flowers.jpg'
 import SketchesArt from '../../static/images/sketch.png'
 
 export default function IndexPage({ data: { allMdx } }: any) {
@@ -180,7 +179,7 @@ function Sketches() {
 
 function Film({ src, label, wide = false }: { src: string; label: string, wide?: boolean }) {
   return (
-    <Card wide={wide}>
+    <Card href="/film" wide={wide}>
       <div className="relative w-full h-full">
         <img src={src} className="w-full h-full object-cover no-lightense" />
 
