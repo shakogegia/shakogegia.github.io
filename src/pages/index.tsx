@@ -169,7 +169,7 @@ function Sketches() {
     <Card href="/sketches">
       <div className="h-full flex flex-col items-center justify-center p-10">
         <div className="max-h-full">
-          <img src={SketchesArt} className="w-full h-full no-lightense" />
+          <img src={SketchesArt} className="w-full h-full no-lightense transition-transform group-hover:scale-110" />
         </div>
 
         <h3 className="text-center font-serif text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
