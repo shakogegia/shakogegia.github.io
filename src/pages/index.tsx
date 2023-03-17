@@ -9,6 +9,11 @@ import SEO from '../components/seo'
 import Rome from '../../static/film/Rome_Porta_400.jpg'
 import Flowers from '../../static/film/Flowers.jpg'
 import SketchesArt from '../../static/images/sketch.png'
+import NikonFA from '../../static/images/nikon_fa.png'
+
+import Friends from '../../static/shows/friends.jpg'
+import HouseOfCards from '../../static/shows/house_of_cards.jpg'
+import Westworld from '../../static/shows/westworld.jpg'
 
 export default function IndexPage({ data: { allMdx } }: any) {
   return (
@@ -84,6 +89,8 @@ export default function IndexPage({ data: { allMdx } }: any) {
         <Library />
         <Film label={`Rome • Portra 400`} src={Rome} />
         <Sketches />
+        <Shows />
+        <Cameras />
       </motion.div>
     </Layout>
   )
@@ -161,7 +168,7 @@ function Sketches() {
   return (
     <Card href="/sketches">
       <div className="h-full flex flex-col items-center justify-center p-10">
-        <div className="">
+        <div className="max-h-full">
           <img src={SketchesArt} className="w-full h-full no-lightense" />
         </div>
 
@@ -170,6 +177,25 @@ function Sketches() {
         </h3>
         <p className="text-center text-neutral-400 dark:text-neutral-300 font-light text-sm">
           painting is my hobby, I love to paint with watercolors
+        </p>
+      </div>
+    </Card>
+  )
+}
+
+function Cameras() {
+  return (
+    <Card href="/cameras">
+      <div className="h-full max-h-full flex flex-col items-center justify-center p-10">
+        <div className='max-h-full'>
+          <img src={NikonFA} className="mx-auto no-lightense max-w-[60%] transition-transform group-hover:scale-110" />
+        </div>
+
+        <h3 className="text-center font-serif text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
+          Camera Collection
+        </h3>
+        <p className="text-center text-neutral-400 dark:text-neutral-300 font-light text-sm">
+          film cameras I own
         </p>
       </div>
     </Card>
@@ -217,6 +243,37 @@ function Library() {
             Library
           </h3>
           <p className="text-center text-neutral-400 font-light text-sm">Books</p>
+        </div>
+      </div>
+    </Card>
+  )
+}
+
+function Shows() {
+  return (
+    <Card href="/shows">
+      <div className="h-full flex flex-col items-center justify-center gap-4 p-10">
+        <div className="relative grid grid-cols-3 gap-2">
+          <img
+            className="no-lightense h-full w-full object-cover rounded-md shadow-lg transition-transform group-hover:shadow-xl group-hover:scale-105"
+            src={Friends}
+          />
+          <img
+            className="no-lightense h-full w-full object-cover rounded-md shadow-lg transition-transform group-hover:shadow-xl group-hover:scale-110"
+            src={HouseOfCards}
+          />
+          <img
+            className="no-lightense h-full w-full object-cover rounded-md shadow-lg transition-transform group-hover:shadow-xl group-hover:scale-105"
+            src={Westworld}
+          />
+        </div>
+        <div className="flex flex-col">
+          <h3 className="text-center font-serif text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
+            Shows
+          </h3>
+          <p className="text-center text-neutral-400 font-light text-sm">
+            Favorite TV Shows
+          </p>
         </div>
       </div>
     </Card>
