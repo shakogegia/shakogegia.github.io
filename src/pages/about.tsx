@@ -1,9 +1,8 @@
-import React, { PropsWithChildren } from 'react'
 import { Link } from 'gatsby'
+import React from 'react'
+import Selfie from '../../static/images/selfie.jpg'
 import Layout from '../components/layout/main'
-import Selfie from '../images/selfie.jpg'
 import SEO from '../components/seo'
-import GifTip from 'src/components/gif-tip'
 
 export default function About() {
   return (
@@ -15,7 +14,7 @@ export default function About() {
       </figure>
 
       <article className="prose md:prose-lg max-w-none font-duospace font-light mt-8 text-gray-600 transition-colors dark:text-gray-300 dark:prose-a:text-gray-200">
-        <p>Hi I’m Shalva, a Georgian 🇬🇪 software engineer based in Amsterdam, Netherlands 🇳🇱</p>
+        <p>Hi I’m Shalva, a software engineer based in Amsterdam, Netherlands 🇳🇱</p>
         <p>
           I'm starting this website to become my digital <Link to="/garden">garden 🌱</Link> where I'll
           share notes, articles & thoughts about things that interest me. Still new to digital gardening, but I’m

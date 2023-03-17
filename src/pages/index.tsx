@@ -6,6 +6,11 @@ import classNames from 'src/utils/classnames'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 
+import Rome from '../../static/film/rome-porta400-1.jpg'
+import Rome2 from '../../static/film/rome-porta400-2.png'
+import Flowers from '../../static/film/flowers.jpg'
+import SketchesArt from '../../static/images/sketch.png'
+
 export default function IndexPage({ data: { allMdx } }: any) {
   return (
     <Layout>
@@ -43,7 +48,9 @@ export default function IndexPage({ data: { allMdx } }: any) {
             ) : (
               <div className="relative h-full flex flex-col justify-end font-light text-neutral-600">
                 {node.frontmatter.featuredbanner && (
-                  <div className={classNames('absolute left-[10%] right-[10%] bottom-[10%] top-4 z-0 group-hover:z-10')}>
+                  <div
+                    className={classNames('absolute left-[10%] right-[10%] bottom-[10%] top-4 z-0 group-hover:z-10')}
+                  >
                     <img
                       className="h-full w-full max-w-full max-h-full object-contain no-lightense transition-transform group-hover:scale-105"
                       src={node.frontmatter.featuredbanner.childImageSharp.fluid.src}
@@ -74,7 +81,11 @@ export default function IndexPage({ data: { allMdx } }: any) {
         ))}
 
         <Notes />
+        <Film label={`250D • Ektar 100`} src={Flowers} />
         <Library />
+        <Film label={`Rome • Portra 400`} src={Rome} />
+        <Sketches />
+        {/* <Film label={`Rome • Portra 400`} src={Rome2} wide /> */}
       </motion.div>
     </Layout>
   )
@@ -143,6 +154,43 @@ function Notes() {
           Notes
         </h3>
         <p className="text-center text-neutral-400 font-light text-sm">notes, articles & thoughts about things</p>
+      </div>
+    </Card>
+  )
+}
+
+function Sketches() {
+  return (
+    <Card href="/sketches">
+      <div className="h-full flex flex-col items-center justify-center p-10">
+        <div className="">
+          <img src={SketchesArt} className="w-full h-full no-lightense" />
+        </div>
+
+        <h3 className="text-center font-serif text-2xl text-neutral-600 leading-relaxed font-extralight tracking-wide">
+          Sketches
+        </h3>
+        <p className="text-center text-neutral-400 font-light text-sm">
+          painting is my hobby, I love to paint with watercolors
+        </p>
+      </div>
+    </Card>
+  )
+}
+
+function Film({ src, label, wide = false }: { src: string; label: string, wide?: boolean }) {
+  return (
+    <Card wide={wide}>
+      <div className="relative w-full h-full">
+        <img src={src} className="w-full h-full object-cover no-lightense" />
+
+        <div className="absolute left-4 bottom-2">
+          <span
+            className={classNames('text-white/70 px-2 py-1 rounded-md transition-colors', 'group-hover:bg-black/70 ')}
+          >
+            {label}
+          </span>
+        </div>
       </div>
     </Card>
   )

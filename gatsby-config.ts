@@ -27,7 +27,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/favicon.png',
+        icon: 'static/images/favicon.png',
       },
     },
     'gatsby-remark-images',
@@ -65,7 +65,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `./src/images/sketches/`,
+        path: `./static/sketches/`,
         name: "sketches",
       },
     },

@@ -2,14 +2,14 @@ import React from 'react'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 
-import Friends from '../images/shows/friends.jpg'
-import Got from '../images/shows/got.jpg'
-import GoOn from '../images/shows/go_on.jpg'
-import HouseOfCards from '../images/shows/house_of_cards.jpg'
-import Sherlock from '../images/shows/sherlock.jpg'
-import Sopranos from '../images/shows/sopranos.jpg'
-import Westworld from '../images/shows/westworld.jpg'
-import YoungPope from '../images/shows/young_pope.jpg'
+import Friends from '../../static/shows/friends.jpg'
+import Got from '../../static/shows/got.jpg'
+import GoOn from '../../static/shows/go_on.jpg'
+import HouseOfCards from '../../static/shows/house_of_cards.jpg'
+import Sherlock from '../../static/shows/sherlock.jpg'
+import Sopranos from '../../static/shows/sopranos.jpg'
+import Westworld from '../../static/shows/westworld.jpg'
+import YoungPope from '../../static/shows/young_pope.jpg'
 
 export default function ShowsPage() {
   return (
