@@ -157,7 +157,7 @@ function RenderResults() {
             className={classNames(
               'flex justify-between',
               'font-duospace px-4 py-4 dark:text-gray-300',
-              active ? 'bg-gray-50 dark:bg-gray-700 dark:text-gray-200' : 'bg-transparent',
+              active ? 'bg-gray-50 z-10 dark:bg-gray-700 dark:text-gray-200' : 'bg-transparent',
             )}
           >
             <div className="flex items-center gap-1">

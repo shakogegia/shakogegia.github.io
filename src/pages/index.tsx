@@ -61,16 +61,16 @@ export default function IndexPage({ data: { allMdx } }: any) {
                   className={classNames(
                     'flex flex-col h-full justify-end z-0 p-5',
                     node.frontmatter.featuredtype !== 'article' &&
-                      'transition-opacity bg-gradient-to-t from-neutral-50 group-focus-within:opacity-0 group-hover:opacity-20',
+                      'transition-opacity bg-gradient-to-t from-neutral-50 dark:from-gray-600 group-focus-within:opacity-0 group-hover:opacity-20',
                   )}
                 >
-                  <h3 className="font-serif text-3xl">{node.frontmatter.title}</h3>
+                  <h3 className="font-serif text-3xl dark:text-neutral-300">{node.frontmatter.title}</h3>
                   {node.frontmatter.featuredtype === 'article' && (
                     <>
                       <span className="mt-2 mb-4 block text-sm -tracking-[0.03em] text-neutral-400">
                         {node.frontmatter.date}
                       </span>
-                      <p className="leading-relaxed line-clamp-3 sm:line-clamp-4">{node.excerpt}</p>
+                      <p className="leading-relaxed line-clamp-3 sm:line-clamp-4 dark:text-gray-400">{node.excerpt}</p>
                     </>
                   )}
                 </div>
@@ -84,7 +84,6 @@ export default function IndexPage({ data: { allMdx } }: any) {
         <Library />
         <Film label={`Rome • Portra 400`} src={Rome} />
         <Sketches />
-        {/* <Film label={`Rome • Portra 400`} src={Rome2} wide /> */}
       </motion.div>
     </Layout>
   )
@@ -123,18 +122,18 @@ function About() {
         <br />
         <p>
           I'm starting this website to become my digital
-          <span className="decoration-dashed text-neutral-600"> garden 🌱 </span>
+          <span className="decoration-dashed text-neutral-600 dark:text-neutral-300"> garden 🌱 </span>
           where I'll share notes, articles & thoughts about things that interest me. Still new to digital gardening, but
           I’m learning how to grow
         </p>
         <br />
         <p>
           You can reach out to me via{' '}
-          <a className="decoration-dashed text-neutral-600" href="mailto:shalva.gegia@gmail.com?subject=Hi">
+          <a className="decoration-dashed text-neutral-600 dark:text-neutral-300" href="mailto:shalva.gegia@gmail.com?subject=Hi">
             Email
           </a>{' '}
           or{' '}
-          <a className="decoration-dashed text-neutral-600" href="https://twitter.com/@ShalvaGegia" target="_blank">
+          <a className="decoration-dashed text-neutral-600 dark:text-neutral-300" href="https://twitter.com/@ShalvaGegia" target="_blank">
             Twitter
           </a>{' '}
           if you want to say hi. While I'm not super active on social media, I do check in every now and then.
@@ -149,7 +148,7 @@ function Notes() {
     <Card href="/notes">
       <div className="h-full flex flex-col items-center justify-center p-10">
         <span className="text-9xl flex justify-center mb-6">📜</span>
-        <h3 className="text-center font-serif text-2xl text-neutral-600 leading-relaxed font-extralight tracking-wide">
+        <h3 className="text-center font-serif text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
           Notes
         </h3>
         <p className="text-center text-neutral-400 font-light text-sm">notes, articles & thoughts about things</p>
@@ -169,7 +168,7 @@ function Sketches() {
         <h3 className="text-center font-serif text-2xl text-neutral-600 leading-relaxed font-extralight tracking-wide">
           Sketches
         </h3>
-        <p className="text-center text-neutral-400 font-light text-sm">
+        <p className="text-center text-neutral-400 dark:text-neutral-300 font-light text-sm">
           painting is my hobby, I love to paint with watercolors
         </p>
       </div>
@@ -214,7 +213,7 @@ function Library() {
           />
         </div>
         <div className="flex flex-col flex-1">
-          <h3 className="text-center font-serif text-2xl text-neutral-600 leading-relaxed font-extralight tracking-wide">
+          <h3 className="text-center font-serif text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
             Library
           </h3>
           <p className="text-center text-neutral-400 font-light text-sm">Books</p>
