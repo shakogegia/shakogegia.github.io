@@ -21,6 +21,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^2.1.5",
     "@mdx-js/react": "^2.1.5",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "framer-motion": "^10.2.4",
     "gatsby": "^5.1.0",
     "gatsby-image": "^3.11.0",

@@ -114,3 +114,9 @@ const library = [
 ]
 
 export default library
+
+export const featured = [
+  library.find(book => book.title === 'The Name of the Wind'),
+  library.find(book => book.title === 'Ubik'),
+  library.find(book => book.title === 'Flow My Tears, the Policeman Said'),
+]

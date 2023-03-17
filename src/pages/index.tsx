@@ -1,86 +1,179 @@
-import * as React from 'react'
+import { motion } from 'framer-motion'
 import { graphql, Link } from 'gatsby'
+import * as React from 'react'
+import { featured as featuredBooks } from 'src/resources/library'
+import classNames from 'src/utils/classnames'
 import Layout from '../components/layout/main'
-import { IoUnlinkOutline, IoLinkOutline } from 'react-icons/io5'
 import SEO from '../components/seo'
 
-export default function IndexPage({ data: { site, allMdx } }: any) {
+export default function IndexPage({ data: { allMdx } }: any) {
   return (
-    <Layout className='max-w-5xl'>
+    <Layout>
       <SEO title="Home" />
-      
-      <article className="prose normalized-prose md:prose-lg lg:prose-xl max-w-none font-mono font-light mt-8 text-gray-600 transition-colors dark:text-gray-400 dark:prose-a:text-gray-200">
-        <p>Hi I’m Shalva, a Georgian software engineer based in Amsterdam</p>
-        <p>
-          I'm starting this website to become my digital <Link to="/garden">garden 🌱</Link> where I'll share notes,
-          articles & thoughts about things that interest me. Still new to digital gardening, but I’m learning how to
-          grow
-        </p>
-        <p>
-          You can reach out to me via <a href="mailto:shalva.gegia@gmail.com?subject=Hi">Email</a> or{' '}
-          <a href="https://twitter.com/@ShalvaGegia" target="_blank">
-            Twitter
-          </a>{' '}
-          if you want to say hi. While I'm not super active on social media, I do check in every now and then.
-        </p>
-        <p>
-          <Link to="/about" className="group underline-offset-2 hover:text-indigo-500 transition-colors">
-            <span>more about me</span>
-            <span className="group-hover:ml-1 transition-all"> →</span>
-          </Link>
-        </p>
-      </article>
 
-      <div className="py-12">
-        <div className="w-full border-t border-gray-100 transition-colors dark:border-gray-600"></div>
-      </div>
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:grid-flow-row-dense"
+        initial="hidden"
+        animate="show"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+      >
+        <About />
 
-      <section>
-        <Title>Personal</Title>
-        <div className="flex flex-col space-y-4 mt-4 font-duospace">
-          <Item href="/library">📚 Books I read</Item>
-          <Item href="/shows">📽 Shows I watch</Item>
-          <Item href="/cameras">📸 Cameras I own</Item>
-          <Item href="/sketches">🎨 Sketches I paint</Item>
-        </div>
-      </section>
+        {allMdx.edges.map(({ node }: any) => (
+          <Card label="Notes" key={node.id} href={node.frontmatter.slug} wide={node.frontmatter.featuredwide}>
+            {node.frontmatter.featuredtype === 'image' ? (
+              <img
+                className={classNames(
+                  'absolute left-1/2 -translate-x-1/2 top-[20%] w-[80%] object-contain transition-transform group-hover:scale-105',
+                  'rounded-lg shadow-xl',
+                  'no-lightense',
+                )}
+                src={node.frontmatter.featuredbanner.childImageSharp.fluid.src}
+                srcSet={node.frontmatter.featuredbanner.childImageSharp.fluid.srcSet}
+              />
+            ) : (
+              <div className="relative h-full flex flex-col justify-end font-light text-neutral-600">
+                {node.frontmatter.featuredbanner && (
+                  <div className={classNames('absolute left-[10%] right-[10%] bottom-[10%] top-4 z-0 group-hover:z-10')}>
+                    <img
+                      className="h-full w-full max-w-full max-h-full object-contain no-lightense transition-transform group-hover:scale-105"
+                      src={node.frontmatter.featuredbanner.childImageSharp.fluid.src}
+                      srcSet={node.frontmatter.featuredbanner.childImageSharp.fluid.srcSet}
+                    />
+                  </div>
+                )}
+                <div
+                  className={classNames(
+                    'flex flex-col h-full justify-end z-0 p-5',
+                    node.frontmatter.featuredtype !== 'article' &&
+                      'transition-opacity bg-gradient-to-t from-neutral-50 group-focus-within:opacity-0 group-hover:opacity-20',
+                  )}
+                >
+                  <h3 className="font-serif text-3xl">{node.frontmatter.title}</h3>
+                  {node.frontmatter.featuredtype === 'article' && (
+                    <>
+                      <span className="mt-2 mb-4 block text-sm -tracking-[0.03em] text-neutral-400">
+                        {node.frontmatter.date}
+                      </span>
+                      <p className="leading-relaxed line-clamp-3 sm:line-clamp-4">{node.excerpt}</p>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
+          </Card>
+        ))}
 
-      <section className="mt-8">
-        <Title>Favorites</Title>
-        <div className="flex flex-col space-y-4 mt-4 font-duospace">
-          {allMdx.edges.map(({ node }: any) => (
-            <Item key={node.id} href={node.frontmatter.slug}>
-              {node.frontmatter.title}
-            </Item>
-          ))}
-        </div>
-      </section>
+        <Notes />
+        <Library />
+      </motion.div>
     </Layout>
   )
 }
 
-function Title({ children }: React.PropsWithChildren<{}>) {
-  return <h3 className="text-2xl font-semibold transition-colors dark:text-gray-200">{children}</h3>
+function Card({
+  href = '',
+  className,
+  label,
+  wide,
+  children,
+}: React.PropsWithChildren<{ href?: string; className?: string; wide?: boolean; label?: string }>) {
+  return (
+    <motion.div
+      className={classNames(
+        wide ? 'aspect-[2] col-span-2' : 'aspect-square',
+        'relative overflow-hidden rounded-md group bg-neutral-50 hover:bg-neutral-100 dark:bg-gray-800 hover:dark:bg-gray-700',
+        className,
+      )}
+      variants={{ hidden: { opacity: 0, y: -10 }, show: { opacity: 1, y: 0, transition: { type: 'spring' } } }}
+    >
+      {label && <span className="absolute left-4 top-3 text-sm tracking-tight text-neutral-400">{label}</span>}
+      <Link to={href}>{children}</Link>
+    </motion.div>
+  )
 }
 
-function Item(props: React.PropsWithChildren<{ href: string }>) {
+function About() {
   return (
-    <Link
-      to={props.href}
-      className="inline-flex space-x-2 text-lg hover:underline hover:text-indigo-500 transition-colors group dark:text-gray-400"
+    <motion.div
+      className={classNames('aspect-[2] row-span-2 col-span-2 p-8 sm:pl-0')}
+      variants={{ hidden: { opacity: 0, y: -10 }, show: { opacity: 1, y: 0, transition: { type: 'spring' } } }}
     >
-      <div className="inline-flex mt-1">
-        <span className="inline-flex group-hover:hidden">
-          <IoUnlinkOutline />
-        </span>
-
-        <span className="hidden group-hover:inline-flex">
-          <IoLinkOutline />
-        </span>
+      <div className="text-2xl leading-10 font-mono font-extralight transition-colors text-neutral-400 dark:text-gray-400">
+        <p>Hi I’m Shalva, a web developer based in Amsterdam</p>
+        <br />
+        <p>
+          I'm starting this website to become my digital
+          <span className="decoration-dashed text-neutral-600"> garden 🌱 </span>
+          where I'll share notes, articles & thoughts about things that interest me. Still new to digital gardening, but
+          I’m learning how to grow
+        </p>
+        <br />
+        <p>
+          You can reach out to me via{' '}
+          <a className="decoration-dashed text-neutral-600" href="mailto:shalva.gegia@gmail.com?subject=Hi">
+            Email
+          </a>{' '}
+          or{' '}
+          <a className="decoration-dashed text-neutral-600" href="https://twitter.com/@ShalvaGegia" target="_blank">
+            Twitter
+          </a>{' '}
+          if you want to say hi. While I'm not super active on social media, I do check in every now and then.
+        </p>
       </div>
+    </motion.div>
+  )
+}
 
-      <span>{props.children}</span>
-    </Link>
+function Notes() {
+  return (
+    <Card href="/notes">
+      <div className="h-full flex flex-col items-center justify-center p-10">
+        <span className="text-9xl flex justify-center mb-6">📜</span>
+        <h3 className="text-center font-serif text-2xl text-neutral-600 leading-relaxed font-extralight tracking-wide">
+          Notes
+        </h3>
+        <p className="text-center text-neutral-400 font-light text-sm">notes, articles & thoughts about things</p>
+      </div>
+    </Card>
+  )
+}
+
+function Library() {
+  return (
+    <Card href="/library">
+      <div className="h-full flex flex-col items-center justify-center p-10">
+        <div className="relative grid grow grid-cols-3">
+          <img
+            className="no-lightense rounded-md shadow-lg group-hover:shadow-xl rotate-[-20deg] transition-transform translate-x-5 translate-y-2 group-hover:rotate-[-25deg] group-hover:translate-x-3 group-hover:scale-105"
+            src={featuredBooks[0]?.cover}
+          />
+          <img
+            className="no-lightense rounded-md shadow-lg group-hover:shadow-xl z-10 transition-transform group-hover:translate-y-[-10px] group-hover:scale-110"
+            src={featuredBooks[1]?.cover}
+          />
+          <img
+            className="no-lightense rounded-md shadow-lg group-hover:shadow-xl transition-transform rotate-[20deg] -translate-x-5 translate-y-2 group-hover:rotate-[25deg] group-hover:-translate-x-3 group-hover:scale-105"
+            src={featuredBooks[2]?.cover}
+          />
+        </div>
+        <div className="flex flex-col flex-1">
+          <h3 className="text-center font-serif text-2xl text-neutral-600 leading-relaxed font-extralight tracking-wide">
+            Library
+          </h3>
+          <p className="text-center text-neutral-400 font-light text-sm">Books</p>
+        </div>
+      </div>
+    </Card>
   )
 }
 
@@ -92,7 +185,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      filter: { frontmatter: { published: { ne: false }, featured: { eq: true } } }
+      filter: { frontmatter: { published: { eq: true }, featured: { eq: true } } }
       sort: { frontmatter: { date: DESC } }
     ) {
       edges {
@@ -121,6 +214,15 @@ export const pageQuery = graphql`
             }
             slug
             keywords
+            featuredwide
+            featuredtype
+            featuredbanner {
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
           }
         }
       }
