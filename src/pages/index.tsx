@@ -165,7 +165,7 @@ function Sketches() {
           <img src={SketchesArt} className="w-full h-full no-lightense" />
         </div>
 
-        <h3 className="text-center font-serif text-2xl text-neutral-600 leading-relaxed font-extralight tracking-wide">
+        <h3 className="text-center font-serif text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
           Sketches
         </h3>
         <p className="text-center text-neutral-400 dark:text-neutral-300 font-light text-sm">
