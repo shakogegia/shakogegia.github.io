@@ -16,7 +16,9 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev },
       />
 
       <div className="max-w-3xl m-auto mt-8">
-        <h3 className="text-center text-3xl font-duospace-bold transition-colors dark:text-gray-200">{mdx.frontmatter.title}</h3>
+        <h3 className="text-center text-3xl leading-10 font-duospace-bold transition-colors dark:text-gray-200">
+          {mdx.frontmatter.title}
+        </h3>
 
         <div className="prose max-w-none mt-10 prose-lg font-duospace text-gray-500 transition-colors dark:text-gray-300 dark:prose-a:text-gray-200 dark:prose-strong:text-gray-200 dark:prose-blockquote:text-gray-200 dark:prose-headings:text-gray-200">
           {children}
@@ -30,7 +32,7 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev },
           <div className="w-full border-t border-gray-100 transition-colors dark:border-gray-600"></div>
         </div>
 
-        <div className='py-20'>
+        <div className="py-20">
           <Share text={mdx.frontmatter.title} url={`/${mdx.frontmatter.slug}`} />
         </div>
       </div>

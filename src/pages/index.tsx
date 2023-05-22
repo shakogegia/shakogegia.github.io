@@ -69,13 +69,17 @@ export default function IndexPage({ data: { allMdx } }: any) {
                       'transition-opacity bg-gradient-to-t from-neutral-50 dark:from-gray-600 group-focus-within:opacity-0 group-hover:opacity-20',
                   )}
                 >
-                  <h3 className="font-serif text-3xl dark:text-neutral-300">{node.frontmatter.title}</h3>
+                  <h3 className="font-sentient font-extralight text-3xl dark:text-neutral-300">
+                    {node.frontmatter.title}
+                  </h3>
                   {node.frontmatter.featuredtype === 'article' && (
                     <>
                       <span className="mt-2 mb-4 block text-sm -tracking-[0.03em] text-neutral-400">
                         {node.frontmatter.date}
                       </span>
-                      <p className="leading-relaxed line-clamp-3 sm:line-clamp-4 dark:text-gray-400">{node.excerpt}</p>
+                      <p className="leading-relaxed font-inter line-clamp-3 sm:line-clamp-4 text-neutral-600 dark:text-gray-400">
+                        {node.excerpt}
+                      </p>
                     </>
                   )}
                 </div>
@@ -90,7 +94,7 @@ export default function IndexPage({ data: { allMdx } }: any) {
         <Film label={`Rome • Portra 400`} src={Rome} />
         <Sketches />
         <Shows />
-        <Cameras />
+        {/* <Cameras /> */}
       </motion.div>
     </Layout>
   )
@@ -112,7 +116,9 @@ function Card({
       )}
       variants={{ hidden: { opacity: 0, y: -10 }, show: { opacity: 1, y: 0, transition: { type: 'spring' } } }}
     >
-      {label && <span className="absolute left-4 top-3 text-sm tracking-tight text-neutral-400">{label}</span>}
+      {label && (
+        <span className="absolute left-4 top-3 text-sm font-inter tracking-normal text-neutral-400">{label}</span>
+      )}
       <Link to={href}>{children}</Link>
     </motion.div>
   )
@@ -129,18 +135,25 @@ function About() {
         <br />
         <p>
           I'm starting this website to become my digital
-          <span className="decoration-dashed text-neutral-600 dark:text-neutral-300"> garden 🌱 </span>
+          <span className="decoration-dashed text-neutral-600 dark:text-neutral-300 font-light"> garden 🌱 </span>
           where I'll share notes, articles & thoughts about things that interest me. Still new to digital gardening, but
           I’m learning how to grow
         </p>
         <br />
         <p>
           You can reach out to me via{' '}
-          <a className="decoration-dashed text-neutral-600 dark:text-neutral-300" href="mailto:shalva.gegia@gmail.com?subject=Hi">
+          <a
+            className="text-neutral-600 dark:text-neutral-300 font-light hover:underline underline-offset-4"
+            href="mailto:shalva.gegia@gmail.com?subject=Hi"
+          >
             Email
           </a>{' '}
           or{' '}
-          <a className="decoration-dashed text-neutral-600 dark:text-neutral-300" href="https://twitter.com/@ShalvaGegia" target="_blank">
+          <a
+            className="text-neutral-600 dark:text-neutral-300 font-light hover:underline underline-offset-4"
+            href="https://twitter.com/@ShalvaGegia"
+            target="_blank"
+          >
             Twitter
           </a>{' '}
           if you want to say hi. While I'm not super active on social media, I do check in every now and then.
@@ -154,11 +167,13 @@ function Notes() {
   return (
     <Card href="/notes">
       <div className="h-full flex flex-col items-center justify-center p-10">
-        <span className="text-9xl flex justify-center mb-6">📜</span>
-        <h3 className="text-center font-serif text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
+        <span className="text-9xl flex justify-center mb-6 transition-transform group-hover:scale-110">📜</span>
+        <h3 className="text-center font-sentient text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
           Notes
         </h3>
-        <p className="text-center text-neutral-400 font-light text-sm">notes, articles & thoughts about things</p>
+        <p className="text-center text-neutral-400 font-light font-inter text-sm">
+          notes, articles & thoughts about things
+        </p>
       </div>
     </Card>
   )
@@ -172,7 +187,7 @@ function Sketches() {
           <img src={SketchesArt} className="w-full h-full no-lightense transition-transform group-hover:scale-110" />
         </div>
 
-        <h3 className="text-center font-serif text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
+        <h3 className="mt-8 text-center font-sentient text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
           Sketches
         </h3>
         <p className="text-center text-neutral-400 dark:text-neutral-300 font-light text-sm">
@@ -187,22 +202,20 @@ function Cameras() {
   return (
     <Card href="/cameras">
       <div className="h-full max-h-full flex flex-col items-center justify-center p-10">
-        <div className='max-h-full'>
+        <div className="max-h-full">
           <img src={NikonFA} className="mx-auto no-lightense max-w-[60%] transition-transform group-hover:scale-110" />
         </div>
 
-        <h3 className="text-center font-serif text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
+        <h3 className="text-center font-sentient text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
           Camera Collection
         </h3>
-        <p className="text-center text-neutral-400 dark:text-neutral-300 font-light text-sm">
-          film cameras I own
-        </p>
+        <p className="text-center text-neutral-400 dark:text-neutral-300 font-light text-sm">film cameras I own</p>
       </div>
     </Card>
   )
 }
 
-function Film({ src, label, wide = false }: { src: string; label: string, wide?: boolean }) {
+function Film({ src, label, wide = false }: { src: string; label: string; wide?: boolean }) {
   return (
     <Card href="/film" wide={wide}>
       <div className="relative w-full h-full">
@@ -210,7 +223,10 @@ function Film({ src, label, wide = false }: { src: string; label: string, wide?:
 
         <div className="absolute left-4 bottom-2">
           <span
-            className={classNames('text-white/70 px-2 py-1 rounded-md transition-colors', 'group-hover:bg-black/70 ')}
+            className={classNames(
+              'text-white/70 px-2 py-1 rounded-md transition-colors bg-black/25',
+              'group-hover:bg-black ',
+            )}
           >
             {label}
           </span>
@@ -239,10 +255,10 @@ function Library() {
           />
         </div>
         <div className="flex flex-col flex-1">
-          <h3 className="text-center font-serif text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
+          <h3 className="text-center font-sentient text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
             Library
           </h3>
-          <p className="text-center text-neutral-400 font-light text-sm">Books</p>
+          <p className="text-center text-neutral-400 font-light font-inter text-sm">Books</p>
         </div>
       </div>
     </Card>
@@ -252,7 +268,7 @@ function Library() {
 function Shows() {
   return (
     <Card href="/shows">
-      <div className="h-full flex flex-col items-center justify-center gap-4 p-10">
+      <div className="h-full flex flex-col items-center justify-center gap-8 p-10">
         <div className="relative grid grid-cols-3 gap-2">
           <img
             className="no-lightense h-full w-full object-cover rounded-md shadow-lg transition-transform group-hover:shadow-xl group-hover:scale-105"
@@ -268,12 +284,10 @@ function Shows() {
           />
         </div>
         <div className="flex flex-col">
-          <h3 className="text-center font-serif text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
+          <h3 className="text-center font-sentient text-2xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-extralight tracking-wide">
             Shows
           </h3>
-          <p className="text-center text-neutral-400 font-light text-sm">
-            Favorite TV Shows
-          </p>
+          <p className="text-center text-neutral-400 font-light font-inter text-sm">Favorite TV Shows</p>
         </div>
       </div>
     </Card>

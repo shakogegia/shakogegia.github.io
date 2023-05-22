@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import Layout from '../components/layout/main'
 import SEO from '../components/seo'
-
 import Friends from '../../static/shows/friends.jpg'
 import Got from '../../static/shows/got.jpg'
 import GoOn from '../../static/shows/go_on.jpg'
@@ -25,7 +25,21 @@ export default function ShowsPage() {
         </h6>
       </div>
 
-      <section className="grid mx-auto lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-center gap-8 mt-10">
+      <motion.div
+        className="grid mx-auto lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-center gap-8 mt-10"
+        initial="hidden"
+        animate="show"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+      >
         <Item title="Friends" cover={Friends} />
         <Item title="Go On" cover={GoOn} />
         <Item title="The Sopranos" cover={Sopranos} />
@@ -34,15 +48,19 @@ export default function ShowsPage() {
         <Item title="GOT" cover={Got} />
         <Item title="The Young Pope" cover={YoungPope} />
         <Item title="Sherlock" cover={Sherlock} />
-      </section>
+      </motion.div>
     </Layout>
   )
 }
 
 function Item(props: { title: string; cover: string }) {
   return (
-    <article className="flex justify-center">
+    <motion.div
+      className="flex justify-center"
+      variants={{ hidden: { opacity: 0, y: -10 }, show: { opacity: 1, y: 0, transition: { type: 'spring' } } }}
+    >
       <img src={props.cover} alt={props.title} className="w-[380px] h-[540px] rounded-md object-cover" loading="lazy" />
-    </article>
+    </motion.div>
+    
   )
 }

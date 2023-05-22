@@ -6,12 +6,19 @@ import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 import Hero from 'src/components/layout/hero'
 
-type CardProps = React.PropsWithChildren<{ href?: string; className?: string; wide?: boolean; label?: string }>
+type CardProps = React.PropsWithChildren<{
+  href?: string
+  className?: string
+  wide?: boolean
+  portrait?: boolean
+  label?: string
+}>
 type FilmProps = {
   src: string
   srcSet?: string
   label?: string
   wide?: boolean
+  portrait?: boolean
 }
 
 export default function FilmPage({ data }: any) {
@@ -68,6 +75,7 @@ export default function FilmPage({ data }: any) {
             src={edge.node.childImageSharp.fluid.src}
             srcSet={edge.node.childImageSharp.fluid.srcSet}
             wide={edge.node.childImageSharp.fluid.originalName.includes('wide')}
+            portrait={edge.node.childImageSharp.fluid.originalName.includes('portrait')}
             label={edge.node.childImageSharp.fluid.originalName.replaceAll('_', ' ').split('-')[0].split('.')[0]}
           />
         ))}
@@ -76,11 +84,11 @@ export default function FilmPage({ data }: any) {
   )
 }
 
-function Card({ className, label, wide, children }: CardProps) {
+function Card({ className, label, wide, portrait, children }: CardProps) {
   return (
     <motion.div
       className={classNames(
-        wide ? 'aspect-[2] col-span-2' : 'aspect-square',
+        wide ? 'aspect-[2] col-span-2' : portrait ? 'aspect-[1/2] col-span-1 row-span-2' : 'aspect-square',
         'relative overflow-hidden rounded-md group bg-neutral-50 hover:bg-neutral-100 dark:bg-gray-800 hover:dark:bg-gray-700',
         className,
       )}
@@ -92,15 +100,18 @@ function Card({ className, label, wide, children }: CardProps) {
   )
 }
 
-function Film({ src, srcSet, label, wide = false }: FilmProps) {
+function Film({ src, srcSet, label, wide = false, portrait = false, }: FilmProps) {
   return (
-    <Card wide={wide}>
+    <Card wide={wide} portrait={portrait}>
       <div className="relative w-full h-full">
         <img src={src} className="w-full h-full object-cover no-lightense" srcSet={srcSet} />
 
         <div className="absolute left-4 bottom-2">
           <span
-            className={classNames('text-white/70 px-2 py-1 rounded-md transition-colors', 'group-hover:bg-black/70 ')}
+            className={classNames(
+              'text-white/70 px-2 py-1 rounded-md transition-colors bg-black/40',
+              'group-hover:bg-black ',
+            )}
           >
             {label}
           </span>
