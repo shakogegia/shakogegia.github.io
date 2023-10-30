@@ -15,7 +15,7 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "cname": "touch ./public/.nojekyll && echo 'gegia.dev' > ./public/CNAME",
-    "deploy": "gatsby build --prefix-paths && yarn cname && gh-pages -d public",
+    "deploy": "yarn build --prefix-paths && yarn cname && gh-pages -d public",
     "new:post": "node ./scripts/new-post.js"
   },
   "dependencies": {
