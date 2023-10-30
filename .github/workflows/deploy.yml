@@ -21,11 +21,11 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build
-        run: yarn build
+        run: yarn build && yarn cname
 
       - name: Publish
-        run: |
-          git config --global user.email "shalva.gegia@gmail.com"
-          git config --global user.name "Shalva Gegia"
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
 
-          yarn cname && yarn publish
