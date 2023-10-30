@@ -20,5 +20,12 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Build and Publish
-        run: yarn deploy
+      - name: Build
+        run: yarn build
+
+      - name: Publish
+        run: |
+          git config --global user.email "shalva.gegia@gmail.com"
+          git config --global user.name "Shalva Gegia"
+
+          yarn cname && yarn publish

@@ -10,12 +10,13 @@
   "scripts": {
     "dev": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "cname": "touch ./public/.nojekyll && echo 'gegia.dev' > ./public/CNAME",
-    "deploy": "yarn build --prefix-paths && yarn cname && gh-pages -d public",
+    "publish": "gh-pages -d public",
+    "deploy": "yarn build && yarn cname && yarn publish",
     "new:post": "node ./scripts/new-post.js"
   },
   "dependencies": {
