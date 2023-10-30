@@ -35,7 +35,7 @@ export default function ShowsPage() {
           hidden: {},
           show: {
             transition: {
-              staggerChildren: 0.15,
+              staggerChildren: 0.08,
             },
           },
         }}

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { graphql } from 'gatsby'
 import * as React from 'react'
 import Layout from '../components/layout/main'
@@ -16,13 +17,20 @@ export default function Post({ data: { site, mdx }, pageContext: { next, prev },
       />
 
       <div className="max-w-3xl m-auto mt-8">
-        <h3 className="text-center text-3xl leading-10 font-duospace-bold transition-colors dark:text-gray-200">
+        <h3 className="text-left lg:text-center text-3xl leading-10 font-duospace-bold transition-colors dark:text-gray-200">
           {mdx.frontmatter.title}
         </h3>
 
-        <div className="prose max-w-none mt-10 prose-lg font-duospace text-gray-500 transition-colors dark:text-gray-300 dark:prose-a:text-gray-200 dark:prose-strong:text-gray-200 dark:prose-blockquote:text-gray-200 dark:prose-headings:text-gray-200">
-          {children}
-        </div>
+        <motion.div
+          initial="hidden"
+          animate="show"
+          whileInView="show"
+          variants={{ hidden: { opacity: 0, y: -10 }, show: { opacity: 1, y: 0, transition: { type: 'spring' } } }}
+        >
+          <div className="prose max-w-none mt-10 prose-lg font-duospace text-gray-500 transition-colors dark:text-gray-300 dark:prose-a:text-gray-200 dark:prose-strong:text-gray-200 dark:prose-blockquote:text-gray-200 dark:prose-headings:text-gray-200">
+            {children}
+          </div>
+        </motion.div>
 
         <div className="mt-14">
           <em className="font-extralight font-mono text-gray-400">Published on {mdx.frontmatter.date}</em>

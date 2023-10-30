@@ -30,7 +30,7 @@ export default function IndexPage({ data: { allMdx } }: any) {
           hidden: {},
           show: {
             transition: {
-              staggerChildren: 0.15,
+              staggerChildren: 0.1,
             },
           },
         }}
@@ -94,6 +94,7 @@ export default function IndexPage({ data: { allMdx } }: any) {
         <Film label={`Rome • Portra 400`} src={Rome} />
         <Sketches />
         <Shows />
+        
         {/* <Cameras /> */}
       </motion.div>
     </Layout>
@@ -130,7 +131,7 @@ function About() {
       className={classNames('aspect-[2] row-span-2 col-span-2 p-8 sm:pl-0')}
       variants={{ hidden: { opacity: 0, y: -10 }, show: { opacity: 1, y: 0, transition: { type: 'spring' } } }}
     >
-      <div className="text-2xl leading-10 font-mono font-extralight transition-colors text-neutral-400 dark:text-gray-400">
+      <div className="text-lg leading-8 lg:text-2xl lg:leading-10 font-mono font-extralight transition-colors text-neutral-400 dark:text-gray-400">
         <p>Hi I’m Shalva, a web developer based in Amsterdam</p>
         <br />
         <p>
@@ -275,7 +276,7 @@ function Shows() {
             src={Friends}
           />
           <img
-            className="no-lightense h-full w-full object-cover rounded-md shadow-lg transition-transform group-hover:shadow-xl group-hover:scale-110"
+            className="no-lightense h-full w-full object-cover rounded-md shadow-lg transition-transform group-hover:shadow-xl group-hover:scale-110 group-hover:-translate-y-1"
             src={HouseOfCards}
           />
           <img
