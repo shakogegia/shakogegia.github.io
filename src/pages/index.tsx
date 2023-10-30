@@ -7,7 +7,7 @@ import Layout from '../components/layout/main'
 import SEO from '../components/seo'
 
 import Rome from '../../static/film/Rome_Porta_400.jpg'
-import Flowers from '../../static/film/Flowers.jpg'
+import Flowers from '../../static/film/flowers.jpg'
 import SketchesArt from '../../static/images/sketch.png'
 import NikonFA from '../../static/images/nikon_fa.png'
 
