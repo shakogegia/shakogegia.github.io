@@ -110,6 +110,34 @@ const library = [
     "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327708260l/6892870.jpg",
     "href": "https://www.goodreads.com/book/show/6892870-the-girl-who-kicked-the-hornet-s-nest",
     "category": "Thriller"
+  },
+  {
+    "title": "Paradox Bound",
+    "author": "Peter Clines",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1500032167i/33825757.jpg",
+    "href": "https://www.goodreads.com/book/show/33825757-paradox-bound",
+    "category": "Sci-Fi"
+  },
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
+    "href": "https://www.goodreads.com/book/show/44767458-dune?ac=1&from_search=true&qid=dGF9GqA36d&rank=1",
+    "category": "Sci-Fi"
+  },
+  {
+    "title": "Dune Messiah",
+    "author": "Frank Herbert",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1577043824i/44492285.jpg",
+    "href": "https://www.goodreads.com/book/show/44492285-dune-messiah",
+    "category": "Sci-Fi"
+  },
+  {
+    "title": "Children of Dune",
+    "author": "Frank Herbert",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1564783201i/44492286.jpg",
+    "href": "https://www.goodreads.com/book/show/44492286-children-of-dune?ref=nav_sb_noss_l_13",
+    "category": "Sci-Fi"
   }
 ]
 
